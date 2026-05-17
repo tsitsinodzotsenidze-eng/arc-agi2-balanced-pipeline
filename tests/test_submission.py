@@ -40,7 +40,7 @@ def test_build_submission_payload_warns_when_more_than_two_candidates(caplog):
     c2 = Candidate(candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g")
     c3 = Candidate(candidate_id="3", task_id="abc", test_index=0, grid=[[3]], generator_name="g")
 
-    with caplog.at_level("WARNING"):
+    with caplog.at_level("WARNING", logger="arc_agi2_pipeline.submission.io"):
         payload = build_submission_payload([c1, c2, c3])
 
     assert payload["abc"][0]["attempt_1"] == [[1]]
@@ -134,3 +134,19 @@ def test_write_submission_round_trip(tmp_path: Path):
         loaded = json.load(f)
     assert loaded == payload
     assert list(tmp_path.glob("*.tmp")) == []
+
+
+def test_write_submission_cleans_up_tmp_on_failure(tmp_path: Path, monkeypatch):
+    payload = {"task_x": [{"attempt_1": [[1]], "attempt_2": [[2]]}]}
+    output_path = tmp_path / "submission.json"
+
+    def bad_dump(*args, **kwargs):
+        raise OSError("disk full")
+
+    monkeypatch.setattr("arc_agi2_pipeline.submission.io.json.dump", bad_dump)
+
+    with pytest.raises(OSError, match="disk full"):
+        write_submission(payload, output_path)
+
+    assert list(tmp_path.glob("*.tmp")) == []
+    assert not output_path.exists()

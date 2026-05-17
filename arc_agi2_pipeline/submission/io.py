@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import logging
+import tempfile
 from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Sequence
@@ -8,6 +10,7 @@ from typing import Dict, List, Sequence
 from arc_agi2_pipeline.core.types import Candidate
 
 _ALLOWED_ATTEMPT_KEYS = {"attempt_1", "attempt_2"}
+_LOG = logging.getLogger(__name__)
 
 
 def _validate_grid(grid: list, *, field_name: str) -> None:
@@ -32,6 +35,9 @@ def build_submission_payload(candidates: Sequence[Candidate]) -> Dict[str, List[
     """Build submission payload from pre-ranked candidates.
 
     Contract:
+    - For empty/debug runs, an empty candidate list returns `{}`. This is not
+      sufficient for final competition completeness; completeness must be
+      validated separately against the expected task list.
     - Requires at least 2 candidates for each (task_id, test_index).
     - Uses the first two candidates in supplied list order as attempt_1/attempt_2.
     - Callers must sort/rank candidates upstream before calling this function.
@@ -50,6 +56,14 @@ def build_submission_payload(candidates: Sequence[Candidate]) -> Dict[str, List[
                 raise ValueError(
                     f"Task {task_id}[{test_index}] requires at least 2 candidates to produce "
                     "both attempt_1 and attempt_2 with valid grids."
+                )
+            if len(attempts) > 2:
+                _LOG.warning(
+                    "Task %s[%d] received %d candidates; build_submission_payload uses only the first two. "
+                    "Rank/select upstream before IO payload construction.",
+                    task_id,
+                    test_index,
+                    len(attempts),
                 )
             output = {
                 "attempt_1": attempts[0],
@@ -93,5 +107,22 @@ def validate_submission_payload(payload: Dict[str, List[dict]]) -> None:
 
 def write_submission(payload: Dict[str, List[dict]], output_path: Path) -> None:
     validate_submission_payload(payload)
-    with output_path.open("w", encoding="utf-8") as f:
-        json.dump(payload, f, sort_keys=True)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=output_path.parent,
+            prefix=f".{output_path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as f:
+            tmp_path = Path(f.name)
+            # Keep key order deterministic for reproducible diffs and stable submission files.
+            json.dump(payload, f, sort_keys=True)
+        tmp_path.replace(output_path)
+    except Exception:
+        if tmp_path is not None and tmp_path.exists():
+            tmp_path.unlink()
+        raise

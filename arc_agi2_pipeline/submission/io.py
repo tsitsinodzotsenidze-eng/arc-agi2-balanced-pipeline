@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import tempfile
 from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Sequence
@@ -107,8 +108,21 @@ def validate_submission_payload(payload: Dict[str, List[dict]]) -> None:
 def write_submission(payload: Dict[str, List[dict]], output_path: Path) -> None:
     validate_submission_payload(payload)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    tmp_path = output_path.with_suffix(f"{output_path.suffix}.tmp")
-    with tmp_path.open("w", encoding="utf-8") as f:
-        # Keep key order deterministic for reproducible diffs and stable submission files.
-        json.dump(payload, f, sort_keys=True)
-    tmp_path.replace(output_path)
+    tmp_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=output_path.parent,
+            prefix=f".{output_path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as f:
+            tmp_path = Path(f.name)
+            # Keep key order deterministic for reproducible diffs and stable submission files.
+            json.dump(payload, f, sort_keys=True)
+        tmp_path.replace(output_path)
+    except Exception:
+        if tmp_path is not None and tmp_path.exists():
+            tmp_path.unlink()
+        raise

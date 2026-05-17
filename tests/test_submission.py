@@ -133,4 +133,4 @@ def test_write_submission_round_trip(tmp_path: Path):
     with output_path.open("r", encoding="utf-8") as f:
         loaded = json.load(f)
     assert loaded == payload
-    assert not output_path.with_suffix(".json.tmp").exists()
+    assert list(tmp_path.glob("*.tmp")) == []

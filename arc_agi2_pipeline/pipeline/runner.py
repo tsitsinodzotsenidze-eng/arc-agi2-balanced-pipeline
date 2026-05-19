@@ -11,11 +11,23 @@ from arc_agi2_pipeline.data import load_tasks_from_dir
 from arc_agi2_pipeline.generators import ModelBasedGenerator, SymbolicGenerator
 from arc_agi2_pipeline.search import BeamSearchExpander
 from arc_agi2_pipeline.selection import TopKSelector
-from arc_agi2_pipeline.submission import build_submission_payload, write_submission
+from arc_agi2_pipeline.submission import (
+    build_submission_payload,
+    validate_submission_against_tasks,
+    write_submission,
+)
 from arc_agi2_pipeline.verification import BasicVerifier
 
 
-def run(tasks_dir: Path, output_path: Path, max_attempts: int = 2, seed: int = 0) -> None:
+def run(
+    tasks_dir: Path, output_path: Path, max_attempts: int = 2, seed: int = 0
+) -> None:
+    # ARC-AGI-2 submissions require both attempt_1 and attempt_2, so keep at least two attempts.
+    if max_attempts < 2:
+        raise ValueError(
+            "ARC-AGI-2 submissions require both attempt_1 and attempt_2; max_attempts must be at least 2."
+        )
+
     tasks = load_tasks_from_dir(tasks_dir)
     context = PipelineContext(run_id=f"run:{tasks_dir}:{seed}", random_seed=seed)
 
@@ -38,10 +50,13 @@ def run(tasks_dir: Path, output_path: Path, max_attempts: int = 2, seed: int = 0
 
         expanded = search.expand(seed_candidates)
         scored = verifier.score(task_adapted, expanded, context)
-        selected = selector.select(task_adapted, scored, max_attempts=max_attempts, context=context)
+        selected = selector.select(
+            task_adapted, scored, max_attempts=max_attempts, context=context
+        )
         final_candidates.extend(selected)
 
     payload = build_submission_payload(final_candidates)
+    validate_submission_against_tasks(tasks, payload)
     write_submission(payload, output_path)
 
 

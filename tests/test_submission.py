@@ -3,12 +3,24 @@ from pathlib import Path
 
 import pytest
 
-from arc_agi2_pipeline.core.types import Candidate
+from arc_agi2_pipeline.core.types import ArcTask, Candidate
+from arc_agi2_pipeline.pipeline.runner import run
 from arc_agi2_pipeline.submission import (
     build_submission_payload,
+    validate_submission_against_tasks,
     validate_submission_payload,
     write_submission,
 )
+
+
+def _task(task_id: str, test_count: int) -> ArcTask:
+    return ArcTask(
+        task_id=task_id, train=[], test_inputs=[[[0]] for _ in range(test_count)]
+    )
+
+
+def _output(value: int = 1) -> dict:
+    return {"attempt_1": [[value]], "attempt_2": [[value]]}
 
 
 def test_build_submission_payload_zero_candidates_returns_empty_payload():
@@ -16,8 +28,12 @@ def test_build_submission_payload_zero_candidates_returns_empty_payload():
 
 
 def test_submission_payload_shape():
-    c1 = Candidate(candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g")
-    c2 = Candidate(candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g")
+    c1 = Candidate(
+        candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g"
+    )
+    c2 = Candidate(
+        candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g"
+    )
     payload = build_submission_payload([c1, c2])
 
     assert "abc" in payload
@@ -26,9 +42,15 @@ def test_submission_payload_shape():
 
 
 def test_build_submission_payload_uses_first_two_candidates_only():
-    c1 = Candidate(candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g")
-    c2 = Candidate(candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g")
-    c3 = Candidate(candidate_id="3", task_id="abc", test_index=0, grid=[[3]], generator_name="g")
+    c1 = Candidate(
+        candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g"
+    )
+    c2 = Candidate(
+        candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g"
+    )
+    c3 = Candidate(
+        candidate_id="3", task_id="abc", test_index=0, grid=[[3]], generator_name="g"
+    )
 
     payload = build_submission_payload([c1, c2, c3])
     assert payload["abc"][0]["attempt_1"] == [[1]]
@@ -36,9 +58,15 @@ def test_build_submission_payload_uses_first_two_candidates_only():
 
 
 def test_build_submission_payload_warns_when_more_than_two_candidates(caplog):
-    c1 = Candidate(candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g")
-    c2 = Candidate(candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g")
-    c3 = Candidate(candidate_id="3", task_id="abc", test_index=0, grid=[[3]], generator_name="g")
+    c1 = Candidate(
+        candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g"
+    )
+    c2 = Candidate(
+        candidate_id="2", task_id="abc", test_index=0, grid=[[2]], generator_name="g"
+    )
+    c3 = Candidate(
+        candidate_id="3", task_id="abc", test_index=0, grid=[[3]], generator_name="g"
+    )
 
     with caplog.at_level("WARNING", logger="arc_agi2_pipeline.submission.io"):
         payload = build_submission_payload([c1, c2, c3])
@@ -49,7 +77,9 @@ def test_build_submission_payload_warns_when_more_than_two_candidates(caplog):
 
 
 def test_build_submission_payload_rejects_single_candidate_for_test_index():
-    c1 = Candidate(candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g")
+    c1 = Candidate(
+        candidate_id="1", task_id="abc", test_index=0, grid=[[1]], generator_name="g"
+    )
     with pytest.raises(ValueError, match="requires at least 2 candidates"):
         build_submission_payload([c1])
 
@@ -102,12 +132,48 @@ def test_submission_validation_rejects_unknown_extra_key():
 
 def test_build_submission_payload_groups_by_task_and_sorted_test_index():
     candidates = [
-        Candidate(candidate_id="a1", task_id="task_b", test_index=1, grid=[[1]], generator_name="g"),
-        Candidate(candidate_id="a2", task_id="task_b", test_index=1, grid=[[2]], generator_name="g"),
-        Candidate(candidate_id="b1", task_id="task_b", test_index=0, grid=[[3]], generator_name="g"),
-        Candidate(candidate_id="b2", task_id="task_b", test_index=0, grid=[[4]], generator_name="g"),
-        Candidate(candidate_id="c1", task_id="task_a", test_index=0, grid=[[5]], generator_name="g"),
-        Candidate(candidate_id="c2", task_id="task_a", test_index=0, grid=[[6]], generator_name="g"),
+        Candidate(
+            candidate_id="a1",
+            task_id="task_b",
+            test_index=1,
+            grid=[[1]],
+            generator_name="g",
+        ),
+        Candidate(
+            candidate_id="a2",
+            task_id="task_b",
+            test_index=1,
+            grid=[[2]],
+            generator_name="g",
+        ),
+        Candidate(
+            candidate_id="b1",
+            task_id="task_b",
+            test_index=0,
+            grid=[[3]],
+            generator_name="g",
+        ),
+        Candidate(
+            candidate_id="b2",
+            task_id="task_b",
+            test_index=0,
+            grid=[[4]],
+            generator_name="g",
+        ),
+        Candidate(
+            candidate_id="c1",
+            task_id="task_a",
+            test_index=0,
+            grid=[[5]],
+            generator_name="g",
+        ),
+        Candidate(
+            candidate_id="c2",
+            task_id="task_a",
+            test_index=0,
+            grid=[[6]],
+            generator_name="g",
+        ),
     ]
 
     payload = build_submission_payload(candidates)
@@ -150,3 +216,46 @@ def test_write_submission_cleans_up_tmp_on_failure(tmp_path: Path, monkeypatch):
 
     assert list(tmp_path.glob("*.tmp")) == []
     assert not output_path.exists()
+
+
+def test_validate_submission_against_tasks_rejects_missing_task_id():
+    tasks = [_task("task_a", 1), _task("task_b", 1)]
+    payload = {"task_a": [_output()]}
+
+    with pytest.raises(ValueError, match=r"missing task ids: \['task_b'\]"):
+        validate_submission_against_tasks(tasks, payload)
+
+
+def test_validate_submission_against_tasks_rejects_extra_task_id_by_default():
+    tasks = [_task("task_a", 1)]
+    payload = {"task_a": [_output()], "task_extra": [_output()]}
+
+    with pytest.raises(ValueError, match=r"extra task ids: \['task_extra'\]"):
+        validate_submission_against_tasks(tasks, payload)
+
+
+def test_validate_submission_against_tasks_allows_extra_task_id_when_explicit():
+    tasks = [_task("task_a", 1)]
+    payload = {"task_a": [_output()], "task_extra": [_output()]}
+
+    validate_submission_against_tasks(tasks, payload, allow_extra_task_ids=True)
+
+
+def test_validate_submission_against_tasks_rejects_mismatched_output_count():
+    tasks = [_task("task_a", 2)]
+    payload = {"task_a": [_output()]}
+
+    with pytest.raises(ValueError, match="task_a: expected 2, got 1"):
+        validate_submission_against_tasks(tasks, payload)
+
+
+def test_validate_submission_against_tasks_complete_payload_passes():
+    tasks = [_task("task_a", 2), _task("task_b", 1)]
+    payload = {"task_a": [_output(1), _output(2)], "task_b": [_output(3)]}
+
+    validate_submission_against_tasks(tasks, payload)
+
+
+def test_runner_rejects_max_attempts_less_than_two(tmp_path: Path):
+    with pytest.raises(ValueError, match="require both attempt_1 and attempt_2"):
+        run(tmp_path / "tasks", tmp_path / "submission.json", max_attempts=1)

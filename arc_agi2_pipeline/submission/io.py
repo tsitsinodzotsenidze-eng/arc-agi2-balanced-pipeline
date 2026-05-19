@@ -7,7 +7,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Sequence
 
-from arc_agi2_pipeline.core.types import Candidate
+from arc_agi2_pipeline.core.types import ArcTask, Candidate
 
 _ALLOWED_ATTEMPT_KEYS = {"attempt_1", "attempt_2"}
 _LOG = logging.getLogger(__name__)
@@ -28,7 +28,9 @@ def _validate_grid(grid: list, *, field_name: str) -> None:
             if not isinstance(value, int):
                 raise ValueError(f"{field_name}[{r_i}][{c_i}] must be an integer.")
             if value < 0 or value > 9:
-                raise ValueError(f"{field_name}[{r_i}][{c_i}] must be in ARC color range [0, 9].")
+                raise ValueError(
+                    f"{field_name}[{r_i}][{c_i}] must be in ARC color range [0, 9]."
+                )
 
 
 def build_submission_payload(candidates: Sequence[Candidate]) -> Dict[str, List[dict]]:
@@ -43,7 +45,9 @@ def build_submission_payload(candidates: Sequence[Candidate]) -> Dict[str, List[
     - Callers must sort/rank candidates upstream before calling this function.
     - Extra candidates beyond the first two are intentionally ignored at IO layer.
     """
-    grouped: Dict[str, Dict[int, List[Candidate]]] = defaultdict(lambda: defaultdict(list))
+    grouped: Dict[str, Dict[int, List[Candidate]]] = defaultdict(
+        lambda: defaultdict(list)
+    )
     for c in candidates:
         grouped[c.task_id][c.test_index].append(c)
 
@@ -103,6 +107,50 @@ def validate_submission_payload(payload: Dict[str, List[dict]]) -> None:
 
             _validate_grid(output["attempt_1"], field_name=f"{task_id}[{i}].attempt_1")
             _validate_grid(output["attempt_2"], field_name=f"{task_id}[{i}].attempt_2")
+
+
+def validate_submission_against_tasks(
+    tasks: Sequence[ArcTask],
+    payload: Dict[str, List[dict]],
+    *,
+    allow_extra_task_ids: bool = False,
+) -> None:
+    """Validate payload completeness against the loaded ARC challenge tasks.
+
+    This enforces final submission completeness in addition to the structural
+    payload checks performed by :func:`validate_submission_payload`.
+    """
+    validate_submission_payload(payload)
+
+    expected_counts = {task.task_id: len(task.test_inputs) for task in tasks}
+    expected_ids = set(expected_counts)
+    payload_ids = set(payload)
+
+    missing_task_ids = sorted(expected_ids - payload_ids)
+    if missing_task_ids:
+        raise ValueError(f"Submission payload is missing task ids: {missing_task_ids}.")
+
+    extra_task_ids = sorted(payload_ids - expected_ids)
+    if extra_task_ids and not allow_extra_task_ids:
+        raise ValueError(
+            f"Submission payload contains extra task ids: {extra_task_ids}."
+        )
+
+    mismatches = []
+    for task_id in sorted(expected_ids & payload_ids):
+        expected_count = expected_counts[task_id]
+        actual_count = len(payload[task_id])
+        if actual_count != expected_count:
+            mismatches.append(
+                f"{task_id}: expected {expected_count}, got {actual_count}"
+            )
+
+    if mismatches:
+        raise ValueError(
+            "Submission payload has mismatched output counts for task ids: "
+            + "; ".join(mismatches)
+            + "."
+        )
 
 
 def write_submission(payload: Dict[str, List[dict]], output_path: Path) -> None:

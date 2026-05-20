@@ -32,9 +32,25 @@ class TopKSelector:
         context: PipelineContext,
     ) -> Sequence[Candidate]:
         del context
+        if max_attempts <= 0:
+            raise ValueError(f"max_attempts must be positive, got {max_attempts}")
+
+        test_input_count = len(task.test_inputs)
+        if test_input_count == 0:
+            raise ValueError("task must have at least one test input")
+
+        for item in scored:
+            test_index = item.candidate.test_index
+            if test_index < 0 or test_index >= test_input_count:
+                raise ValueError(
+                    f"candidate {item.candidate.candidate_id} has invalid test_index "
+                    f"{test_index}; expected range [0, {test_input_count - 1}]"
+                )
+
         by_test: Dict[int, List[ScoredCandidate]] = defaultdict(list)
         for item in scored:
-            by_test[item.candidate.test_index].append(item)
+            test_index = item.candidate.test_index
+            by_test[test_index].append(item)
 
         selected: List[Candidate] = []
         for test_index in range(len(task.test_inputs)):

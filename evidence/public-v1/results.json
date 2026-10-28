@@ -1,0 +1,3490 @@
+{
+  "arms": {
+    "depth1": {
+      "all_tests_top2_fraction": 0.0,
+      "all_tests_top2_tasks": 0,
+      "elapsed_seconds": 0.22454664399992907,
+      "fallback_outputs": 167,
+      "per_task": [
+        {
+          "all_tests_top2": false,
+          "task_id": "0934a4d8",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "135a2760",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "136b0064",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "13e47133",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "142ca369",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "16b78196",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "16de56c4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "1818057f",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "195c6913",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "1ae2feb7",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 2,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "20270e3b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "20a9e565",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "21897d95",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "221dfab4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "247ef758",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "269e22fb",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "271d71e2",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "28a6681f",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "291dc1e1",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2b83f449",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2ba387bc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2c181942",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2d0172a1",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "31f7f899",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "332f06d7",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "35ab12c3",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "36a08778",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "38007db0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "3a25b0d8",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "3dc255db",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "3e6067c3",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "409aa875",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "446ef5d2",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "45a5af55",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4a21e3da",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4c3d4a41",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4c416de3",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4c7dc4dd",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4e34c42c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "53fb4810",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "5545f144",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "581f7754",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "58490d8a",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "58f5dbd5",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "5961cc34",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "5dbc8537",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "62593bfd",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "64efde09",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "65b59efc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "67e490f4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "6e453dd6",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "6e4f6532",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "6ffbe589",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "71e489b6",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7491f3cf",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7666fa5d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "78332cb0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b0280bc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b3084d4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b5033c1",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b80bb43",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7c66cb00",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7ed72f31",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "800d221b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "80a900e0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8698868d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "88bcf3b4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "88e364bc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "89565ca0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "898e7135",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8b7bacbf",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8b9c3697",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8e5c0c38",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8f215267",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8f3a5a89",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "9385bd28",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "97d7923e",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "981571dc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "9aaea919",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "9bbf930d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a251c730",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a25697e4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a32d8b75",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a395ee82",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a47bf94d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a6f40cea",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "aa4ec2a5",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "abc82100",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b0039139",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b10624e5",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b5ca7ac4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b6f77b65",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b99e7126",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b9e38dc0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "bf45cf4b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "c4d067a0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "c7f57c3e",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "cb2d8a2c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "cbebaa4b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "d35bdbdc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 2,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "d59b0160",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "d8e07eb2",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "da515329",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "db0c5428",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "db695cfb",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "dbff022c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "dd6b8c4b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "de809cff",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "dfadab01",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e12f9a14",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e3721c99",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e376de54",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e8686506",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e87109e9",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "edb79dae",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "eee78d87",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "f560132c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "f931b4a8",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "faa9f03d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "fc7cae8d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        }
+      ],
+      "tasks": 120,
+      "test_outputs": 167,
+      "top1_fraction": 0.0,
+      "top1_outputs": 0,
+      "top2_fraction": 0.0,
+      "top2_outputs": 0,
+      "train_fit_tasks": 0,
+      "verified_outputs": 0
+    },
+    "depth2": {
+      "all_tests_top2_fraction": 0.0,
+      "all_tests_top2_tasks": 0,
+      "elapsed_seconds": 3.9569305500003793,
+      "fallback_outputs": 167,
+      "per_task": [
+        {
+          "all_tests_top2": false,
+          "task_id": "0934a4d8",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "135a2760",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "136b0064",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "13e47133",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "142ca369",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "16b78196",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "16de56c4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "1818057f",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "195c6913",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "1ae2feb7",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 2,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "20270e3b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "20a9e565",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "21897d95",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "221dfab4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "247ef758",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "269e22fb",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "271d71e2",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "28a6681f",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "291dc1e1",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2b83f449",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2ba387bc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2c181942",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "2d0172a1",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "31f7f899",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "332f06d7",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "35ab12c3",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "36a08778",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "38007db0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "3a25b0d8",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "3dc255db",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "3e6067c3",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "409aa875",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "446ef5d2",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "45a5af55",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4a21e3da",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4c3d4a41",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4c416de3",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4c7dc4dd",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "4e34c42c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "53fb4810",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "5545f144",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "581f7754",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "58490d8a",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "58f5dbd5",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "5961cc34",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "5dbc8537",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "62593bfd",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "64efde09",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "65b59efc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "67e490f4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "6e453dd6",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "6e4f6532",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "6ffbe589",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "71e489b6",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7491f3cf",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7666fa5d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "78332cb0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b0280bc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b3084d4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b5033c1",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7b80bb43",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7c66cb00",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "7ed72f31",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "800d221b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "80a900e0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8698868d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "88bcf3b4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "88e364bc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "89565ca0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "898e7135",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8b7bacbf",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8b9c3697",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8e5c0c38",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8f215267",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "8f3a5a89",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "9385bd28",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "97d7923e",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "981571dc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "9aaea919",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "9bbf930d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a251c730",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a25697e4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a32d8b75",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a395ee82",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a47bf94d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "a6f40cea",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "aa4ec2a5",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "abc82100",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b0039139",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b10624e5",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b5ca7ac4",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b6f77b65",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b99e7126",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "b9e38dc0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "bf45cf4b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "c4d067a0",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "c7f57c3e",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "cb2d8a2c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "cbebaa4b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "d35bdbdc",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 2,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "d59b0160",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "d8e07eb2",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "da515329",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "db0c5428",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "db695cfb",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "dbff022c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "dd6b8c4b",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "de809cff",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "dfadab01",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e12f9a14",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e3721c99",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e376de54",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e8686506",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "e87109e9",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "edb79dae",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "eee78d87",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "f560132c",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "f931b4a8",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            },
+            {
+              "test_index": 1,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "faa9f03d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        },
+        {
+          "all_tests_top2": false,
+          "task_id": "fc7cae8d",
+          "tests": [
+            {
+              "test_index": 0,
+              "top1": false,
+              "top2": false,
+              "verified": false
+            }
+          ]
+        }
+      ],
+      "tasks": 120,
+      "test_outputs": 167,
+      "top1_fraction": 0.0,
+      "top1_outputs": 0,
+      "top2_fraction": 0.0,
+      "top2_outputs": 0,
+      "train_fit_tasks": 0,
+      "verified_outputs": 0
+    }
+  },
+  "benchmark": "public retrospective ARC-AGI-2; not official Kaggle score",
+  "challenges_sha256": "f4afe2c0dba53c98a85e7ae42f830096a18d91fffb50cf4a52a71732d30ffeac",
+  "freeze_sha256": "d68221c14d1b0090806d87822c844274606e3ccef87e84f1a6983d5928ebebc3",
+  "paired": {
+    "both_correct_outputs": 0,
+    "both_wrong_outputs": 167,
+    "depth1_only_correct_outputs": 0,
+    "depth2_only_correct_outputs": 0
+  },
+  "solutions_sha256": "bb8689e8d953ac18686d910633494ce3521bdb2e3576241a8e24150ea706ead7"
+}

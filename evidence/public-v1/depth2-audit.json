@@ -1,0 +1,2422 @@
+{
+  "seed": 0,
+  "seed_used_by_deterministic_solver": false,
+  "tasks": {
+    "0934a4d8": {
+      "elapsed_seconds": 0.07446364300039932,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "135a2760": {
+      "elapsed_seconds": 0.009000625000226137,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "136b0064": {
+      "elapsed_seconds": 0.022682583000005252,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "13e47133": {
+      "elapsed_seconds": 0.0320223190001343,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "142ca369": {
+      "elapsed_seconds": 0.029893369000092207,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "16b78196": {
+      "elapsed_seconds": 0.07197716200016657,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "16de56c4": {
+      "elapsed_seconds": 0.01283009899998433,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "1818057f": {
+      "elapsed_seconds": 0.01711155399971176,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "195c6913": {
+      "elapsed_seconds": 0.02916620599989983,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "1ae2feb7": {
+      "elapsed_seconds": 0.01352287100007743,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "20270e3b": {
+      "elapsed_seconds": 0.012231318999965879,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "20a9e565": {
+      "elapsed_seconds": 0.059498244999758754,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "21897d95": {
+      "elapsed_seconds": 0.016458410999803164,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "221dfab4": {
+      "elapsed_seconds": 0.045770978999826184,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "247ef758": {
+      "elapsed_seconds": 0.017562510000061593,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "269e22fb": {
+      "elapsed_seconds": 0.014552417999766476,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "271d71e2": {
+      "elapsed_seconds": 0.01178057200013427,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "28a6681f": {
+      "elapsed_seconds": 0.01801191500044297,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "291dc1e1": {
+      "elapsed_seconds": 0.015789054999913787,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "2b83f449": {
+      "elapsed_seconds": 0.019624268999905325,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "2ba387bc": {
+      "elapsed_seconds": 0.04200861400022404,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "2c181942": {
+      "elapsed_seconds": 0.037087870000050316,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "2d0172a1": {
+      "elapsed_seconds": 0.05017989199996009,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "31f7f899": {
+      "elapsed_seconds": 0.017198584000198025,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "332f06d7": {
+      "elapsed_seconds": 0.022428911999668344,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "35ab12c3": {
+      "elapsed_seconds": 0.030286319999959233,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "36a08778": {
+      "elapsed_seconds": 0.01962801500030764,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "38007db0": {
+      "elapsed_seconds": 0.02856988999974419,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "3a25b0d8": {
+      "elapsed_seconds": 0.03647000199998729,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "3dc255db": {
+      "elapsed_seconds": 0.015759499999603577,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "3e6067c3": {
+      "elapsed_seconds": 0.03193294499988042,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "409aa875": {
+      "elapsed_seconds": 0.026167120000081923,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "446ef5d2": {
+      "elapsed_seconds": 0.019559389999812993,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "45a5af55": {
+      "elapsed_seconds": 0.01991387400039457,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "4a21e3da": {
+      "elapsed_seconds": 0.024782869999853574,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "4c3d4a41": {
+      "elapsed_seconds": 0.013773396999567922,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "4c416de3": {
+      "elapsed_seconds": 0.03480695200005357,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "4c7dc4dd": {
+      "elapsed_seconds": 0.07119282799976645,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "4e34c42c": {
+      "elapsed_seconds": 0.04604851399972176,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "53fb4810": {
+      "elapsed_seconds": 0.026755403999686678,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "5545f144": {
+      "elapsed_seconds": 0.02061975500009794,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "581f7754": {
+      "elapsed_seconds": 0.01352157699966483,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "58490d8a": {
+      "elapsed_seconds": 0.03388126199979524,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "58f5dbd5": {
+      "elapsed_seconds": 0.028743441000187886,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "5961cc34": {
+      "elapsed_seconds": 0.027377319000152056,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "5dbc8537": {
+      "elapsed_seconds": 0.025787419000153022,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "62593bfd": {
+      "elapsed_seconds": 0.042274693000308616,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "64efde09": {
+      "elapsed_seconds": 0.05956578699988313,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "65b59efc": {
+      "elapsed_seconds": 0.014552588000242395,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "67e490f4": {
+      "elapsed_seconds": 0.06878790500013565,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "6e453dd6": {
+      "elapsed_seconds": 0.021515330000056565,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "6e4f6532": {
+      "elapsed_seconds": 0.029376884000157588,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "6ffbe589": {
+      "elapsed_seconds": 0.03446590000021388,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "71e489b6": {
+      "elapsed_seconds": 0.026799962000040978,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7491f3cf": {
+      "elapsed_seconds": 0.015965079999659793,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7666fa5d": {
+      "elapsed_seconds": 0.029096682000272267,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "78332cb0": {
+      "elapsed_seconds": 0.01555654499998127,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7b0280bc": {
+      "elapsed_seconds": 0.03445835399998032,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7b3084d4": {
+      "elapsed_seconds": 0.029769021999982215,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7b5033c1": {
+      "elapsed_seconds": 0.020035220999943704,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7b80bb43": {
+      "elapsed_seconds": 0.03995425900029659,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7c66cb00": {
+      "elapsed_seconds": 0.07810677199995553,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "7ed72f31": {
+      "elapsed_seconds": 0.03278996900007769,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "800d221b": {
+      "elapsed_seconds": 0.028655358999913005,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "80a900e0": {
+      "elapsed_seconds": 0.026614101999712148,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "8698868d": {
+      "elapsed_seconds": 0.025854592000086996,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "88bcf3b4": {
+      "elapsed_seconds": 0.01205644800029404,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "88e364bc": {
+      "elapsed_seconds": 0.04166257999986556,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "89565ca0": {
+      "elapsed_seconds": 0.04813956199996028,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "898e7135": {
+      "elapsed_seconds": 0.025570263999725285,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "8b7bacbf": {
+      "elapsed_seconds": 0.03584448699984932,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "8b9c3697": {
+      "elapsed_seconds": 0.03487372800009325,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "8e5c0c38": {
+      "elapsed_seconds": 0.03831246399977317,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "8f215267": {
+      "elapsed_seconds": 0.04242581100015741,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "8f3a5a89": {
+      "elapsed_seconds": 0.022782879000260436,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "9385bd28": {
+      "elapsed_seconds": 0.01967909699988013,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "97d7923e": {
+      "elapsed_seconds": 0.02075905799983957,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "981571dc": {
+      "elapsed_seconds": 0.07164999299993724,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "9aaea919": {
+      "elapsed_seconds": 0.07518348099983996,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "9bbf930d": {
+      "elapsed_seconds": 0.0231046310000238,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "a251c730": {
+      "elapsed_seconds": 0.07135041499986983,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "a25697e4": {
+      "elapsed_seconds": 0.04166878399973939,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "a32d8b75": {
+      "elapsed_seconds": 0.05131272800008446,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "a395ee82": {
+      "elapsed_seconds": 0.03813545699995302,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "a47bf94d": {
+      "elapsed_seconds": 0.039410130999840476,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "a6f40cea": {
+      "elapsed_seconds": 0.029629010999997263,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "aa4ec2a5": {
+      "elapsed_seconds": 0.04396705599992856,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "abc82100": {
+      "elapsed_seconds": 0.006642084999839426,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "b0039139": {
+      "elapsed_seconds": 0.007825161999789998,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "b10624e5": {
+      "elapsed_seconds": 0.056202291999852605,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "b5ca7ac4": {
+      "elapsed_seconds": 0.0410804600001029,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "b6f77b65": {
+      "elapsed_seconds": 0.02180218600005901,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "b99e7126": {
+      "elapsed_seconds": 0.07441996399984419,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "b9e38dc0": {
+      "elapsed_seconds": 0.04097300900002665,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "bf45cf4b": {
+      "elapsed_seconds": 0.015248812999743677,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "c4d067a0": {
+      "elapsed_seconds": 0.04028228200013473,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "c7f57c3e": {
+      "elapsed_seconds": 0.027423947999977827,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "cb2d8a2c": {
+      "elapsed_seconds": 0.019003382999926544,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "cbebaa4b": {
+      "elapsed_seconds": 0.04204627100034486,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "d35bdbdc": {
+      "elapsed_seconds": 0.02349278499968932,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "d59b0160": {
+      "elapsed_seconds": 0.022603489000175614,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "d8e07eb2": {
+      "elapsed_seconds": 0.053825222000341455,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "da515329": {
+      "elapsed_seconds": 0.015787933000410703,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "db0c5428": {
+      "elapsed_seconds": 0.026697148000039306,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "db695cfb": {
+      "elapsed_seconds": 0.01951723399997718,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "dbff022c": {
+      "elapsed_seconds": 0.029815340999903128,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "dd6b8c4b": {
+      "elapsed_seconds": 0.02359668999997666,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "de809cff": {
+      "elapsed_seconds": 0.03207908100011991,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "dfadab01": {
+      "elapsed_seconds": 0.030786810000336118,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "e12f9a14": {
+      "elapsed_seconds": 0.04344828700004655,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "e3721c99": {
+      "elapsed_seconds": 0.08084790900011285,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "e376de54": {
+      "elapsed_seconds": 0.021053681000012148,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "e8686506": {
+      "elapsed_seconds": 0.020052968000072724,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "e87109e9": {
+      "elapsed_seconds": 0.0451759510001466,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "edb79dae": {
+      "elapsed_seconds": 0.042717489000096975,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "eee78d87": {
+      "elapsed_seconds": 0.0072607260003678675,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "f560132c": {
+      "elapsed_seconds": 0.028667996999956813,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "f931b4a8": {
+      "elapsed_seconds": 0.013573947999702796,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ],
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "faa9f03d": {
+      "elapsed_seconds": 0.016962195999894902,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    },
+    "fc7cae8d": {
+      "elapsed_seconds": 0.03838414099982401,
+      "max_depth": 2,
+      "programs_enumerated": 601,
+      "selected": [
+        [
+          {
+            "source": "fallback_identity"
+          },
+          {
+            "source": "fallback_first_train_output"
+          }
+        ]
+      ],
+      "solver_version": "symbolic-programs-v1",
+      "train_consistent_programs": 0
+    }
+  }
+}

@@ -20,12 +20,14 @@ def _validate_grid(grid: list, *, field_name: str) -> None:
         raise ValueError(f"{field_name} rows must each be a non-empty list.")
 
     row_len = len(grid[0])
+    if len(grid) > 30 or row_len > 30:
+        raise ValueError(f"{field_name} dimensions must be at most 30 by 30.")
     if any(len(row) != row_len for row in grid):
         raise ValueError(f"{field_name} must be rectangular (all rows same length).")
 
     for r_i, row in enumerate(grid):
         for c_i, value in enumerate(row):
-            if not isinstance(value, int):
+            if type(value) is not int:
                 raise ValueError(f"{field_name}[{r_i}][{c_i}] must be an integer.")
             if value < 0 or value > 9:
                 raise ValueError(

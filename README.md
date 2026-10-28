@@ -1,5 +1,37 @@
 # ARC-AGI-2 Strong Balanced Competitive Pipeline
 
+## Current checkpoint — 28 October 2026
+
+The repository now includes a bounded, standard-library symbolic program
+solver and a Kaggle bundled-challenges adapter. One predeclared public pilot
+compared geometric depth 1 versus depth 2: both scored **0/167 test outputs**
+on 120 public evaluation tasks, with no demonstration-consistent programs.
+This records a grammar-coverage limit; v1 is **not ready as a meaningful
+competition candidate**. A separate attributed [NVARC port](nvarc_port/README.md)
+is packaged, with runtime validation still pending.
+
+- [Frozen protocol](docs/EXPERIMENT_PROTOCOL_2026-10-28.md)
+- [Results and reproduction](docs/RESULTS_PUBLIC_V1_2026-10-28.md)
+- [Source/data freeze](docs/EXPERIMENT_FREEZE_V1.json)
+- [Public data provenance](docs/DATA_PROVENANCE.md)
+- [Raw results](evidence/public-v1/results.json)
+- [Continuation checkpoint](docs/CONTINUATION_2026-10-29.md)
+
+Tests: `python -m pytest -q` — 64 passed, including five CPU-only NVARC wrapper
+checks, on Python 3.12. Solver inference is CPU-only,
+offline, and receives no test-output labels. Official competition submission
+is a separate human action; none was performed for this work.
+
+Run a Kaggle-style bundle:
+
+```sh
+python -m arc_agi2_pipeline.pipeline.runner --challenges-json /path/to/arc-agi_test_challenges.json --output submission.json --audit audit.json --max-depth 2
+```
+
+The earlier architecture roadmap below is retained as planned future work.
+The legacy model hook, search/augmentation hooks and structural verifier are
+not used by the new explicit train-consistent program entrypoint.
+
 This repository is a **serious architecture scaffold** for an ARC-AGI-2 balanced competitive system intended to improve hidden-task solve probability over time.
 
 It is designed to scale into a full stack with:

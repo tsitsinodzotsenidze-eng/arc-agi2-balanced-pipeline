@@ -1,0 +1,18 @@
+NVARC 2026 port candidate — preparation only, not a validated model or novel algorithm.
+
+Upstream NVARC authors: Ivan Sorokin and Jean-Francois Puget (NVIDIA KGMoN).
+Underlying approach derives from the ARChitects solution.
+Author notebook: sorokin/arc2-qwen3-unsloth-flash-lora-batch4-queue, version 10.
+Dependency notebook: sorokin/pip-install-unsloth-flash-patch, version 2.
+Model: sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1.
+
+On 2026-10-28 the root agent verified signed-in Kaggle UI license fields:
+all three above are Apache License 2.0. The GitHub repository's missing
+license metadata does not override these artifact-specific declarations.
+Exact upstream notebook files are retained in vendor/ with SOURCE_HASHES.json.
+No upstream copyright notices have been removed. Changes: standard-library
+execution gateway, 2026 input configuration, removal of four-task development
+filter, diagnostic instrumentation, deadline/coverage guards, and separation
+of inference from label-based benchmarking. Scientific scoring, LoRA and
+candidate-generation parameters are unchanged. Wrapper additions are provided
+under Apache License 2.0. See LICENSE.

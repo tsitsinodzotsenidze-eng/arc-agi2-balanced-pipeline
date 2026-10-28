@@ -36,4 +36,31 @@ class WrapperTests(unittest.TestCase):
             with self.assertRaises(ValueError):d.resolve_input(None,t,'*')
     def test_anchor_guard(self):
         with self.assertRaises(ValueError):d.replace_once('x x','x','y')
+    def test_mode_gates(self):
+        d.validate_mode('smoke',False)
+        d.validate_mode('competition',True)
+        with self.assertRaises(RuntimeError):d.validate_mode('smoke',True)
+        with self.assertRaises(RuntimeError):d.validate_mode('competition',False)
+    def test_fixed_smoke_hash(self):
+        path,tasks,m=d.smoke_input()
+        self.assertEqual(list(tasks),['smoke01'])
+        self.assertEqual(m['test_outputs'],2)
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t)
+            (root/'smoke-manifest.json').write_text(json.dumps(m))
+            (root/m['challenges_file']).write_text('{}')
+            with self.assertRaises(ValueError):d.smoke_input(root/'smoke-manifest.json')
+    def test_dependency_patch(self):
+        blocks,_=d.upstream_patch_blocks()
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/'qwen3.py'
+            p.write_text('\n'.join('\n'.join(b) for b in blocks))
+            self.assertEqual(d.verify_dependency_patch(p)['required_kernel_version'],272622465)
+            p.write_text(p.read_text().replace('flash_attn_func','unpatched_attention'))
+            with self.assertRaises(RuntimeError):d.verify_dependency_patch(p)
+    def test_missing_attempts(self):
+        audit=d.attempt_coverage({'a_0':[[[1]]]}, {'a':{'test':[{},{}]}})
+        self.assertEqual(audit['missing_attempt_count'],3)
+        self.assertEqual(audit['missing_attempts']['a_0'],['attempt_2'])
+        self.assertEqual(audit['fallback_outputs'],['a_1'])
 if __name__=='__main__':unittest.main()

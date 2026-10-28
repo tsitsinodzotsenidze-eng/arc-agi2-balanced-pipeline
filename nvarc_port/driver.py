@@ -1,6 +1,7 @@
 """Packaging by default. Explicit competition rerun gate; no scientific-policy changes."""
 from __future__ import annotations
 import argparse
+import ast
 import hashlib
 import json
 import os
@@ -92,6 +93,69 @@ def check_payload(payload, tasks):
                 if any(not isinstance(r, list) or len(r) != len(grid[0]) or any(type(v) is not int or not 0 <= v <= 9 for v in r) for r in grid):
                     raise ValueError('Invalid grid cells')
 
+def smoke_input(manifest_path=None):
+    manifest_path = Path(manifest_path) if manifest_path else ROOT / 'smoke-manifest.json'
+    manifest = json.loads(manifest_path.read_text())
+    challenge = manifest_path.parent / manifest['challenges_file']
+    if hashlib.sha256(challenge.read_bytes()).hexdigest() != manifest['sha256']:
+        raise ValueError('Smoke challenge hash mismatch')
+    tasks = load_challenges(challenge)
+    if sorted(tasks) != manifest['task_ids'] or sum(len(t['test']) for t in tasks.values()) != manifest['test_outputs']:
+        raise ValueError('Smoke cohort mismatch')
+    return challenge.resolve(), tasks, manifest
+
+
+def upstream_patch_blocks():
+    verified_sources()
+    notebook = json.loads((ROOT / 'vendor/dependency-v2.ipynb').read_text())
+    patch = None
+    for cell in notebook['cells']:
+        source = ''.join(cell['source'])
+        if source.startswith('patch = '):
+            tree = ast.parse(source)
+            patch = ast.literal_eval(tree.body[0].value).decode()
+    if patch is None:
+        raise ValueError('Exact dependency v2 patch not found')
+    blocks, current = [], []
+    for line in patch.splitlines():
+        if line.startswith('+') and not line.startswith('+++'):
+            current.append(line[1:].strip())
+        elif current:
+            blocks.append(current); current = []
+    if current: blocks.append(current)
+    return blocks, hashlib.sha256(patch.encode()).hexdigest()
+
+
+def verify_dependency_patch(path):
+    # Verify exact added-code blocks from the hash-preserved author's v2 patch.
+    # This is a patch-content check, not a claim of hashing the entire dependency tree.
+    blocks, patch_hash = upstream_patch_blocks()
+    data = Path(path).read_bytes()
+    lines = [line.strip() for line in data.decode().splitlines()]
+    for block in blocks:
+        if not any(lines[i:i+len(block)] == block for i in range(len(lines)-len(block)+1)):
+            raise RuntimeError('Required author dependency-v2 Qwen3 patch block absent')
+    return {'required_kernel_version':272622465, 'required_notebook_version':2,
+            'upstream_patch_sha256':patch_hash, 'mounted_qwen3_sha256':hashlib.sha256(data).hexdigest()}
+
+
+def attempt_coverage(selected, tasks):
+    expected = {f'{key}_{i}' for key,t in tasks.items() for i in range(len(t['test']))}
+    present = {k for k,v in selected.items() if len(v)}
+    missing = {k: [f'attempt_{i+1}' for i in range(min(len(selected.get(k, [])),2),2)] for k in expected}
+    return {'candidate_outputs':len(present), 'expected_outputs':len(expected),
+            'fallback_outputs':sorted(expected-present),
+            'missing_attempts':{k:v for k,v in sorted(missing.items()) if v},
+            'missing_attempt_count':sum(map(len,missing.values()))}
+
+
+def validate_mode(mode, rerun):
+    if mode == 'competition' and not rerun:
+        raise RuntimeError('Competition execution requires actual Kaggle rerun')
+    if mode == 'smoke' and rerun:
+        raise RuntimeError('Smoke mode forbidden during competition rerun')
+
+
 def preflight(model, dependency):
     if sys.version_info[:2] != (3, 11):
         raise RuntimeError('Pinned source requires Python 3.11')
@@ -99,6 +163,7 @@ def preflight(model, dependency):
         raise RuntimeError('Missing attached model configuration/weights')
     if not (dependency / 'unsloth/models/qwen3.py').is_file():
         raise RuntimeError('Missing attached patched dependency output')
+    provenance = verify_dependency_patch(dependency / 'unsloth/models/qwen3.py')
     sys.path.insert(0, str(dependency))
     import torch
     if torch.__version__.split('+')[0].split('.')[:2] != ['2', '8'] or torch.version.cuda != '12.8':
@@ -112,19 +177,33 @@ def preflight(model, dependency):
     import flash_attn
     if not flash_attn.__version__.startswith('2.8.2'):
         raise RuntimeError('Flash Attention version mismatch')
+    return provenance
 
 def execute(args):
-    if os.environ.get('KAGGLE_IS_COMPETITION_RERUN','').lower() not in ('1','true'):
-        raise RuntimeError('Execution requires actual competition-rerun mode')
-    if args.end_time is None or args.end_time > time.time() + 12*3600-590:
-        raise RuntimeError('First-cell deadline required')
-    challenge = resolve_input(args.challenges, '/kaggle/input', '**/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json')
-    if 'arc-prize-2026-arc-agi-2' not in challenge.parts or challenge.name != 'arc-agi_test_challenges.json':
-        raise RuntimeError('Require current 2026 competition test challenges')
+    rerun = os.environ.get('KAGGLE_IS_COMPETITION_RERUN','').lower() in ('1','true')
+    validate_mode(args.mode, rerun)
+    if args.mode == 'smoke':
+        if args.challenges:
+            raise ValueError('Smoke uses only the fixed hash-checked challenge manifest')
+        challenge, tasks, manifest = smoke_input()
+        if not 1 <= args.smoke_seconds <= manifest['max_seconds']:
+            raise ValueError('Smoke deadline outside declared bound')
+        deadline = time.time() + args.smoke_seconds
+        args.end_time = min(args.end_time, deadline) if args.end_time else deadline
+        if Path(args.output).name == 'submission.json':
+            raise ValueError('Smoke must not write submission.json')
+    else:
+        if args.end_time is None or args.end_time > time.time() + 12*3600-590:
+            raise RuntimeError('First-cell deadline required')
+        challenge = resolve_input(args.challenges, '/kaggle/input', '**/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json')
+        if 'arc-prize-2026-arc-agi-2' not in challenge.parts or challenge.name != 'arc-agi_test_challenges.json':
+            raise RuntimeError('Require current 2026 competition test challenges')
+        tasks = load_challenges(challenge)
+    if args.end_time <= time.time():
+        raise RuntimeError('Budget exhausted before preflight')
     model = resolve_input(args.model, '/kaggle/input', '**/qwen3_4b_grids15_sft139/transformers/bfloat16/1')
     dep = resolve_input(args.dependencies, '/kaggle/usr/lib/notebooks', 'sorokin/pip_install_unsloth_flash_patch')
-    tasks = load_challenges(challenge)
-    preflight(model, dep)
+    dependency_provenance = preflight(model, dep)
     work = prepare(args.workdir)
     outputs, status = work/'outputs', work/'status'
     outputs.mkdir(); status.mkdir()
@@ -142,7 +221,7 @@ def execute(args):
         (work/'diagnostics.json').write_text(json.dumps({'failure':'global_deadline','worker_returncode':process.returncode}))
         raise RuntimeError('Global deadline: terminated worker process group')
     completed = {json.loads(line)['task_id'] for p in status.glob('*.jsonl') for line in p.read_text().splitlines()}
-    diagnostics = {'worker_returncode':returncode,'completed_tasks':len(completed),'expected_tasks':len(tasks),'missing_tasks':sorted(set(tasks)-completed)}
+    diagnostics = {'mode':args.mode, 'dependency_provenance':dependency_provenance, 'worker_returncode':returncode,'completed_tasks':len(completed),'expected_tasks':len(tasks),'missing_tasks':sorted(set(tasks)-completed)}
     (work/'diagnostics.json').write_text(json.dumps(diagnostics,indent=2))
     if returncode or completed != set(tasks):
         raise RuntimeError('Worker failure/incomplete processing; inspect diagnostics.json')
@@ -155,7 +234,7 @@ def execute(args):
     selected = decoder.run_selection_algo()
     expected = {f'{key}_{i}' for key,t in tasks.items() for i in range(len(t['test']))}
     present = {k for k,v in selected.items() if len(v)}
-    diagnostics.update(candidate_outputs=len(present),expected_outputs=len(expected),fallback_outputs=sorted(expected-present))
+    diagnostics.update(attempt_coverage(selected,tasks))
     (work/'diagnostics.json').write_text(json.dumps(diagnostics,indent=2))
     if not present or not present <= expected:
         raise RuntimeError('No generated candidates or unexpected decoded keys')
@@ -165,13 +244,15 @@ def execute(args):
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument('--execute',action='store_true')
+    p.add_argument('--mode',choices=('package','smoke','competition'),default='package')
+    p.add_argument('--smoke-seconds',type=int,default=900)
     p.add_argument('--end-time',type=float)
     p.add_argument('--challenges');p.add_argument('--model');p.add_argument('--dependencies')
     p.add_argument('--workdir',default='/kaggle/working/nvarc2026-port')
-    p.add_argument('--output',default='/kaggle/working/submission.json')
+    p.add_argument('--output')
     args=p.parse_args()
-    if args.execute: execute(args)
+    args.output = args.output or ('/kaggle/working/smoke-predictions.json' if args.mode == 'smoke' else '/kaggle/working/submission.json')
+    if args.mode != 'package': execute(args)
     else:
         prepare(args.workdir)
         print('Packaging only: no model, torch, Unsloth, GPU or submission invoked.')

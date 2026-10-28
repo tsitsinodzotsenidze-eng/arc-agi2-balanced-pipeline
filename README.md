@@ -17,7 +17,7 @@ is packaged, with runtime validation still pending.
 - [Raw results](evidence/public-v1/results.json)
 - [Continuation checkpoint](docs/CONTINUATION_2026-10-29.md)
 
-Tests: `python -m pytest -q` — 64 passed, including five CPU-only NVARC wrapper
+Tests: `python -m pytest -q` — 68 passed, including nine CPU-only NVARC wrapper
 checks, on Python 3.12. Solver inference is CPU-only,
 offline, and receives no test-output labels. Official competition submission
 is a separate human action; none was performed for this work.

@@ -7,10 +7,10 @@ import zipfile
 root=Path(__file__).resolve().parent
 buf=io.BytesIO()
 with zipfile.ZipFile(buf,'w',zipfile.ZIP_DEFLATED) as z:
-    for name in ['driver.py','SOURCE_HASHES.json','NOTICE','LICENSE','vendor/author-v10.ipynb','vendor/dependency-v2.ipynb']:
+    for name in ['driver.py','SOURCE_HASHES.json','NOTICE','LICENSE','smoke-challenges.json','smoke-manifest.json','vendor/author-v10.ipynb','vendor/dependency-v2.ipynb']:
         z.writestr(name,(root/name).read_bytes())
 encoded=base64.b64encode(buf.getvalue()).decode()
-first='import time\nPORT_DEADLINE = time.time() + 12 * 3600 - 600\n'
+first="import time\nPORT_STARTED = time.time()\nPORT_DEADLINE = PORT_STARTED + 12 * 3600 - 600\nPORT_MODE = 'package'  # Explicitly choose 'smoke' only for an authorized GPU check.\nSMOKE_SECONDS = 900\n"
 second=f'''# Attributed source packaging only unless Kaggle competition rerun is active.
 import base64, io, os, pathlib, subprocess, sys, zipfile
 bundle = {encoded!r}
@@ -20,7 +20,13 @@ with zipfile.ZipFile(io.BytesIO(base64.b64decode(bundle))) as archive:
     archive.extractall(port_root)
 command = [sys.executable, str(port_root / 'driver.py'), '--workdir', '/kaggle/working/nvarc2026-runtime']
 if os.environ.get('KAGGLE_IS_COMPETITION_RERUN', '').lower() in ('1', 'true'):
-    command += ['--execute', '--end-time', str(PORT_DEADLINE)]
+    if PORT_MODE == 'smoke': raise RuntimeError('Smoke choice prohibited in competition rerun')
+    command += ['--mode', 'competition', '--end-time', str(PORT_DEADLINE)]
+else:
+    if PORT_MODE not in ('package','smoke'): raise ValueError('Choose package or smoke')
+    command += ['--mode', PORT_MODE]
+    if PORT_MODE == 'smoke':
+        command += ['--end-time', str(min(PORT_DEADLINE, PORT_STARTED+SMOKE_SECONDS)), '--smoke-seconds', str(SMOKE_SECONDS)]
 subprocess.run(command, check=True)
 '''
 nb={'nbformat':4,'nbformat_minor':5,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'kaggle':{'isInternetEnabled':False,'isGpuEnabled':False}},'cells':[{'cell_type':'code','execution_count':None,'metadata':{},'outputs':[],'source':s.splitlines(True)} for s in (first,second)]}

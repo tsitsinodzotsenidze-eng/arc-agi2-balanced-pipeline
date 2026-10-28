@@ -32,3 +32,32 @@ changes. It never executes notebook cells wholesale. Only the four attributed
 Python modules run after the explicit rerun gateway and preflight. Generated
 pickle files are read only from the fresh worker output directory. See NOTICE,
 LICENSE and SOURCE_HASHES.json for provenance.
+
+## Explicit smoke mode
+
+The notebook's first cell now offers `PORT_MODE = 'package'` (default) or
+`'smoke'`. Accelerator remains disabled in saved metadata. A reviewed GPU smoke
+requires explicit accelerator selection and mode change; neither is performed
+by this preparation. CLI equivalent: `--mode smoke --smoke-seconds 900`.
+Competition execution is `--mode competition` and still requires genuine
+Kaggle rerun status. No mode sets or spoofs that status.
+
+Smoke uses only the bundled hash-checked manifest: one synthetic identity task
+with two demonstration pairs and two test inputs, no test outputs. It is a
+runtime/plumbing check, not accuracy evaluation. Default deadline900s, maximum
+1800s; notebook deadline starts in its first cell. Output is
+`smoke-predictions.json`, never `submission.json`. Model generation, adaptation,
+ranking and four-worker settings remain the author's unchanged policies.
+
+Dependency requirement: author notebook version2 / attached kernelVersion
+272622465. Before importing the model stack, exact added-code blocks from its
+hash-preserved Qwen3 patch must appear in the mounted qwen3.py. Diagnostics
+record both upstream patch SHA256 and mounted file SHA256. This checks patch
+content, not the identity of every transitive dependency; actual runtime must
+still satisfy the pinned version/ABI checks. Diagnostics now enumerate missing
+attempt_1/attempt_2 slots, including a lone candidate's second fallback.
+
+A new Kaggle CPU image was independently observed by root as Python3.13.15 /
+Torch2.11.0+cpu. That is incompatible with this pinned carrier; it does not
+establish the GPU image's ABI. Preserve/verify the author's environment rather
+than substituting package versions heuristically. No GPU run has occurred.

@@ -9,10 +9,10 @@
   tune it against the revealed evaluation targets.
 - An attributed, separately named NVARC carrier preserves author v10 and
   dependency v2 with SHA256 receipts, Apache-2.0 license and NOTICE. It is
-  preparation only: no weights downloaded, upstream model stack imported,
-  GPU run, official ARC2 submission or publication performed here.
-- Root ran the complete test suite after smoke-mode preparation: **68 passed**,
-  including nine CPU-only wrapper checks. Generated modules compile without importing
+  preparation only: no author weights opened by inspection code, no model
+  initialization/training/inference, official ARC2 submission or publication.
+- Root ran the complete test suite after input-inspection preparation: **69 passed**,
+  including ten CPU-only wrapper checks. Generated modules compile without importing
   torch/Unsloth. Packaging notebook GPU metadata is disabled.
 - The paper/HCI inventory is stored separately from this code repository.
   No Zenodo deposit, new paper repository, visibility change or main merge.
@@ -52,11 +52,54 @@ about the GPU image. The completed interactive CPU session was stopped.
 The quick-saved notebook version retains code, not its interactive outputs;
 the JSON here is explicitly a transcription of the observed UI output.
 
-Opening the author's Copy & Edit route displays a binding ARC Prize 2025
-competition-rules acceptance dialog. No acceptance was given and no author
-copy was created. User confirmation is required for that route. The old 2025
-dataset is not needed for the planned 2026 inference. Do not treat the rules
-prompt as proof that the original runtime can or cannot be preserved by a fork.
+The initial author-model Copy & Edit route displayed a binding ARC Prize2025
+rules dialog. It was declined. That route is abandoned; no 2025 agreement or
+2025 competition input is needed for the actual carrier.
+
+## Resolved environment-copy path
+
+Both exact upstream notebooks specify `dockerImageVersionId:31090`. Copying the
+dependency-v2 utility notebook, which has no competition/data inputs, succeeds
+without an old-competition rules prompt and preserves the original image.
+A separate private pinned-runtime probe replaced all copied code with our own
+inspection code, InternetOFF. A brief T4x2 session observed Python3.11.13 and
+the exact author Docker digest. Base torch is2.6.0+cu124 / CUDA12.4 and
+transformers4.52.4; author inference may obtain torch2.8 from the attached
+dependency output. This still requires verification after mounting that output.
+No author model code, model loading or package installation was executed in
+this probe. The GPU session was stopped after the completed inspection.
+
+The real private candidate is `ARC2 2026 NVARC Candidate`. Import of the generated
+carrier metadata honored all three inputs together: ARC Prize2026 ARC-AGI-2
+(source133469), dependency kernelVersion272622465, model version627758.
+Accelerator=None, InternetOFF and the original image pin were visibly verified.
+The first actual Kaggle CPU packaging run passed (0.193s, returncode0), compiling
+the attributed modules without importing torch/Unsloth or executing the model.
+The next package includes pure-stdlib mounted-input inspection, to record actual
+dependency paths, package metadata and Qwen3 patch identity before model use.
+
+## Durable saved package and pending smoke action
+
+Saved candidate Version1 is successful (71.7s total Kaggle run):
+https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-candidate?scriptVersionId=363290856
+
+Its package-only inspection verifies the actual dependency root already used
+by the wrapper, the exact required Qwen3 patch blocks and model config path.
+Mounted metadata contains torch2.8.0, transformers4.55.4, Unsloth2025.9.7,
+zoo2025.9.9, Flash Attention2.8.2 and NVIDIA CUDA runtime12.8.90. Thus the
+base-image torch2.6 observation is not the complete attached runtime. Package
+metadata and patch verification do not establish successful GPU imports or
+model execution. See `receipt_provenance.md` beside the retained receipt.
+
+The builder now also emits a separately named smoke notebook. The former
+pinned-runtime probe draft was reused as private `ARC2 2026 NVARC Smoke Check`:
+https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-smoke-check/edit
+
+The UI visibly has mode=smoke, budget900s, all three current inputs, GPU L4 x4,
+InternetOFF, original image pin, and Draft Session OFF. It has not been run or
+submitted. The saved candidate Version1 remains package-only. Before its
+first third-party model/binary execution, obtain the required browser action-
+time confirmation; no old-competition rule acceptance is required.
 
 Any smoke result is an engineering compatibility check. NVARC training includes
 public-evaluation-derived material; those tasks cannot establish fresh neural

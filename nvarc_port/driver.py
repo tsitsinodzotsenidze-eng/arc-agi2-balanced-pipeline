@@ -242,6 +242,38 @@ def execute(args):
     check_payload(payload,tasks)
     Path(args.output).write_text(json.dumps(payload))
 
+def inspect_inputs(roots=('/kaggle/input', '/kaggle/usr/lib/notebooks')):
+    """Read source/package metadata only. Never import installed model packages."""
+    import importlib.metadata
+    report = {'searched_roots':list(map(str,roots)), 'dependency_candidates':[], 'model_config_parents':[]}
+    seen = set()
+    for root in map(Path, roots):
+        if not root.exists():
+            continue
+        for source in sorted(root.glob('**/unsloth/models/qwen3.py')):
+            dependency = source.parents[2].resolve()
+            if str(dependency) in seen:
+                continue
+            seen.add(str(dependency))
+            entry = {'root':str(dependency),'qwen3_path':str(source)}
+            try:
+                entry['patch_receipt'] = verify_dependency_patch(source)
+                entry['patch_verified'] = True
+            except (ValueError,RuntimeError,OSError) as error:
+                entry['patch_verified'] = False
+                entry['patch_error'] = str(error)
+            entry['package_versions'] = sorted(
+                [{'name':dist.metadata.get('Name',''), 'version':dist.version}
+                 for dist in importlib.metadata.distributions(path=[str(dependency)])],
+                key=lambda item:(item['name'].lower(),item['version']))
+            report['dependency_candidates'].append(entry)
+        for model in sorted(root.glob('**/qwen3_4b_grids15_sft139/transformers/bfloat16/1')):
+            if (model/'config.json').is_file():
+                report['model_config_parents'].append(str(model.resolve()))
+    report['model_config_parents'] = sorted(set(report['model_config_parents']))
+    return report
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--mode',choices=('package','smoke','competition'),default='package')
@@ -250,10 +282,18 @@ def main():
     p.add_argument('--challenges');p.add_argument('--model');p.add_argument('--dependencies')
     p.add_argument('--workdir',default='/kaggle/working/nvarc2026-port')
     p.add_argument('--output')
+    p.add_argument('--inspect-inputs',action='store_true')
     args=p.parse_args()
+    if args.inspect_inputs and args.mode != 'package':
+        p.error('--inspect-inputs is supported only in package mode')
     args.output = args.output or ('/kaggle/working/smoke-predictions.json' if args.mode == 'smoke' else '/kaggle/working/submission.json')
     if args.mode != 'package': execute(args)
     else:
         prepare(args.workdir)
+        if args.inspect_inputs:
+            report = inspect_inputs()
+            report_path = Path('/kaggle/working/nvarc-input-inspection.json')
+            report_path.write_text(json.dumps(report,indent=2) + '\n')
+            print(json.dumps(report,indent=2))
         print('Packaging only: no model, torch, Unsloth, GPU or submission invoked.')
 if __name__=='__main__':main()

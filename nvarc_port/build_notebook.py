@@ -25,9 +25,26 @@ if os.environ.get('KAGGLE_IS_COMPETITION_RERUN', '').lower() in ('1', 'true'):
 else:
     if PORT_MODE not in ('package','smoke'): raise ValueError('Choose package or smoke')
     command += ['--mode', PORT_MODE]
+    if PORT_MODE == 'package': command += ['--inspect-inputs']
     if PORT_MODE == 'smoke':
         command += ['--end-time', str(min(PORT_DEADLINE, PORT_STARTED+SMOKE_SECONDS)), '--smoke-seconds', str(SMOKE_SECONDS)]
 subprocess.run(command, check=True)
 '''
-nb={'nbformat':4,'nbformat_minor':5,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'kaggle':{'isInternetEnabled':False,'isGpuEnabled':False}},'cells':[{'cell_type':'code','execution_count':None,'metadata':{},'outputs':[],'source':s.splitlines(True)} for s in (first,second)]}
+kaggle_metadata = {
+    'accelerator':'none', 'isInternetEnabled':False, 'isGpuEnabled':False,
+    'language':'python', 'sourceType':'notebook', 'dockerImageVersionId':31090,
+    'dataSources':[
+        {'sourceType':'competition','sourceId':133469},
+        {'sourceType':'kernelVersion','sourceId':272622465},
+        {'sourceType':'modelInstanceVersion','sourceId':627758,
+         'modelInstanceId':472720,'modelId':488596},
+    ],
+}
+nb={'nbformat':4,'nbformat_minor':5,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'kaggle':kaggle_metadata},'cells':[{'cell_type':'code','execution_count':None,'metadata':{},'outputs':[],'source':s.splitlines(True)} for s in (first,second)]}
 (root/'NVARC_2026_PORT_CANDIDATE.ipynb').write_text(json.dumps(nb,indent=1)+'\n')
+
+# Separate engineering smoke artifact; never use as a competition submission.
+smoke = json.loads(json.dumps(nb))
+smoke['cells'][0]['source'] = first.replace("PORT_MODE = 'package'", "PORT_MODE = 'smoke'").splitlines(True)
+smoke['metadata']['kaggle'].update(accelerator='nvidiaL4', isGpuEnabled=True)
+(root/'NVARC_2026_SMOKE_CHECK.ipynb').write_text(json.dumps(smoke,indent=1)+'\n')

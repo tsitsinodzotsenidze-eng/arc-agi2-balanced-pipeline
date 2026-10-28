@@ -63,4 +63,21 @@ class WrapperTests(unittest.TestCase):
         self.assertEqual(audit['missing_attempt_count'],3)
         self.assertEqual(audit['missing_attempts']['a_0'],['attempt_2'])
         self.assertEqual(audit['fallback_outputs'],['a_1'])
+    def test_input_inspection_metadata_only(self):
+        before=set(sys.modules)
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t)
+            dep=root/'mounted'
+            source=dep/'unsloth/models/qwen3.py';source.parent.mkdir(parents=True)
+            blocks,_=d.upstream_patch_blocks()
+            source.write_text('\n'.join('\n'.join(b) for b in blocks))
+            metadata=dep/'torch-2.8.0.dist-info';metadata.mkdir()
+            (metadata/'METADATA').write_text('Metadata-Version: 2.1\nName: torch\nVersion: 2.8.0\n')
+            model=root/'models/qwen3_4b_grids15_sft139/transformers/bfloat16/1'
+            model.mkdir(parents=True);(model/'config.json').write_text('{}')
+            report=d.inspect_inputs([root])
+            self.assertTrue(report['dependency_candidates'][0]['patch_verified'])
+            self.assertEqual(report['dependency_candidates'][0]['package_versions'],[{'name':'torch','version':'2.8.0'}])
+            self.assertEqual(report['model_config_parents'],[str(model.resolve())])
+        self.assertFalse({'torch','unsloth','transformers'} & (set(sys.modules)-before))
 if __name__=='__main__':unittest.main()

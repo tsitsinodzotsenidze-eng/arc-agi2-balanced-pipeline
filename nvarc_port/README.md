@@ -1,9 +1,12 @@
 # NVARC 2026 port candidate (unvalidated)
 
-This is an attributed baseline carrier, not a new algorithm. No GPU/model run
-has been performed. Ordinary notebook execution packages and compiles only;
+This is an attributed baseline carrier, not a new algorithm. No model
+initialization, training or inference has been performed. A separate brief
+T4x2 session ran only our runtime inspector and was stopped. Ordinary notebook
+execution packages and compiles only;
 it does not import torch/Unsloth or request model weights. Only actual Kaggle
-competition-rerun mode triggers execution. Do not submit until independently
+competition-rerun mode or explicit bounded smoke mode triggers model execution.
+Do not submit until independently
 reviewed and the runtime compatibility blocker is resolved.
 
 `python -m unittest discover -s nvarc_port -p test_wrapper.py -v` runs CPU-only
@@ -16,6 +19,12 @@ Its first cell starts the 12h-minus-600s deadline. Attached inputs must be the
 2026 competition, author BF16 model version1 and dependency notebook version2.
 GPU is disabled in the packaging notebook metadata. A later, separately
 reviewed execution version must explicitly select L4 x4 in Kaggle settings.
+The generated metadata names only the 2026 competition (source133469), exact
+dependency kernelVersion272622465, model627758 and original Docker image31090.
+Both vendored upstream notebooks name image31090. A competition-free copy of
+the dependency notebook can preserve this image without attaching ARC2025.
+Verify all three inputs and the environment in Kaggle after import; metadata
+is a request, not proof that the current UI honored it.
 The dependency source is prebuilt output; no online pip install is attempted.
 Explicit challenge/model/dependency overrides are supported by the driver.
 
@@ -29,13 +38,18 @@ labels are rejected, and no label-based selector benchmark runs.
 
 The driver checks hash-preserved vendor sources and applies guarded carrier
 changes. It never executes notebook cells wholesale. Only the four attributed
-Python modules run after the explicit rerun gateway and preflight. Generated
+Python modules run after the explicit mode gateway and preflight. Generated
 pickle files are read only from the fresh worker output directory. See NOTICE,
 LICENSE and SOURCE_HASHES.json for provenance.
 
 ## Explicit smoke mode
 
-The notebook's first cell now offers `PORT_MODE = 'package'` (default) or
+The builder also produces a separately named `NVARC_2026_SMOKE_CHECK.ipynb`:
+mode=smoke, budget900s, requested L4 x4, InternetOFF, the same exact three inputs
+and image31090. It is for a separate private smoke notebook only. Actual
+competition rerun rejects this mode; it must never be submitted for scoring.
+
+The main candidate's first cell offers `PORT_MODE = 'package'` (default) or
 `'smoke'`. Accelerator remains disabled in saved metadata. A reviewed GPU smoke
 requires explicit accelerator selection and mode change; neither is performed
 by this preparation. CLI equivalent: `--mode smoke --smoke-seconds 900`.
@@ -60,4 +74,17 @@ attempt_1/attempt_2 slots, including a lone candidate's second fallback.
 A new Kaggle CPU image was independently observed by root as Python3.13.15 /
 Torch2.11.0+cpu. That is incompatible with this pinned carrier; it does not
 establish the GPU image's ABI. Preserve/verify the author's environment rather
-than substituting package versions heuristically. No GPU run has occurred.
+than substituting package versions heuristically. A competition-free dependency
+notebook copy successfully preserved Python3.11 and the exact original Docker
+digest in a brief runtime-only T4x2 probe. Base torch2.6/CUDA12.4 differed from
+the author inference requirements; attached dependency output is inspected
+separately before importing its torch2.8 build. No model run has occurred.
+
+Packaging now includes `--inspect-inputs`: source/package metadata is inspected
+only under `/kaggle/input` and `/kaggle/usr/lib/notebooks`. The report records
+matching dependency roots, Qwen3 patch receipts, installed-distribution metadata
+versions and model config parent paths in
+`/kaggle/working/nvarc-input-inspection.json`. It does not import torch,
+Unsloth or the model, and does not open weights. This establishes actual mount
+locations before any authorized GPU check. Missing/invalid patch candidates
+are reported explicitly.

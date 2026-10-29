@@ -48,8 +48,12 @@ and placeholder receipt before preflight, processes the current challenge
 cohort and atomically writes validated inference output on success. It never
 spoofs Kaggle rerun status. Smoke output remains separately named.
 Astra independently reviewed this builder/exporter integration with no material
-blocker. Save the official carrier as a successful new version and inspect
-its saved hardware, inputs and file before human final Submit.
+blocker. Saved Version2 script363494251 completed successfully in119.5seconds, with
+L4x4 and selectable submission.json. Its prepared competition form accepted
+the selected version/file, showed one remaining daily attempt and was left
+for human final Submit. See `../evidence/submission-package-20261029/`.
+This re-import required root to restore the three exact inputs through the UI;
+do not assume that import metadata alone will preserve attachments.
 
 ## Tests and CI repair
 
@@ -64,7 +68,9 @@ and 0b4dc87, not a Kaggle submission. Latest run40767338231 stopped in
 flat-layout discovery of evidence, nvarc_port and arc_agi2_pipeline. The project
 now explicitly includes only `arc_agi2_pipeline*` in its Python distribution;
 the attributed notebook carrier/evidence remain separate repository artifacts.
-Local editable installation succeeds. Remote CI must be checked on the new head.
+Local editable installation succeeds. Remote run40874952780 passed on commit
+7a918d461c039616caa23fb00aa4c427ffc0cd83: Python3.10 and Python3.11 each
+passed all72 tests. See `../evidence/ci-20261029.json`.
 
 ## Environment-copy history
 

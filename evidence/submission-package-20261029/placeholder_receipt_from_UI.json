@@ -1,0 +1,11 @@
+{
+  "packaging_placeholder": true,
+  "purpose": "File-selection artifact only; NOT inference or performance evidence",
+  "challenge_path": "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json",
+  "challenges_sha256": "232264c58f825ee77327dcfc9f4e5cb2f83b8d997eb69032be1bf2205bbe1a83",
+  "driver_sha256": "1eec5bb8db719e45d2e07af80b24db9b50d2214254b79445384d4852486f5fd4",
+  "vendor_source_manifest_sha256": "959e834f587789ed46d191d541f65501738119957fcbd22f504cb5aaaf0420b8",
+  "tasks": 240,
+  "test_outputs": 259,
+  "attempts_per_output": 2
+}

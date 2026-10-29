@@ -1,0 +1,15 @@
+{
+  "observed_date_georgia": "2026-10-29",
+  "approximate_observation_time_georgia": "17:00–17:05",
+  "source": "read-only Kaggle Submissions accessibility state",
+  "url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions",
+  "notebook": "ARC2 2026 NVARC Candidate",
+  "version_name": "V2 package exporter L4x4 offline 2026-10-29",
+  "scriptVersionId": 363494251,
+  "observed_status": "Notebook Running",
+  "ui_relative_age": "10 minutes ago",
+  "public_score_displayed": false,
+  "final_selection_count": "0/2",
+  "description": "Attributed NVARC v10 baseline port for ARC-AGI-2 2026; original model policy preserved; pinned offline runtime; L4 x4.",
+  "action_taken": "Read only; no submit, cancel, selection or settings change"
+}

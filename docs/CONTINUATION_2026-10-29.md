@@ -86,3 +86,19 @@ The current carrier uses only the 2026 competition. ARC3 was not modified.
 NVARC training includes public-evaluation-derived material, so those public
 items cannot establish fresh neural generalization. Preserve source credit.
 Official final Submit remains exclusively a human action.
+
+## Official submission observed and additional-study plan
+
+On 29 October at about 17:00–17:05 Georgia time, the competition Submissions
+page showed the Version2 candidate as Notebook Running, about ten minutes
+old, with no score displayed. Human final Submit is now independently
+observed as an existing submission; the active run was left unchanged.
+See `../evidence/arc2-submission-observed-20261029.json`.
+
+Cici requested up to three further official attempts for research material.
+Astra reviewed a three-arm controlled update-strength proposal:
+[protocol v0.1](ARC2_UPDATE_STRENGTH_PROTOCOL_2026-10-29.md).
+Target B1 full rate on30October, Z zero rate on31October, H half rate
+on1November; all three pin Python hashing before driver launch. Original B0
+is outside those matched contrasts. Candidate code/engineering checks are
+still to be implemented; no extra official or GPU runs were launched.

@@ -179,9 +179,61 @@ def preflight(model, dependency):
         raise RuntimeError('Flash Attention version mismatch')
     return provenance
 
+def placeholder_receipt_path(output):
+    return Path(output).with_name(Path(output).stem + '-placeholder-provenance.json')
+
+
+def clear_competition_outputs(output):
+    # Called before mount resolution/preflight, so failed reruns cannot retain a placeholder.
+    for path in (Path(output), placeholder_receipt_path(output)):
+        path.unlink(missing_ok=True)
+
+
+def atomic_json(path, payload):
+    import tempfile
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', dir=path.parent,
+                                         prefix='.' + path.name, delete=False) as handle:
+            temporary = Path(handle.name)
+            json.dump(payload, handle, sort_keys=True)
+            handle.write('\n')
+        temporary.replace(path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
+def export_placeholder(challenge, output, rerun=False):
+    if rerun or os.environ.get('KAGGLE_IS_COMPETITION_RERUN','').lower() in ('1','true'):
+        raise RuntimeError('Packaging placeholder prohibited during competition rerun')
+    challenge = Path(challenge).resolve()
+    if 'arc-prize-2026-arc-agi-2' not in challenge.parts or challenge.name != 'arc-agi_test_challenges.json':
+        raise ValueError('Placeholder requires current 2026 test challenges')
+    tasks = load_challenges(challenge)
+    payload = {key:[{'attempt_1':[[0]],'attempt_2':[[0]]} for _ in task['test']]
+               for key,task in tasks.items()}
+    check_payload(payload,tasks)
+    receipt = {'packaging_placeholder':True,
+               'purpose':'File-selection artifact only; NOT inference or performance evidence',
+               'challenge_path':str(challenge),
+               'challenges_sha256':hashlib.sha256(challenge.read_bytes()).hexdigest(),
+               'driver_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+               'vendor_source_manifest_sha256':hashlib.sha256((ROOT/'SOURCE_HASHES.json').read_bytes()).hexdigest(),
+               'tasks':len(tasks),'test_outputs':sum(len(t['test']) for t in tasks.values()),
+               'attempts_per_output':2}
+    atomic_json(placeholder_receipt_path(output),receipt)
+    atomic_json(output,payload)
+    return receipt
+
+
 def execute(args):
     rerun = os.environ.get('KAGGLE_IS_COMPETITION_RERUN','').lower() in ('1','true')
     validate_mode(args.mode, rerun)
+    if args.mode == 'competition':
+        clear_competition_outputs(args.output)
     if args.mode == 'smoke':
         if args.challenges:
             raise ValueError('Smoke uses only the fixed hash-checked challenge manifest')
@@ -240,7 +292,7 @@ def execute(args):
         raise RuntimeError('No generated candidates or unexpected decoded keys')
     payload = data.get_submission(selected)
     check_payload(payload,tasks)
-    Path(args.output).write_text(json.dumps(payload))
+    atomic_json(args.output,payload)
 
 def inspect_inputs(roots=('/kaggle/input', '/kaggle/usr/lib/notebooks')):
     """Read source/package metadata only. Never import installed model packages."""
@@ -283,7 +335,12 @@ def main():
     p.add_argument('--workdir',default='/kaggle/working/nvarc2026-port')
     p.add_argument('--output')
     p.add_argument('--inspect-inputs',action='store_true')
+    p.add_argument('--export-placeholder',action='store_true')
     args=p.parse_args()
+    if args.export_placeholder and args.mode != 'package':
+        p.error('--export-placeholder is supported only in package mode')
+    if args.export_placeholder and os.environ.get('KAGGLE_IS_COMPETITION_RERUN','').lower() in ('1','true'):
+        p.error('Packaging placeholder prohibited during competition rerun')
     if args.inspect_inputs and args.mode != 'package':
         p.error('--inspect-inputs is supported only in package mode')
     args.output = args.output or ('/kaggle/working/smoke-predictions.json' if args.mode == 'smoke' else '/kaggle/working/submission.json')
@@ -295,5 +352,8 @@ def main():
             report_path = Path('/kaggle/working/nvarc-input-inspection.json')
             report_path.write_text(json.dumps(report,indent=2) + '\n')
             print(json.dumps(report,indent=2))
-        print('Packaging only: no model, torch, Unsloth, GPU or submission invoked.')
+        if args.export_placeholder:
+            challenge = resolve_input(args.challenges, '/kaggle/input', '**/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json')
+            print(json.dumps(export_placeholder(challenge,args.output),indent=2))
+        print('Packaging only: no model, torch, Unsloth, GPU or inference invoked.')
 if __name__=='__main__':main()

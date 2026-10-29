@@ -1,6 +1,6 @@
 # ARC-AGI-2 Strong Balanced Competitive Pipeline
 
-## Current checkpoint — 28 October 2026
+## Current checkpoint — 29 October 2026
 
 The repository now includes a bounded, standard-library symbolic program
 solver and a Kaggle bundled-challenges adapter. One predeclared public pilot
@@ -8,7 +8,8 @@ compared geometric depth 1 versus depth 2: both scored **0/167 test outputs**
 on 120 public evaluation tasks, with no demonstration-consistent programs.
 This records a grammar-coverage limit; v1 is **not ready as a meaningful
 competition candidate**. A separate attributed [NVARC port](nvarc_port/README.md)
-is packaged, with runtime validation still pending.
+passed a bounded synthetic GPU runtime smoke check; official scoring and
+full-cohort completion remain untested.
 
 - [Frozen protocol](docs/EXPERIMENT_PROTOCOL_2026-10-28.md)
 - [Results and reproduction](docs/RESULTS_PUBLIC_V1_2026-10-28.md)
@@ -16,8 +17,9 @@ is packaged, with runtime validation still pending.
 - [Public data provenance](docs/DATA_PROVENANCE.md)
 - [Raw results](evidence/public-v1/results.json)
 - [Continuation checkpoint](docs/CONTINUATION_2026-10-29.md)
+- [Synthetic GPU smoke evidence](evidence/smoke-20261029/README.md)
 
-Tests: `python -m pytest -q` — 69 passed, including ten CPU-only NVARC wrapper
+Tests: `python -m pytest -q` — 72 passed, including thirteen CPU-only NVARC wrapper
 checks, on Python 3.12. Solver inference is CPU-only,
 offline, and receives no test-output labels. Official competition submission
 is a separate human action; none was performed for this work.

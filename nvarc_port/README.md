@@ -1,13 +1,35 @@
-# NVARC 2026 port candidate (unvalidated)
+# NVARC 2026 port candidate
 
-This is an attributed baseline carrier, not a new algorithm. No model
-initialization, training or inference has been performed. A separate brief
-T4x2 session ran only our runtime inspector and was stopped. Ordinary notebook
+The first bounded synthetic GPU smoke completed successfully on 29 October 2026:
+one task, both first-attempt outputs equal the declared identity inputs;
+second-attempt slots retain the author's [[0]] fallback. Model pipeline
+wall time 429.719s. This validates small synthetic runtime plumbing, not ARC2
+benchmark accuracy, full hidden-cohort completion or official scoring.
+See `../evidence/smoke-20261029/` for the exact executed-source binding.
+
+The builder produces three distinct artifacts:
+
+| Notebook | Ordinary execution | Accelerator request |
+| --- | --- | --- |
+| `NVARC_2026_PORT_CANDIDATE.ipynb` | CPU package/input inspection | None |
+| `NVARC_2026_SMOKE_CHECK.ipynb` | Fixed synthetic smoke, budget900s | L4x4 |
+| `NVARC_2026_SUBMISSION_CANDIDATE.ipynb` | Package + labeled submission placeholder | L4x4 |
+
+The submission carrier uses genuine competition-rerun mode for model inference;
+ordinary packaging only creates the selectable file. It never reports those
+[[0]] placeholders as predictions or evidence of performance. Final official
+Submit is a separate human action.
+
+This is an attributed baseline carrier, not a new algorithm. A separate brief
+T4x2 session ran only our runtime inspector and was stopped. The later L4x4
+synthetic smoke initialized/trained/decoded the model and its session was
+stopped after archiving results. Ordinary package-mode notebook
 execution packages and compiles only;
 it does not import torch/Unsloth or request model weights. Only actual Kaggle
 competition-rerun mode or explicit bounded smoke mode triggers model execution.
-Do not submit until independently
-reviewed and the runtime compatibility blocker is resolved.
+Astra independently reviewed the carrier and exporter. The tiny smoke resolves
+the observed runtime compatibility gate; it does not validate hidden-cohort
+completion or predict an official score.
 
 `python -m unittest discover -s nvarc_port -p test_wrapper.py -v` runs CPU-only
 wrapper checks. `python nvarc_port/driver.py --workdir /tmp/a-new-port-directory`
@@ -51,8 +73,8 @@ competition rerun rejects this mode; it must never be submitted for scoring.
 
 The main candidate's first cell offers `PORT_MODE = 'package'` (default) or
 `'smoke'`. Accelerator remains disabled in saved metadata. A reviewed GPU smoke
-requires explicit accelerator selection and mode change; neither is performed
-by this preparation. CLI equivalent: `--mode smoke --smoke-seconds 900`.
+requires explicit accelerator selection and mode change. The separately named
+smoke notebook supplies those requested settings. CLI equivalent: `--mode smoke --smoke-seconds 900`.
 Competition execution is `--mode competition` and still requires genuine
 Kaggle rerun status. No mode sets or spoofs that status.
 
@@ -78,7 +100,8 @@ than substituting package versions heuristically. A competition-free dependency
 notebook copy successfully preserved Python3.11 and the exact original Docker
 digest in a brief runtime-only T4x2 probe. Base torch2.6/CUDA12.4 differed from
 the author inference requirements; attached dependency output is inspected
-separately before importing its torch2.8 build. No model run has occurred.
+separately before importing its torch2.8 build. The completed synthetic smoke
+subsequently verified this import path and GPU execution.
 
 Packaging now includes `--inspect-inputs`: source/package metadata is inspected
 only under `/kaggle/input` and `/kaggle/usr/lib/notebooks`. The report records
@@ -88,3 +111,14 @@ versions and model config parent paths in
 Unsloth or the model, and does not open weights. This establishes actual mount
 locations before any authorized GPU check. Missing/invalid patch candidates
 are reported explicitly.
+
+`--export-placeholder` is an explicit package-only option, disabled by default.
+It reads only current2026 test challenges and writes schema-valid [[0]] attempts
+for file selection, plus `submission-placeholder-provenance.json` with source/
+challenge hashes and task/test counts. This is explicitly not inference or
+performance evidence. It refuses genuine reruns and test labels. Competition
+execution removes any prior target and placeholder receipt before mount checks
+or preflight; only validated successful inference writes the real payload,
+using atomic replacement. Smoke remains separate. Only `NVARC_2026_SUBMISSION_CANDIDATE.ipynb` enables this flag; the CPU
+inspection and synthetic smoke artifacts leave it disabled. Astra reviewed
+the builder integration and embedded driver after this change.

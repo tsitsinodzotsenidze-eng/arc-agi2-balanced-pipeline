@@ -5,6 +5,8 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 spec=importlib.util.spec_from_file_location('port_driver',Path(__file__).with_name('driver.py'))
 d=importlib.util.module_from_spec(spec);spec.loader.exec_module(d)
 class WrapperTests(unittest.TestCase):
@@ -80,4 +82,37 @@ class WrapperTests(unittest.TestCase):
             self.assertEqual(report['dependency_candidates'][0]['package_versions'],[{'name':'torch','version':'2.8.0'}])
             self.assertEqual(report['model_config_parents'],[str(model.resolve())])
         self.assertFalse({'torch','unsloth','transformers'} & (set(sys.modules)-before))
+    def test_placeholder_multitest_and_provenance(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);folder=root/'arc-prize-2026-arc-agi-2';folder.mkdir()
+            challenge=folder/'arc-agi_test_challenges.json'
+            tasks={'b':{'train':[{'input':[[1]],'output':[[1]]}], 'test':[{'input':[[2]]},{'input':[[3]]}]},
+                   'a':{'train':[{'input':[[1]],'output':[[1]]}], 'test':[{'input':[[4]]}]}}
+            challenge.write_text(json.dumps(tasks));output=root/'submission.json'
+            with patch.dict(d.os.environ,{'KAGGLE_IS_COMPETITION_RERUN':''}):
+                receipt=d.export_placeholder(challenge,output)
+            payload=json.loads(output.read_text());d.check_payload(payload,tasks)
+            self.assertEqual(len(payload['b']),2)
+            self.assertTrue(receipt['packaging_placeholder'])
+            self.assertEqual(receipt['test_outputs'],3)
+            self.assertTrue(d.placeholder_receipt_path(output).is_file())
+            with self.assertRaises(RuntimeError):d.export_placeholder(challenge,output,rerun=True)
+            tasks['b']['test'][0]['output']=[[2]];challenge.write_text(json.dumps(tasks))
+            with self.assertRaises(ValueError):d.export_placeholder(challenge,root/'other.json')
+            self.assertFalse((root/'other.json').exists())
+    def test_failed_competition_clears_stale_output_before_preflight(self):
+        with tempfile.TemporaryDirectory() as t:
+            output=Path(t)/'submission.json';output.write_text('{}')
+            receipt=d.placeholder_receipt_path(output);receipt.write_text('{}')
+            args=SimpleNamespace(mode='competition',output=str(output),end_time=d.time.time()+100,challenges=None)
+            with patch.dict(d.os.environ,{'KAGGLE_IS_COMPETITION_RERUN':'true'}):
+                with patch.object(d,'resolve_input',side_effect=ValueError('missing mount')):
+                    with self.assertRaises(ValueError):d.execute(args)
+            self.assertFalse(output.exists());self.assertFalse(receipt.exists())
+    def test_atomic_json_replaces(self):
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/'result.json';p.write_text('old')
+            d.atomic_json(p,{'ok':True})
+            self.assertEqual(json.loads(p.read_text()),{'ok':True})
+            self.assertEqual(list(Path(t).iterdir()),[p])
 if __name__=='__main__':unittest.main()

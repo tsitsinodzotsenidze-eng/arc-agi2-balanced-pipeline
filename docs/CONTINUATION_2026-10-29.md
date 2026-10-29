@@ -1,107 +1,82 @@
 # Continuation checkpoint — 29 October 2026
 
-## Preserved work
+## Preserved research
 
-- Upstream base commit: `01347aa067486bc5f5a95d50aa243a5a2877a74e`.
-- Symbolic v1 protocol, source/data freeze, both prediction files, audits and
-  metrics are retained unchanged. Both arms scored 0/167 outputs on 120 public
-  retrospective tasks. Do not submit this grammar as a meaningful candidate or
-  tune it against the revealed evaluation targets.
-- An attributed, separately named NVARC carrier preserves author v10 and
-  dependency v2 with SHA256 receipts, Apache-2.0 license and NOTICE. It is
-  preparation only: no author weights opened by inspection code, no model
-  initialization/training/inference, official ARC2 submission or publication.
-- Root ran the complete test suite after input-inspection preparation: **69 passed**,
-  including ten CPU-only wrapper checks. Generated modules compile without importing
-  torch/Unsloth. Packaging notebook GPU metadata is disabled.
-- The paper/HCI inventory is stored separately from this code repository.
-  No Zenodo deposit, new paper repository, visibility change or main merge.
+Upstream base: `01347aa067486bc5f5a95d50aa243a5a2877a74e`.
+The frozen symbolic v1 protocol, source/data freeze, predictions, audits and
+metrics remain unchanged. Both depth arms scored 0/167 outputs on 120 public
+retrospective tasks. This records limited grammar coverage; do not tune this
+frozen pilot against its revealed evaluation targets.
 
-## Independent port review and next gate
+The NVARC carrier is an attributed existing baseline, separate from the
+symbolic pilot and the ARC3 Recovery study. Exact author v10 and dependency v2
+sources, SHA256 receipts, Apache-2.0 license and NOTICE are retained.
+The paper/HCI inventory is separate. No Zenodo deposit, new paper repository,
+visibility change or main-branch merge has been performed.
 
-Astra's second read-only review found author LoRA/generation/ranking policy,
-decoder keys/schema and label-free aggregation consistent. Worker completion
-and process-group timeout guards are present. This is not full-runtime proof.
+## Completed runtime gate
 
-The explicit synthetic smoke mode, fixed challenge-only manifest, bounded
-deadline, separate output, dependency-patch checks and missing-attempt
-diagnostics have now been implemented and CPU-tested. No model was executed.
+The first separate, authorized, bounded synthetic GPU smoke passed:
+429.719 seconds, worker return code 0, 1/1 tasks completed, model candidates
+for 2/2 test inputs. Both first attempts equal the fixed identity inputs;
+both second attempts are the author's `[[0]]` fallback. All GPU sessions were
+stopped afterward. See [evidence](../evidence/smoke-20261029/README.md).
 
-Remaining gates before a controlled GPU smoke run:
+Actual imports confirmed Python 3.11.13, Torch 2.8.0+cu128, Transformers 4.55.4,
+Unsloth 2025.9.7, CUDA 12.8 and Flash Attention 2. This resolves the observed
+runtime gate only; hidden-cohort completion and official scoring are untested.
+The executed historical driver SHA256 is
+`345ce2feb474870fad0976694caf71478441e3ad071aec26028e337487fdf109`,
+preserved at remote commit `0b4dc87d7ebb8d9ed244d14566b912965d4f2cdd`.
+Current generated artifacts contain a later CPU-tested packaging exporter.
 
-1. Preserve explicit smoke mode and packaging default; never spoof Kaggle rerun
-   status. The smoke input is one synthetic task with two test inputs, with no
-   test labels. Default budget is 900 seconds, maximum 1800 seconds.
-2. Inspect actual Kaggle Python/Torch/CUDA and L4 x4 availability before model
-   loading. Current carrier requires Python3.11, Torch2.8 and CUDA12.8 because
-   of the attached Flash Attention binary. Stop on mismatch.
-3. Attach dependency kernel version272622465 (v2). The wrapper now verifies
-   exact added-code blocks from the hash-preserved upstream patch, and records
-   the mounted Qwen3 file hash. This does not establish the identity of every
-   transitive dependency. Missing attempt slots now appear in diagnostics.
+## Submission carrier
 
-## Actual Kaggle CPU preflight and copy gate
+The private notebook is `ARC2 2026 NVARC Candidate`:
+https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-candidate
 
-Root created a separate private `ARC2 NVARC Runtime Preflight CPU` notebook,
-set Accelerator=None and Internet=OFF, and ran only runtime-inspection code.
-The observed CPU image has Python3.13.15, torch2.11.0+cpu, transformers5.16.1;
-Unsloth/zoo/Flash Attention are absent. See
-`../evidence/runtime-preflight-20261029/cpu_observed.json`.
-This CPU image is incompatible with the pinned author binary; it is not proof
-about the GPU image. The completed interactive CPU session was stopped.
-The quick-saved notebook version retains code, not its interactive outputs;
-the JSON here is explicitly a transcription of the observed UI output.
+Version 1 (script363290856) preserved successful CPU packaging/input inspection
+but lacked selectable `submission.json`. It must not be presented as ready.
+`NVARC_2026_SUBMISSION_CANDIDATE.ipynb` now requests L4 x4, Internet OFF,
+image31090 and all three exact inputs: 2026 competition source133469,
+dependency kernelVersion272622465 and model version627758.
 
-The initial author-model Copy & Edit route displayed a binding ARC Prize2025
-rules dialog. It was declined. That route is abandoned; no 2025 agreement or
-2025 competition input is needed for the actual carrier.
+Its ordinary package run writes a clearly labeled schema-valid `submission.json`
+placeholder and separate provenance receipt, for Kaggle file selection only.
+A genuine competition rerun ignores that packaging flag, removes stale target
+and placeholder receipt before preflight, processes the current challenge
+cohort and atomically writes validated inference output on success. It never
+spoofs Kaggle rerun status. Smoke output remains separately named.
+Astra independently reviewed this builder/exporter integration with no material
+blocker. Save the official carrier as a successful new version and inspect
+its saved hardware, inputs and file before human final Submit.
 
-## Resolved environment-copy path
+## Tests and CI repair
 
-Both exact upstream notebooks specify `dockerImageVersionId:31090`. Copying the
-dependency-v2 utility notebook, which has no competition/data inputs, succeeds
-without an old-competition rules prompt and preserves the original image.
-A separate private pinned-runtime probe replaced all copied code with our own
-inspection code, InternetOFF. A brief T4x2 session observed Python3.11.13 and
-the exact author Docker digest. Base torch is2.6.0+cu124 / CUDA12.4 and
-transformers4.52.4; author inference may obtain torch2.8 from the attached
-dependency output. This still requires verification after mounting that output.
-No author model code, model loading or package installation was executed in
-this probe. The GPU session was stopped after the completed inspection.
+The complete local suite passed 72 tests after the exporter and package-discovery
+fix; 13 are CPU-only NVARC wrapper checks. The added exporter checks cover
+multi-test cardinality/provenance, refusal of reruns/test labels, stale-output
+removal before injected preflight failure and atomic writes.
 
-The real private candidate is `ARC2 2026 NVARC Candidate`. Import of the generated
-carrier metadata honored all three inputs together: ARC Prize2026 ARC-AGI-2
-(source133469), dependency kernelVersion272622465, model version627758.
-Accelerator=None, InternetOFF and the original image pin were visibly verified.
-The first actual Kaggle CPU packaging run passed (0.193s, returncode0), compiling
-the attributed modules without importing torch/Unsloth or executing the model.
-The next package includes pure-stdlib mounted-input inspection, to record actual
-dependency paths, package metadata and Qwen3 patch identity before model use.
+Three GitHub failure emails referred to PR workflow runs at 04d5cec, 3ed2ef3
+and 0b4dc87, not a Kaggle submission. Latest run40767338231 stopped in
+`Install test dependencies`, before any tests ran. Setuptools rejected automatic
+flat-layout discovery of evidence, nvarc_port and arc_agi2_pipeline. The project
+now explicitly includes only `arc_agi2_pipeline*` in its Python distribution;
+the attributed notebook carrier/evidence remain separate repository artifacts.
+Local editable installation succeeds. Remote CI must be checked on the new head.
 
-## Durable saved package and pending smoke action
+## Environment-copy history
 
-Saved candidate Version1 is successful (71.7s total Kaggle run):
-https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-candidate?scriptVersionId=363290856
+The initial author-model Copy & Edit route requested binding ARC Prize2025
+rules; it was declined. A competition-free dependency-v2 notebook copy
+preserved original image31090 without the old competition input or agreement.
+A brief runtime-only T4x2 probe observed Python3.11 and the original Docker
+image; it was stopped. The base torch2.6/CUDA12.4 observation was superseded
+for actual model execution by the attached torch2.8/CUDA12.8 dependency output.
+A separate fresh CPU image was Python3.13/Torch2.11 and unsuitable for this pin.
+The current carrier uses only the 2026 competition. ARC3 was not modified.
 
-Its package-only inspection verifies the actual dependency root already used
-by the wrapper, the exact required Qwen3 patch blocks and model config path.
-Mounted metadata contains torch2.8.0, transformers4.55.4, Unsloth2025.9.7,
-zoo2025.9.9, Flash Attention2.8.2 and NVIDIA CUDA runtime12.8.90. Thus the
-base-image torch2.6 observation is not the complete attached runtime. Package
-metadata and patch verification do not establish successful GPU imports or
-model execution. See `receipt_provenance.md` beside the retained receipt.
-
-The builder now also emits a separately named smoke notebook. The former
-pinned-runtime probe draft was reused as private `ARC2 2026 NVARC Smoke Check`:
-https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-smoke-check/edit
-
-The UI visibly has mode=smoke, budget900s, all three current inputs, GPU L4 x4,
-InternetOFF, original image pin, and Draft Session OFF. It has not been run or
-submitted. The saved candidate Version1 remains package-only. Before its
-first third-party model/binary execution, obtain the required browser action-
-time confirmation; no old-competition rule acceptance is required.
-
-Any smoke result is an engineering compatibility check. NVARC training includes
-public-evaluation-derived material; those tasks cannot establish fresh neural
-generalization. Preserve author credit and separate this baseline from the
-ARC3 Recovery study. Official final Submit remains a human action.
+NVARC training includes public-evaluation-derived material, so those public
+items cannot establish fresh neural generalization. Preserve source credit.
+Official final Submit remains exclusively a human action.

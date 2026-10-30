@@ -1,0 +1,25 @@
+{
+  "arm": "B0",
+  "evidence_type": "manual transcription of authenticated Kaggle Submissions UI and details modal",
+  "observation_date_utc": "2026-10-30",
+  "competition": "arc-prize-2026-arc-agi-2",
+  "notebook": "ARC2 2026 NVARC Candidate",
+  "notebook_version": 2,
+  "version_name": "V2 package exporter L4x4 offline 2026-10-29",
+  "script_version_id": 363494251,
+  "status": "Succeeded",
+  "public_score_displayed": "31.81",
+  "submitted_at_ui": "Oct 29, 2026 05:53:02 PDT",
+  "submitted_at_utc": "2026-10-29T12:53:02Z",
+  "submitted_at_georgia": "2026-10-29T16:53:02+04:00",
+  "completion_timestamp": null,
+  "hidden_model_runtime_seconds": null,
+  "hidden_per_task_predictions_exposed": false,
+  "source_url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions",
+  "version_url": "https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-candidate?scriptVersionId=363494251",
+  "limitations": [
+    "Aggregate public score only; no solved-task count inferred.",
+    "Elapsed pending/running status includes platform time and is not GPU compute time.",
+    "Attributed NVARC v10 port, not a new solver or controlled hash-seeded reference."
+  ]
+}

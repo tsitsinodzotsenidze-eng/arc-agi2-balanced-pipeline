@@ -1,5 +1,13 @@
 # NVARC 2026 port candidate
 
+The first official B0 submission completed successfully: **public score 31.81**,
+Version 2 / scriptVersionId 363494251, observed 30 October 2026. Hidden per-task
+predictions and model-runtime breakdown were not exposed. See
+`../docs/ARC2_B0_RESULT_B1_IMPLEMENTATION_2026-10-30.md` for the result receipt
+and the separately prepared, predeclared B1 hash42 reference. Build B1 with
+`python nvarc_port/build_b1.py`; do not regenerate or overwrite completed B0
+artifacts. B1 preserves the embedded source and full learning rate 5e-5.
+
 The first bounded synthetic GPU smoke completed successfully on 29 October 2026:
 one task, both first-attempt outputs equal the declared identity inputs;
 second-attempt slots retain the author's [[0]] fallback. Model pipeline

@@ -1,0 +1,23 @@
+{
+  "order": [
+    "Z1",
+    "B1_REPEAT",
+    "Z_REPEAT"
+  ],
+  "hash_seed": 42,
+  "zero": {
+    "file": "NVARC_2026_Z_ZERO_UPDATE_SUBMISSION.ipynb",
+    "sha256": "7b9a5c374d04cdbc959b925c4f4e21e3ba7fd6e9459e3958d8f6fd753ca0aec9"
+  },
+  "probe": {
+    "file": "NVARC_2026_ZERO_UPDATE_CHECK.ipynb",
+    "sha256": "b2c90c21f8bdb979ed1a0668e3d1dd49404bd20d4e470db04643c2e0c3760aa1"
+  },
+  "b1_repeat_sha256": "926432d561121dea7914dab459374a693c08c29dc61d1105b72905625ab190e1",
+  "zero_repeat_sha256": "7b9a5c374d04cdbc959b925c4f4e21e3ba7fd6e9459e3958d8f6fd753ca0aec9",
+  "zero_cell2_sha256": "4c449f7a99ca7cc6038b66d0674162aefe60fea415b39c4d77ada8553171910f",
+  "zero_driver_sha256": "a456ecd806a0a14890da6c6539e9bd4691d71ad2e6de36b44c34d757530bc0dc",
+  "real_model_check": "PASS",
+  "check_script_version_id": 363962649,
+  "official_submissions_performed": false
+}

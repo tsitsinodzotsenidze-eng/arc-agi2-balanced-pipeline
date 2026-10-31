@@ -1,5 +1,10 @@
 # ARC2 prepared candidates — 31 October 2026 Georgia time
 
+The final-window review with Astra preserves the order below even if only four
+official runs finish. B1 repeat is the preferred next run after Z1; Z repeat
+remains fifth. Cici reserves 2 November evening for publication preparation.
+See [the recorded rationale](ARC2_FINAL_WINDOW_PRIORITY_2026-10-31.md).
+
 All three future private carriers have completed packaging successfully. Their rendered saved code cells match the durable source artifacts exactly. These short packaging runs produce a file-selection placeholder, not predictions or performance evidence. The hidden competition rerun selects the inference path. No additional official submission was made by the agent.
 
 At the 31 October follow-up, B1 (script 363939870) is officially Succeeded at public score 30.97. B0 remains Succeeded at 31.81. The earlier packaging receipt preserves the historical observation while B1 was still running. The separate real-model null-update check passed in 317.1 seconds (script 363962649): all 128 trainer/optimizer steps completed and all 506 adapter tensors remained finite and exactly unchanged. It stopped before decoding.

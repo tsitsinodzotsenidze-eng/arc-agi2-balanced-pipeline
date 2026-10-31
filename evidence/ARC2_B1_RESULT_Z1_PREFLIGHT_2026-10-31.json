@@ -1,0 +1,69 @@
+{
+  "observed_at_utc": "2026-10-31T16:50:29.167Z",
+  "timezone": "Asia/Tbilisi",
+  "evidence_kind": "UI transcription of official submissions page and saved-version code/form; not backend download",
+  "official_results": {
+    "B0": {
+      "status": "Succeeded",
+      "public_score": 31.81,
+      "script_version_id": 363494251
+    },
+    "B1": {
+      "status": "Succeeded",
+      "public_score": 30.97,
+      "script_version_id": 363939870
+    }
+  },
+  "result_source_url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions#",
+  "result_ui_lines": [
+    "\t\t\t\t\t125 link Value: kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions#, Description: Success ARC2 2026 NVARC B1 Hash42 - B1 full LR5e-5 hash42 offline 2026-10-30 Succeeded · a day ago · description: B1 predeclared full-rate reference: attributed NVARC v10 port; LR 5e-5; PYTHONHASHSEED=42 before driver launch; original model/decoder policy retained; L4x4, pinned offline runtime. public score 30.97",
+    "\t\t\t\t\t127 link Value: kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions#, Description: Success ARC2 2026 NVARC Candidate - V2 package exporter L4x4 offline 2026-10-29 Succeeded · 2 days ago · description: Attributed NVARC v10 baseline port for ARC-AGI-2 2026; original model policy preserved; pinned offline runtime; L4 x4. public score 31.81",
+    "The focused UI element is 125 link URL: kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions#, Description: Success ARC2 2026 NVARC B1 Hash42 - B1 full LR5e-5 hash42 offline 2026-10-30 Succeeded · a day ago · description: B1 predeclared full-rate reference: attributed NVARC v10 port; LR 5e-5; PYTHONHASHSEED=42 before driver launch; original model/decoder policy retained; L4x4, pinned offline runtime. public score 30.97"
+  ],
+  "next_candidate": {
+    "key": "Z1",
+    "title": "ARC2 2026 NVARC Z1 Zero Update",
+    "version": 1,
+    "script_version_id": 364031423,
+    "exact_version_name": "Z1 LR0 hash42 offline 2026-10-31",
+    "notebook_file_sha256": "7b9a5c374d04cdbc959b925c4f4e21e3ba7fd6e9459e3958d8f6fd753ca0aec9",
+    "saved_cells_check": {
+      "pre_count": 4,
+      "first_exact": true,
+      "second_exact": true,
+      "first_sha256": "d020e771b4692fff0f8bcfe0cdba7d7c64aed0b89d708acc4b7db0e49881bbaf",
+      "second_sha256": "4c449f7a99ca7cc6038b66d0674162aefe60fea415b39c4d77ada8553171910f"
+    },
+    "packaging_receipt": {
+      "packaging_placeholder": true,
+      "purpose": "File-selection artifact only; NOT inference or performance evidence",
+      "challenge_path": "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json",
+      "challenges_sha256": "232264c58f825ee77327dcfc9f4e5cb2f83b8d997eb69032be1bf2205bbe1a83",
+      "driver_sha256": "a456ecd806a0a14890da6c6539e9bd4691d71ad2e6de36b44c34d757530bc0dc",
+      "vendor_source_manifest_sha256": "959e834f587789ed46d191d541f65501738119957fcbd22f504cb5aaaf0420b8",
+      "tasks": 240,
+      "test_outputs": 259,
+      "attempts_per_output": 2
+    },
+    "container_image": "gcr.io/kaggle-gpu-images/python@sha256:320043e14c68293f1c946585b9257123385205a58af4b94b17d31868cae4e868",
+    "accelerator": "GPU L4 x4",
+    "daily_slot_available": true,
+    "output_file": "submission.json",
+    "description": "Z1 predeclared null-update contrast: attributed NVARC v10 port; LR 0; hash42; trainer computations retained; original model/decoder policy; pinned offline runtime; L4x4. Separate real-model parameter-invariance check passed.",
+    "form_ui_lines": [
+      "\t\t3622 text You have 1 submissions remaining today. This resets in 7 hours.",
+      "\t\t\t3634 container Description: Select Select Notebook. ARC2 2026 NVARC Z1 Zero Update currently selected., ID: :rgp:",
+      "\t\t\t3636 combo box (collapsed) Select Select Notebook. ARC2 2026 NVARC Z1 Zero Update currently selected., Value: ARC2 2026 NVARC Z1 Zero Update, Secondary Actions: Expand",
+      "\t\t\t3639 container Description: Select Notebook Version. Z1 LR0 hash42 offline 2026-10-31 currently selected., ID: :rgr:",
+      "\t\t\t3641 combo box (collapsed) Select Notebook Version. Z1 LR0 hash42 offline 2026-10-31 currently selected., Value: Z1 LR0 hash42 offline 2026-10-31, Secondary Actions: Expand",
+      "\t\t\t3644 container Description: Select Output File. submission.json currently selected., ID: :rgt:",
+      "\t\t\t3646 combo box (collapsed) Select Output File. submission.json currently selected., Value: submission.json, Secondary Actions: Expand",
+      "\t\t\t3650 text entry area (settable) Submission Description, ID: :rgv:, Value: Z1 predeclared null-update contrast: attributed NVARC v10 port; LR 0; hash42; trainer computations retained; original model/decoder policy; pinned offline runtime; L4x4. Separate real-model parameter-invariance check passed.",
+      "\t\t\t3632 button Submit",
+      "The focused UI element is 3650 text entry area (settable) Submission Description, ID: :rgv:, Value: Z1 predeclared null-update contrast: attributed NVARC v10 port; LR 0; hash42; trainer computations retained; original model/decoder policy; pinned offline runtime; L4x4. Separate real-model parameter-invariance check passed."
+    ],
+    "status": "ready_for_human_submit",
+    "official_submission_performed_by_agent": false
+  },
+  "interpretation": "B0 and B1 are single observed outcomes with different Python hash settings; do not assign their 0.84-point difference causally. Z1 is the prospectively declared comparison to hash42 B1 with per-task parameter updates nulled and trainer computations retained. No candidate code/configuration changed after observing B1 score."
+}

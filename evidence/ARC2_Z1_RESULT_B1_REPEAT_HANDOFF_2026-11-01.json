@@ -1,0 +1,42 @@
+{
+  "record_type": "Kaggle UI transcription; official result and human submission handoff",
+  "observed_date_georgia": "2026-11-01",
+  "source": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions",
+  "z1": {
+    "title": "ARC2 2026 NVARC Z1 Zero Update",
+    "script_version_id": 364031423,
+    "version_label": "Z1 LR0 hash42 offline 2026-10-31",
+    "status": "Succeeded",
+    "public_score": 9.58
+  },
+  "b1_reference": {
+    "script_version_id": 363939870,
+    "status": "Succeeded",
+    "public_score": 30.97
+  },
+  "b0_historical": {
+    "script_version_id": 363494251,
+    "status": "Succeeded",
+    "public_score": 31.81,
+    "hash_unpinned": true,
+    "exact_b1_replication": false
+  },
+  "descriptive_difference": {
+    "b1_minus_z1_public_score_points": 21.39,
+    "causal_identification_claimed": false
+  },
+  "next_candidate": {
+    "title": "ARC2 2026 NVARC B1 Repeat",
+    "script_version_id": 364031921,
+    "version_label": "B1 repeat LR5e-5 hash42 2026-10-31",
+    "output_file": "submission.json",
+    "description": "Exact B1 reference repeat: attributed NVARC v10 port; LR 5e-5; hash42; unchanged code, model and decoder; pinned offline runtime; L4x4. Predeclared run-variability observation.",
+    "official_form_verified": true,
+    "daily_submissions_remaining_at_observation": 1,
+    "reset_display_at_observation": "5 hours",
+    "final_submit_performed_by_agent": false,
+    "human_action_pending": true
+  },
+  "interpretation": "Preserve the predeclared B1 -> Z1 -> exact B1 repeat sequence. One result per condition is descriptive. An execution reported Succeeded is not by itself a complete diagnosis of internal runtime behavior; do not infer hidden per-task effects or isolate a causal learning mechanism from the score gap.",
+  "final_evening_plan": "2 November evening is reserved for GitHub, Zenodo and writeup preparation."
+}

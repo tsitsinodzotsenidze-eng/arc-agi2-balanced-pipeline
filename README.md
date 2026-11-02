@@ -1,99 +1,78 @@
-# ARC-AGI-2 Strong Balanced Competitive Pipeline
+# ARC-AGI-2: NVARC update-sensitivity study (2026)
 
-## Current checkpoint — 29 October 2026
+This repository preserves an attributed port of the NVARC solver and a small
+study of test-time parameter updates. Creator of the port, study and archive:
+Tsitsino Dzotsenidze. Upstream NVARC authors: Ivan Sorokin and Jean-Francois
+Puget (NVIDIA KGMoN), with underlying ARChitects lineage. The port is not claimed
+as a newly invented solver.
 
-The repository now includes a bounded, standard-library symbolic program
-solver and a Kaggle bundled-challenges adapter. One predeclared public pilot
-compared geometric depth 1 versus depth 2: both scored **0/167 test outputs**
-on 120 public evaluation tasks, with no demonstration-consistent programs.
-This records a grammar-coverage limit; v1 is **not ready as a meaningful
-competition candidate**. A separate attributed [NVARC port](nvarc_port/README.md)
-passed a bounded synthetic GPU runtime smoke check; official scoring and
-full-cohort completion remain untested.
+## Current publication checkpoint — 2 November 2026
 
-- [Frozen protocol](docs/EXPERIMENT_PROTOCOL_2026-10-28.md)
-- [Results and reproduction](docs/RESULTS_PUBLIC_V1_2026-10-28.md)
-- [Source/data freeze](docs/EXPERIMENT_FREEZE_V1.json)
-- [Public data provenance](docs/DATA_PROVENANCE.md)
-- [Raw results](evidence/public-v1/results.json)
-- [Continuation checkpoint](docs/CONTINUATION_2026-10-29.md)
-- [Synthetic GPU smoke evidence](evidence/smoke-20261029/README.md)
+The official Kaggle Submissions page was inspected on 2 November before the
+final deadline. The observed scores below are rounded **public** scores, not
+final private scores. Both repeats were still `Notebook Running`.
 
-Tests: `python -m pytest -q` — 72 passed, including thirteen CPU-only NVARC wrapper
-checks, on Python 3.12. Solver inference is CPU-only,
-offline, and receives no test-output labels. Official competition submission
-is a separate human action; none was performed for this work.
+| Arm | Saved scriptVersionId | Configuration | Public score / observed state |
+| --- | --- | --- | --- |
+| B0 / V2 | 363494251 | LR 5e-5; Python hash seed not pinned | 31.81, Succeeded |
+| B1 | 363939870 | LR 5e-5; hash42 | 30.97, Succeeded |
+| Z1 | 364031423 | LR 0; hash42; trainer computations retained | 9.58, Succeeded |
+| B1 repeat | 364031921 | Exact B1 source repeat | Pending verification; Running |
+| Z repeat | 364032699 | Exact Z1 source repeat | Pending verification; Running |
 
-Run a Kaggle-style bundle:
+The B1-Z1 difference is 21.39 public-score points. It is a descriptive
+single-run contrast. Exact source repeats assess stability; identical source
+and hash42 do not guarantee deterministic GPU execution. B0 is a historical
+reference, not an exact B1 replicate. Unfinished or failed runs are not zero
+scores. Packaging runs and their placeholder files are not performance data.
 
-```sh
-python -m arc_agi2_pipeline.pipeline.runner --challenges-json /path/to/arc-agi_test_challenges.json --output submission.json --audit audit.json --max-depth 2
-```
+- [Machine-readable current results](publication/CURRENT_RESULTS.json)
+- [Results, intended analysis and limitations](publication/RESULTS_AND_LIMITATIONS.md)
+- [Reproduction and external dependencies](publication/REPRODUCING.md)
+- [Source attribution and license scope](publication/THIRD_PARTY_NOTICES.md)
+- [Technical Solution Writeup draft](publication/SOLUTION_WRITEUP_DRAFT.md)
+- [Claim-to-evidence ledger](publication/CLAIMS_LEDGER.md)
+- [Zenodo description draft](publication/ZENODO_DESCRIPTION.md)
+- [Publication status](publication/RELEASE_STATUS.md)
 
-The earlier architecture roadmap below is retained as planned future work.
-The legacy model hook, search/augmentation hooks and structural verifier are
-not used by the new explicit train-consistent program entrypoint.
+## Study design and preservation
 
-This repository is a **serious architecture scaffold** for an ARC-AGI-2 balanced competitive system intended to improve hidden-task solve probability over time.
+The dated [29 October protocol](docs/ARC2_UPDATE_STRENGTH_PROTOCOL_2026-10-29.md),
+[30 October amendment](docs/ARC2_PRIORITY_AMENDMENT_2026-10-30.md), and
+[31 October priorities](docs/ARC2_FINAL_WINDOW_PRIORITY_2026-10-31.md) preserve
+the design history. A half-rate arm was considered and later deferred in favor
+of exact B1 and Z repeats. That history is not rewritten after observing scores.
 
-It is designed to scale into a full stack with:
-- model-based hypothesis generation
-- symbolic/rule-based generation
-- augmentation and inverse transforms
-- per-puzzle adaptation
-- search/beam expansion
-- verification/scoring
-- candidate selection
-- strict submission validation
+A separate synthetic engineering probe completed 128 optimizer steps and
+found all 506 inspected adapter tensors finite and exactly unchanged at LR0.
+It stopped before decoding and is not benchmark-accuracy evidence.
 
-## Current Status
+The standalone [NVARC saved carriers](nvarc_port/) contain the submitted source
+payloads. The B1 and B1-repeat local notebooks are byte-identical, as are Z1
+and Z-repeat. Notebook hashes and Kaggle saved-version IDs are separate
+identities; exported Kaggle notebook metadata is not claimed byte-identical.
 
-This phase establishes production-grade structure and contracts before heavy dependencies:
-- typed core data contracts with provenance-ready candidates
-- protocol-based generator/verifier/selector interfaces
-- schema-validating ARC task loading
-- deterministic runner context (run id + seed)
-- strict submission payload validation and deterministic output writing
-- executable end-to-end orchestration path
+## Earlier symbolic pilot
 
-## Repository Layout
+The earlier public symbolic depth1/depth2 pilot, reported at
+[0/167 test outputs](docs/RESULTS_PUBLIC_V1_2026-10-28.md), remains a distinct
+coverage study. It is not the solver responsible for the NVARC Kaggle scores.
+Earlier scaffold and preparation notes describe their dated checkpoints;
+the current observed official status is the table above.
 
-- `arc_agi2_pipeline/core/`: canonical task/candidate types and interfaces.
-- `arc_agi2_pipeline/data/`: validated ARC JSON loading.
-- `arc_agi2_pipeline/generators/`: model-interface and symbolic-rule generators.
-- `arc_agi2_pipeline/augmentation/`: augmentation and inverse-transform hooks.
-- `arc_agi2_pipeline/adaptation/`: per-puzzle adaptation hooks.
-- `arc_agi2_pipeline/search/`: candidate-space expansion hooks.
-- `arc_agi2_pipeline/verification/`: deterministic structural scoring scaffold.
-- `arc_agi2_pipeline/selection/`: ranked per-test attempt selection.
-- `arc_agi2_pipeline/submission/`: payload building, validation, and writing.
-- `arc_agi2_pipeline/pipeline/`: orchestration entrypoint.
-- `tests/`: foundational correctness tests.
-- `docs/`: staged implementation plan.
+## Archive scope
 
-## Intended Flow
+The proposed deposit contains NVARC carrier source, exact vendored notebook
+sources, original study documents and selected development receipts. Model
+weights, installed dependency distributions and hidden evaluation tasks or
+predictions are external and are not redistributed in that deposit. Re-running
+the model requires separately obtained authorized inputs and a compatible GPU
+environment. This checkpoint does not claim a new complete hidden rerun.
 
-`load data → generate candidates → verify/score → select attempts → write submission`
+Original NVARC wrapper additions and publication documents use Apache-2.0 as
+described in [nvarc_port/LICENSE](nvarc_port/LICENSE). Third-party artifacts keep
+their own terms and notices. This is not a blanket relicensing of all content
+or an assertion that every ARC Prize licensing requirement is satisfied.
 
-## Run
-
-```bash
-python -m arc_agi2_pipeline.pipeline.runner \
-  --tasks-dir /path/to/arc_tasks \
-  --output submission.json \
-  --seed 0
-```
-
-## Test
-
-```bash
-pytest
-```
-
-## Non-goals for this phase
-
-- no heavy model runtime dependencies yet
-- no external network dependency assumptions
-- no hidden/private data coupling
-
-See `docs/implementation_plan.md` for staged upgrades.
+This technical record is separate from the joint ARC-AGI-2/ARC-AGI-3 manuscript,
+*Two Worlds, One Challenge: How AI Solves Unfamiliar Problems*.

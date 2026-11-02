@@ -18,11 +18,10 @@ repeat carriers, engineering diagnostics and documentary evidence.
 28 October2026 showing Apache-2.0 for these three artifact-specific releases.
 That dated observation is retained; it is not presented as a fresh license
 inspection of every dependency or the entire upstream GitHub repository.
-The separate 2 November Chat Amunia review reported current search-visible
-Apache-2.0 text for the source notebook, while its dependency/model license
-fields remained unreadable. That review supplements, rather than replaces,
-the dated primary inspection. The root NVARC GitHub repository's missing
-LICENSE is not substituted for these artifact-specific declarations.
+The current publication check relies on that dated primary inspection;
+it does not claim a new independently readable license-field observation
+for all three original releases. The root NVARC GitHub repository's missing
+LICENSE is not substituted for the artifact-specific declarations.
 
 The full Apache-2.0 text is retained at `nvarc_port/LICENSE`. Original project
 NVARC wrapper additions and these publication documents use Apache-2.0.
@@ -35,3 +34,4 @@ history. The selected Zenodo package is scoped to NVARC carriers and study
 evidence, not a blanket relicensing of every repository file. ARC Prize's
 separate requirements for submitter-authored methods are not certified solely
 by this source archive or its Apache-2.0 metadata.
+

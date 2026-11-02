@@ -1,0 +1,29 @@
+{
+  "record_type": "Prepared ARC2 source/evidence export; not a publication claim",
+  "created_date_georgia": "2026-11-02",
+  "source_commit": "6cb9f96dc4d3e4c2219fd5941849131c44be4760",
+  "reviewed_pr": 8,
+  "ci_run_id": 41513603656,
+  "ci_conclusion": "success",
+  "archive": "ARC_AGI2_NVARC_Checkpoint_2026-11-02.zip",
+  "bytes": 391413,
+  "sha256": "00936ad565ba6e0a64f1086834488fa112ad53dd28a09ac64346d401c57211b2",
+  "files": 57,
+  "source_files_verified": 55,
+  "manifest_entries": 56,
+  "checks": [
+    "Git blob identities",
+    "JSON and Python AST",
+    "empty saved carrier outputs",
+    "exact reference-repeat source equality",
+    "ZIP integrity and per-file SHA-256"
+  ],
+  "inference_launched": false,
+  "zenodo_draft_url": "https://zenodo.org/uploads/23895859",
+  "reserved_doi": "10.5281/zenodo.23895859",
+  "zenodo_published": false,
+  "zip_uploaded_to_zenodo": false,
+  "repository_visibility_at_observation": "private",
+  "repeat_results": "pending verification",
+  "next": "Append verified terminal repeat observations, update the export if needed, then review repository/release visibility, Zenodo upload/publication and final Kaggle choices."
+}

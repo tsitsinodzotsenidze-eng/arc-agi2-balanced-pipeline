@@ -1,0 +1,11 @@
+{
+  "purpose": "Synthetic runtime plumbing check only; no accuracy evaluation",
+  "challenges_file": "smoke-challenges.json",
+  "sha256": "1a0cc1bf21729226b88943d7de7c3b1b55f9a64b4a69f56723331a01fada0db9",
+  "task_ids": [
+    "smoke01"
+  ],
+  "test_outputs": 2,
+  "max_seconds": 1800,
+  "default_seconds": 900
+}

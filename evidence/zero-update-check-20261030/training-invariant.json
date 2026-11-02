@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "after_reset": {
+    "stage": "after_reset",
+    "tensors": 506,
+    "elements": 528564224,
+    "keys_shapes_dtypes_match": true,
+    "all_finite": true,
+    "all_exactly_equal": true
+  },
+  "after_training": {
+    "stage": "after_training",
+    "tensors": 506,
+    "elements": 528564224,
+    "keys_shapes_dtypes_match": true,
+    "all_finite": true,
+    "all_exactly_equal": true
+  },
+  "training": {
+    "global_step": 128,
+    "max_steps": 128,
+    "learning_rate": 0,
+    "weight_decay": 0,
+    "optimizer_group_lrs": [
+      0,
+      0
+    ],
+    "optimizer_state_entries": 506,
+    "optimizer_step_min": 128,
+    "optimizer_step_max": 128,
+    "train_loss": 0.7502095103263855,
+    "training_executed": true
+  },
+  "train_dataset_rows": 128,
+  "purpose": "Synthetic engineering invariant; not benchmark accuracy",
+  "inference_executed": false,
+  "dependency_provenance": {
+    "required_kernel_version": 272622465,
+    "required_notebook_version": 2,
+    "upstream_patch_sha256": "33ac957107cd7e4477163072ea6dff5cb2744f00067e8a7b3aea3c89c91d3ad6",
+    "mounted_qwen3_sha256": "0c360b0a7c7ed47c05e113c300791a502c878f3087ab24dfd949855429fe0e30"
+  },
+  "synthetic_manifest": {
+    "purpose": "Synthetic runtime plumbing check only; no accuracy evaluation",
+    "challenges_file": "smoke-challenges.json",
+    "sha256": "1a0cc1bf21729226b88943d7de7c3b1b55f9a64b4a69f56723331a01fada0db9",
+    "task_ids": [
+      "smoke01"
+    ],
+    "test_outputs": 2,
+    "max_seconds": 1800,
+    "default_seconds": 900
+  },
+  "driver_sha256": "a456ecd806a0a14890da6c6539e9bd4691d71ad2e6de36b44c34d757530bc0dc",
+  "official_z_solver_sha256": "6114d76db94746ab0c72e3d29aedaca2f1c8b3df0dfce8d170e8459609c40bfe",
+  "instrumented_probe_solver_sha256": "18d5000d3c3d1b77c81ba64da3bea2988ae02427d1924899af75a4ce950458e4",
+  "probe_support_sha256": "faeb844d1ee7a3eb036550c5b56430fd7579cd00a3ace46d938c80f1d1eabc7f",
+  "hash_seed": 42,
+  "worker_returncode": 0
+}

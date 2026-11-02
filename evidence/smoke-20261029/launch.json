@@ -1,0 +1,15 @@
+{
+  "event": "user-authorized-smoke-launch",
+  "recorded_at_utc": "2026-10-28T21:00:45.329446+00:00",
+  "notebook_url": "https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-smoke-check/edit",
+  "mode": "smoke",
+  "declared_budget_seconds": 900,
+  "accelerator": "GPU L4 x4",
+  "internet_enabled": false,
+  "task_manifest_sha256": "e780b8827cc1e621e670e3e62977629747cbde69f7fbc836c04be7f7aa98c2af",
+  "driver_sha256": "345ce2feb474870fad0976694caf71478441e3ad071aec26028e337487fdf109",
+  "prepared_notebook_sha256": "16ada35c94b02be43c8f797f3dd2677394117c70ce625267f581f82ccd9b69d0",
+  "git_remote_checkpoint": "0b4dc87d7ebb8d9ed244d14566b912965d4f2cdd",
+  "purpose": "synthetic runtime plumbing, not accuracy benchmark or official competition submission",
+  "status": "session-starting"
+}

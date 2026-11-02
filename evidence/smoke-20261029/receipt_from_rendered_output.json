@@ -1,0 +1,69 @@
+{
+  "kind": "synthetic_runtime_smoke",
+  "python": "3.11.13 (main, Jun  4 2025, 08:57:29) [GCC 11.4.0]",
+  "elapsed_from_first_cell_seconds": 523.6731882095337,
+  "diagnostics": {
+    "mode": "smoke",
+    "dependency_provenance": {
+      "required_kernel_version": 272622465,
+      "required_notebook_version": 2,
+      "upstream_patch_sha256": "33ac957107cd7e4477163072ea6dff5cb2744f00067e8a7b3aea3c89c91d3ad6",
+      "mounted_qwen3_sha256": "0c360b0a7c7ed47c05e113c300791a502c878f3087ab24dfd949855429fe0e30"
+    },
+    "worker_returncode": 0,
+    "completed_tasks": 1,
+    "expected_tasks": 1,
+    "missing_tasks": [],
+    "candidate_outputs": 2,
+    "expected_outputs": 2,
+    "fallback_outputs": [],
+    "missing_attempts": {
+      "smoke01_0": [
+        "attempt_2"
+      ],
+      "smoke01_1": [
+        "attempt_2"
+      ]
+    },
+    "missing_attempt_count": 2
+  },
+  "predictions": {
+    "smoke01": [
+      {
+        "attempt_1": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "attempt_2": [
+          [
+            0
+          ]
+        ]
+      },
+      {
+        "attempt_1": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "attempt_2": [
+          [
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "executed_driver_sha256": "345ce2feb474870fad0976694caf71478441e3ad071aec26028e337487fdf109"
+}

@@ -1,0 +1,25 @@
+{
+  "date_local": "2026-10-29",
+  "repository": "tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline",
+  "commit": "7a918d461c039616caa23fb00aa4c427ffc0cd83",
+  "workflow_run_id": 40874952780,
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 123451267703,
+      "python": "3.11",
+      "tests_passed": 72,
+      "duration_test_s": 0.17
+    },
+    {
+      "id": 123451268221,
+      "python": "3.10",
+      "tests_passed": 72,
+      "duration_test_s": 0.19
+    }
+  ],
+  "previous_run": 40767338231,
+  "failure_stage": "Install test dependencies",
+  "previous_error": "Multiple top-level packages discovered in a flat-layout: ['evidence', 'nvarc_port', 'arc_agi2_pipeline']",
+  "fix": "Explicit setuptools package discovery includes only arc_agi2_pipeline*"
+}

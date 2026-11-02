@@ -1,0 +1,24 @@
+{
+  "record_type": "Official Kaggle public-result observation; pre-deadline checkpoint",
+  "observation_date_georgia": "2026-11-02",
+  "source": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions",
+  "score_type": "rounded public leaderboard score",
+  "final_private_results_known": false,
+  "final_selection_observed": "0/2",
+  "runs": [
+    {"arm":"B0","title":"ARC2 2026 NVARC Candidate","script_version_id":363494251,"notebook":"nvarc_port/NVARC_2026_SUBMISSION_CANDIDATE.ipynb","learning_rate":0.00005,"python_hash_seed":null,"role":"historical port result; not exact B1 replicate","status":"Succeeded","public_score":31.81},
+    {"arm":"B1","title":"ARC2 2026 NVARC B1 Hash42","script_version_id":363939870,"notebook":"nvarc_port/NVARC_2026_B1_HASH42_SUBMISSION.ipynb","learning_rate":0.00005,"python_hash_seed":42,"role":"updating reference","status":"Succeeded","public_score":30.97},
+    {"arm":"Z1","title":"ARC2 2026 NVARC Z1 Zero Update","script_version_id":364031423,"notebook":"nvarc_port/NVARC_2026_Z_ZERO_UPDATE_SUBMISSION.ipynb","learning_rate":0,"python_hash_seed":42,"trainer_computations_retained":true,"status":"Succeeded","public_score":9.58},
+    {"arm":"B1_REPEAT","title":"ARC2 2026 NVARC B1 Repeat","script_version_id":364031921,"notebook":"nvarc_port/NVARC_2026_B1_REPEAT_SUBMISSION.ipynb","learning_rate":0.00005,"python_hash_seed":42,"exact_local_source_repeat_of":"B1","status":"Notebook Running","public_score":null,"result_verification":"pending"},
+    {"arm":"Z_REPEAT","title":"ARC2 2026 NVARC Z Repeat","script_version_id":364032699,"notebook":"nvarc_port/NVARC_2026_Z_REPEAT_SUBMISSION.ipynb","learning_rate":0,"python_hash_seed":42,"exact_local_source_repeat_of":"Z1","status":"Notebook Running","public_score":null,"result_verification":"pending"}
+  ],
+  "descriptive_b1_minus_z1_score_points":21.39,
+  "causal_identification_claimed":false,
+  "repeatability_established":false,
+  "source_repeat_sha256": {
+    "B0":"468d6c653869b60203c09fc1bb5db95cf1b96061a72d82c17684b730237aadb0",
+    "B1_and_B1_REPEAT":"926432d561121dea7914dab459374a693c08c29dc61d1105b72905625ab190e1",
+    "Z1_and_Z_REPEAT":"7b9a5c374d04cdbc959b925c4f4e21e3ba7fd6e9459e3958d8f6fd753ca0aec9"
+  },
+  "update_policy":"Append a dated verified observation when a pending run terminates; retain this checkpoint and distinguish non-completion from score zero."
+}

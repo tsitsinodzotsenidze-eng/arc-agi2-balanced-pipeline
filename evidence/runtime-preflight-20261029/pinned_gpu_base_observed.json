@@ -1,0 +1,17 @@
+{
+  "evidence_type": "transcription_of_live_notebook_UI_output",
+  "observed_date_Asia_Tbilisi": "2026-10-29",
+  "notebook_edit_url": "https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-pinned-runtime-preflight/edit",
+  "template": "sorokin/pip-install-unsloth-flash-patch Version2, no competition inputs",
+  "python": "3.11.13 (main, Jun 4 2025, 08:57:29) [GCC 11.4.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.35",
+  "docker_image": "gcr.io/kaggle-gpu-images/python@sha256:320043e14c68293f1c946585b9257123385205a58af4b94b17d31868cae4e868",
+  "model_execution": false,
+  "packages": {"torch":"2.6.0+cu124", "transformers":"4.52.4", "unsloth":null, "unsloth_zoo":null, "flash_attn":null},
+  "cuda_build": "12.4",
+  "gpu_names": ["Tesla T4", "Tesla T4"],
+  "author_abi_match": false,
+  "limitation": "Base image without attached author dependency output. Its Python matches, but Torch/CUDA package compatibility must be checked after dependency path setup.",
+  "internet_enabled": false,
+  "session_stopped": true
+}

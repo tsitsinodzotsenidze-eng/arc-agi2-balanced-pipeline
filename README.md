@@ -1,65 +1,78 @@
-# ARC-AGI-2 Strong Balanced Competitive Pipeline
+# ARC-AGI-2: NVARC update-sensitivity study (2026)
 
-This repository is a **serious architecture scaffold** for an ARC-AGI-2 balanced competitive system intended to improve hidden-task solve probability over time.
+This repository preserves an attributed port of the NVARC solver and a small
+study of test-time parameter updates. Creator of the port, study and archive:
+Tsitsino Dzotsenidze. Upstream NVARC authors: Ivan Sorokin and Jean-Francois
+Puget (NVIDIA KGMoN), with underlying ARChitects lineage. The port is not claimed
+as a newly invented solver.
 
-It is designed to scale into a full stack with:
-- model-based hypothesis generation
-- symbolic/rule-based generation
-- augmentation and inverse transforms
-- per-puzzle adaptation
-- search/beam expansion
-- verification/scoring
-- candidate selection
-- strict submission validation
+## Current publication checkpoint — 2 November 2026
 
-## Current Status
+The official Kaggle Submissions page was inspected on 2 November before the
+final deadline. The observed scores below are rounded **public** scores, not
+final private scores. Both repeats were still `Notebook Running`.
 
-This phase establishes production-grade structure and contracts before heavy dependencies:
-- typed core data contracts with provenance-ready candidates
-- protocol-based generator/verifier/selector interfaces
-- schema-validating ARC task loading
-- deterministic runner context (run id + seed)
-- strict submission payload validation and deterministic output writing
-- executable end-to-end orchestration path
+| Arm | Saved scriptVersionId | Configuration | Public score / observed state |
+| --- | --- | --- | --- |
+| B0 / V2 | 363494251 | LR 5e-5; Python hash seed not pinned | 31.81, Succeeded |
+| B1 | 363939870 | LR 5e-5; hash42 | 30.97, Succeeded |
+| Z1 | 364031423 | LR 0; hash42; trainer computations retained | 9.58, Succeeded |
+| B1 repeat | 364031921 | Exact B1 source repeat | Pending verification; Running |
+| Z repeat | 364032699 | Exact Z1 source repeat | Pending verification; Running |
 
-## Repository Layout
+The B1-Z1 difference is 21.39 public-score points. It is a descriptive
+single-run contrast. Exact source repeats assess stability; identical source
+and hash42 do not guarantee deterministic GPU execution. B0 is a historical
+reference, not an exact B1 replicate. Unfinished or failed runs are not zero
+scores. Packaging runs and their placeholder files are not performance data.
 
-- `arc_agi2_pipeline/core/`: canonical task/candidate types and interfaces.
-- `arc_agi2_pipeline/data/`: validated ARC JSON loading.
-- `arc_agi2_pipeline/generators/`: model-interface and symbolic-rule generators.
-- `arc_agi2_pipeline/augmentation/`: augmentation and inverse-transform hooks.
-- `arc_agi2_pipeline/adaptation/`: per-puzzle adaptation hooks.
-- `arc_agi2_pipeline/search/`: candidate-space expansion hooks.
-- `arc_agi2_pipeline/verification/`: deterministic structural scoring scaffold.
-- `arc_agi2_pipeline/selection/`: ranked per-test attempt selection.
-- `arc_agi2_pipeline/submission/`: payload building, validation, and writing.
-- `arc_agi2_pipeline/pipeline/`: orchestration entrypoint.
-- `tests/`: foundational correctness tests.
-- `docs/`: staged implementation plan.
+- [Machine-readable current results](publication/CURRENT_RESULTS.json)
+- [Results, intended analysis and limitations](publication/RESULTS_AND_LIMITATIONS.md)
+- [Reproduction and external dependencies](publication/REPRODUCING.md)
+- [Source attribution and license scope](publication/THIRD_PARTY_NOTICES.md)
+- [Technical Solution Writeup draft](publication/SOLUTION_WRITEUP_DRAFT.md)
+- [Claim-to-evidence ledger](publication/CLAIMS_LEDGER.md)
+- [Zenodo description draft](publication/ZENODO_DESCRIPTION.md)
+- [Publication status](publication/RELEASE_STATUS.md)
 
-## Intended Flow
+## Study design and preservation
 
-`load data → generate candidates → verify/score → select attempts → write submission`
+The dated [29 October protocol](docs/ARC2_UPDATE_STRENGTH_PROTOCOL_2026-10-29.md),
+[30 October amendment](docs/ARC2_PRIORITY_AMENDMENT_2026-10-30.md), and
+[31 October priorities](docs/ARC2_FINAL_WINDOW_PRIORITY_2026-10-31.md) preserve
+the design history. A half-rate arm was considered and later deferred in favor
+of exact B1 and Z repeats. That history is not rewritten after observing scores.
 
-## Run
+A separate synthetic engineering probe completed 128 optimizer steps and
+found all 506 inspected adapter tensors finite and exactly unchanged at LR0.
+It stopped before decoding and is not benchmark-accuracy evidence.
 
-```bash
-python -m arc_agi2_pipeline.pipeline.runner \
-  --tasks-dir /path/to/arc_tasks \
-  --output submission.json \
-  --seed 0
-```
+The standalone [NVARC saved carriers](nvarc_port/) contain the submitted source
+payloads. The B1 and B1-repeat local notebooks are byte-identical, as are Z1
+and Z-repeat. Notebook hashes and Kaggle saved-version IDs are separate
+identities; exported Kaggle notebook metadata is not claimed byte-identical.
 
-## Test
+## Earlier symbolic pilot
 
-```bash
-pytest
-```
+The earlier public symbolic depth1/depth2 pilot, reported at
+[0/167 test outputs](docs/RESULTS_PUBLIC_V1_2026-10-28.md), remains a distinct
+coverage study. It is not the solver responsible for the NVARC Kaggle scores.
+Earlier scaffold and preparation notes describe their dated checkpoints;
+the current observed official status is the table above.
 
-## Non-goals for this phase
+## Archive scope
 
-- no heavy model runtime dependencies yet
-- no external network dependency assumptions
-- no hidden/private data coupling
+The proposed deposit contains NVARC carrier source, exact vendored notebook
+sources, original study documents and selected development receipts. Model
+weights, installed dependency distributions and hidden evaluation tasks or
+predictions are external and are not redistributed in that deposit. Re-running
+the model requires separately obtained authorized inputs and a compatible GPU
+environment. This checkpoint does not claim a new complete hidden rerun.
 
-See `docs/implementation_plan.md` for staged upgrades.
+Original NVARC wrapper additions and publication documents use Apache-2.0 as
+described in [nvarc_port/LICENSE](nvarc_port/LICENSE). Third-party artifacts keep
+their own terms and notices. This is not a blanket relicensing of all content
+or an assertion that every ARC Prize licensing requirement is satisfied.
+
+This technical record is separate from the joint ARC-AGI-2/ARC-AGI-3 manuscript,
+*Two Worlds, One Challenge: How AI Solves Unfamiliar Problems*.

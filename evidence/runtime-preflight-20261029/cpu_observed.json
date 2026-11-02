@@ -1,0 +1,28 @@
+{
+  "evidence_type": "transcription_of_live_notebook_UI_output",
+  "observed_date_Asia_Tbilisi": "2026-10-29",
+  "notebook_saved_version_url": "https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-nvarc-runtime-preflight-cpu?scriptVersionId=363287280",
+  "saved_version_note": "Quick Save retained code without interactive outputs; this record transcribes the independently observed completed cell output.",
+  "python": "3.13.15 (main, Aug 6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "accelerator_requested": "None",
+  "model_execution": false,
+  "packages": {
+    "torch": "2.11.0+cpu",
+    "transformers": "5.16.1",
+    "unsloth": null,
+    "unsloth_zoo": null,
+    "flash_attn": null
+  },
+  "torch_cuda_build": null,
+  "cuda_device_count": 0,
+  "challenge_files": [
+    "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_evaluation_challenges.json",
+    "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_training_challenges.json",
+    "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"
+  ],
+  "expected_author_abi": {"python": "3.11", "torch": "2.8", "cuda": "12.8"},
+  "author_abi_matches_cpu_image": false,
+  "limitation": "CPU image only; no GPU runtime or model compatibility established.",
+  "interactive_session_stopped": true
+}

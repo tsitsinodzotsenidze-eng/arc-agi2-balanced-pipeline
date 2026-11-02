@@ -1,0 +1,184 @@
+2026-10-28 21:01:58.894341: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793221319.216177     399 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1793221319.310276     399 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+
+
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+[Rank 0] start!
+==((====))==  Unsloth 2025.9.7: Fast Qwen3 patching. Transformers: 4.55.4.
+   \\   /|    NVIDIA L4. Num GPUs = 1. Max memory: 22.034 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 8.9. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.32.post2. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]2026-10-28 21:03:44.070875: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793221424.093590     400 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1793221424.101050     400 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+Loading checkpoint shards:  50%|█████     | 1/2 [00:53<00:53, 53.23s/it]
+
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+[Rank 1] start!
+==((====))==  Unsloth 2025.9.7: Fast Qwen3 patching. Transformers: 4.55.4.
+   \\   /|    NVIDIA L4. Num GPUs = 1. Max memory: 22.034 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 8.9. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.32.post2. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+
+
+Loading checkpoint shards: 100%|██████████| 2/2 [01:15<00:00, 37.64s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.31s/it]
+
+
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+[Rank 0] done!
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+
+
+2026-10-28 21:04:58.286696: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793221498.310324     401 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1793221498.317745     401 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+
+
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+[Rank 2] start!
+==((====))==  Unsloth 2025.9.7: Fast Qwen3 patching. Transformers: 4.55.4.
+   \\   /|    NVIDIA L4. Num GPUs = 1. Max memory: 22.034 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 8.9. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.32.post2. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.07it/s]
+
+
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+[Rank 2] done!
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+[Rank 1] allocated 13011MB for training
+[Rank 1] training stats for puzzle smoke01: TrainOutput(global_step=128, training_loss=0.028943965211510658, metrics={'train_runtime': 69.4736, 'train_samples_per_second': 1.842, 'train_steps_per_second': 1.842, 'total_flos': 115073081671680.0, 'train_loss': 0.028943965211510658, 'epoch': 1.0})
+[Rank 1] decoding ['smoke01_0.permute4150723698.ex10', 'smoke01_0.permute6720984531.ex10', 'smoke01_0.rot90.rot90.permute7931086254.ex01', 'smoke01_0.rot90.rot90.permute9302675184.ex01']
+[Rank 1] scoring smoke01_0.permute4150723698.ex10 #0
+[Rank 1] decoding ['smoke01_0.rot90.permute1258796043.ex01', 'smoke01_0.rot90.permute5386701942.ex10', 'smoke01_0.rot90.rot90.rot90.permute2908315674.ex01', 'smoke01_0.rot90.rot90.rot90.permute8579032416.ex01']
+[Rank 1] decoding ['smoke01_1.permute1602397845.ex10', 'smoke01_1.permute6827490351.ex10', 'smoke01_1.rot90.rot90.permute9180254367.ex01', 'smoke01_1.rot90.rot90.permute9368452107.ex10']
+[Rank 1] scoring smoke01_1.permute1602397845.ex10 #0
+[Rank 1] decoding ['smoke01_1.rot90.permute5436201789.ex01', 'smoke01_1.rot90.permute8024967315.ex01', 'smoke01_1.rot90.rot90.rot90.permute0986123745.ex01', 'smoke01_1.rot90.rot90.rot90.permute7068392154.ex10']
+[Rank 1] decoding ['smoke01_0.transpose.permute4950812673.ex01', 'smoke01_0.transpose.permute9316478025.ex10', 'smoke01_0.transpose.rot90.rot90.permute4281673590.ex01', 'smoke01_0.transpose.rot90.rot90.permute7284135096.ex01']
+[Rank 1] decoding ['smoke01_0.transpose.rot90.permute1654278039.ex01', 'smoke01_0.transpose.rot90.permute3170468295.ex10', 'smoke01_0.transpose.rot90.rot90.rot90.permute4965803712.ex10', 'smoke01_0.transpose.rot90.rot90.rot90.permute7568409321.ex10']
+[Rank 1] decoding ['smoke01_1.transpose.permute5980213764.ex10', 'smoke01_1.transpose.permute6703249158.ex01', 'smoke01_1.transpose.rot90.rot90.permute4907281356.ex01', 'smoke01_1.transpose.rot90.rot90.permute7562830149.ex10']
+[Rank 1] decoding ['smoke01_1.transpose.rot90.permute7613284905.ex10', 'smoke01_1.transpose.rot90.permute7690351428.ex01', 'smoke01_1.transpose.rot90.rot90.rot90.permute6142358709.ex10', 'smoke01_1.transpose.rot90.rot90.rot90.permute6150492378.ex01']
+[Rank 1] allocated 9332MB for inference
+[Rank 1] finished smoke01 in 81.7s
+[Rank 1] done!
+
+
+2026-10-28 21:06:07.517015: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793221567.540151     402 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1793221567.547655     402 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+
+
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+[Rank 3] start!
+==((====))==  Unsloth 2025.9.7: Fast Qwen3 patching. Transformers: 4.55.4.
+   \\   /|    NVIDIA L4. Num GPUs = 1. Max memory: 22.034 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 8.9. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.32.post2. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.07it/s]
+
+
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+[Rank 3] done!
+*** Generating submission for 2 outputs...
+
+
+CompletedProcess(args=['/usr/bin/python3', '/kaggle/working/nvarc2026-carrier/driver.py', '--workdir', '/kaggle/working/nvarc2026-runtime', '--mode', 'smoke', '--end-time', '1793222116.1166055', '--smoke-seconds', '900'], returncode=0)
+
+{
+  "kind": "synthetic_runtime_smoke",
+  "python": "3.11.13 (main, Jun  4 2025, 08:57:29) [GCC 11.4.0]",
+  "elapsed_from_first_cell_seconds": 523.6731882095337,
+  "diagnostics": {
+    "mode": "smoke",
+    "dependency_provenance": {
+      "required_kernel_version": 272622465,
+      "required_notebook_version": 2,
+      "upstream_patch_sha256": "33ac957107cd7e4477163072ea6dff5cb2744f00067e8a7b3aea3c89c91d3ad6",
+      "mounted_qwen3_sha256": "0c360b0a7c7ed47c05e113c300791a502c878f3087ab24dfd949855429fe0e30"
+    },
+    "worker_returncode": 0,
+    "completed_tasks": 1,
+    "expected_tasks": 1,
+    "missing_tasks": [],
+    "candidate_outputs": 2,
+    "expected_outputs": 2,
+    "fallback_outputs": [],
+    "missing_attempts": {
+      "smoke01_0": [
+        "attempt_2"
+      ],
+      "smoke01_1": [
+        "attempt_2"
+      ]
+    },
+    "missing_attempt_count": 2
+  },
+  "predictions": {
+    "smoke01": [
+      {
+        "attempt_1": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "attempt_2": [
+          [
+            0
+          ]
+        ]
+      },
+      {
+        "attempt_1": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "attempt_2": [
+          [
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "executed_driver_sha256": "345ce2feb474870fad0976694caf71478441e3ad071aec26028e337487fdf109"
+}

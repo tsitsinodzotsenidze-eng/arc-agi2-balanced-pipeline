@@ -6,7 +6,7 @@ Creator: Dzotsenidze, Tsitsino
 
 Resource type: Software
 
-Version: 2026-checkpoint-2
+Version: to be assigned to the next post-Z-result export; previous draft 2026-checkpoint-2
 
 ## Description
 
@@ -25,12 +25,14 @@ finite and unchanged; it stopped before decoding and is not accuracy evidence.
 Observed rounded official public scores: B0/V2 31.81 (script363494251),
 B1 30.97 (363939870), Z1 9.58 (364031423). On 3 November B1 Repeat
 (script364031921) displayed 30.56, exact status Succeeded (after deadline).
-It is 0.41 below B1 and 20.98 above the single Z1 observation. This is
-research evidence, not a claimed timely final competition candidate.
-Z Repeat (364032699) remains pending verification. B0 has an
+Z Repeat (364032699) also succeeded after deadline with displayed public9.58,
+matching Z1 at two-decimal precision. The updating-minus-zero-update gaps
+are21.39 initially and20.98 in the repeat pair. Both after-deadline results
+are research evidence, not claimed timely final candidates. B0 has an
 unpinned hash seed and is retained as a historical reference. The B1-Z1
-contrast is descriptive; a causal mechanism, statistical significance,
-repeatability and final private leaderboard results are not established.
+contrast recurs descriptively across two observations per configuration;
+a unique causal mechanism, statistical significance, general repeatability
+and final private leaderboard results are not established.
 
 The source/evidence archive preserves self-contained carrier notebooks,
 exact vendored source notebooks, dated design amendments, attribution,

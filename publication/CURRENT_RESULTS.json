@@ -62,9 +62,12 @@
       "learning_rate": 0,
       "python_hash_seed": 42,
       "exact_local_source_repeat_of": "Z1",
-      "status": "Notebook Running",
-      "public_score": null,
-      "result_verification": "pending"
+      "status": "Succeeded (after deadline)",
+      "public_score": 9.58,
+      "result_verification": "verified from user-provided Kaggle screenshot",
+      "completed_after_deadline": true,
+      "timely_final_candidate_claimed": false,
+      "observation_receipt": "publication/Z_REPEAT_RESULT_OBSERVATION_2026-11-03.json"
     }
   ],
   "descriptive_b1_minus_z1_score_points": 21.39,
@@ -79,5 +82,9 @@
   "previous_checkpoint_source_commit": "6cb9f96dc4d3e4c2219fd5941849131c44be4760",
   "descriptive_repeat_minus_b1_score_points": -0.41,
   "descriptive_b1_repeat_minus_z1_score_points": 20.98,
-  "b1_repeat_observation": "One exact-source B1 repeat is 0.41 points lower; Z repeat remains pending."
+  "b1_repeat_observation": "B1 public scores 30.97 and 30.56; Z public scores 9.58 and 9.58. The updating-minus-zero-update gaps are 21.39 and 20.98 points. Both repeats succeeded after deadline.",
+  "descriptive_z_repeat_minus_z1_score_points": 0,
+  "descriptive_b1_repeat_minus_z_repeat_score_points": 20.98,
+  "observed_public_score_contrast_recurred": true,
+  "repeatability_scope": "Two observations per configuration; descriptive recurrence of the rounded public-score contrast, not general repeatability or deterministic prediction identity."
 }

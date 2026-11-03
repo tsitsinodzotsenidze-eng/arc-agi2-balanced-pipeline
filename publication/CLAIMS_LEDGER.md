@@ -9,7 +9,8 @@
 | Repeat priorities were documented before their results | Dated protocol and amendments in `docs/` | Preserves decision chronology |
 | Source licenses were inspected | Dated `nvarc_port/NOTICE` and current `THIRD_PARTY_NOTICES.md` | Artifact-specific observations; not universal dependency certification |
 | One B1 exact-source repeat returned 30.56 | `RESULT_OBSERVATION_2026-11-03.json` | Succeeded (after deadline); 0.41 below reference |
-| B1-Z contrast recurs across both conditions | Z repeat remains pending | Not yet established |
+| Z exact-source repeat returned displayed 9.58, matching Z1 | `Z_REPEAT_RESULT_OBSERVATION_2026-11-03.json` | Succeeded (after deadline); rounded aggregate agreement, not prediction identity |
+| B1-Z public-score contrast recurs in the recorded repeats | Original gap 21.39; repeat gap 20.98; `CURRENT_RESULTS.json` | Two observations per configuration; descriptive recurrence, not statistical significance or a unique causal mechanism |
 | Final private leaderboard performance | Not available at this checkpoint | Not claimed |
 
 The archive excludes hidden test outputs, model weights and built dependency

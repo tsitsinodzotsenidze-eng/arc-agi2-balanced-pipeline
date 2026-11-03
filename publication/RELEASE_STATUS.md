@@ -9,8 +9,9 @@ The original 2 November 57-file ZIP is preserved unchanged, SHA-256
 `00936ad565ba6e0a64f1086834488fa112ad53dd28a09ac64346d401c57211b2`.
 It is a pre-result checkpoint. Later observations enter a subsequent export.
 
-B1 Repeat is verified at public30.56, exact Kaggle status
-`Succeeded (after deadline)`; Z Repeat remains pending. The user's post-cutoff
+B1 Repeat is verified at public30.56 and Z Repeat at public9.58; both have
+exact Kaggle status `Succeeded (after deadline)`. Z matches the displayed Z1
+score9.58; the contrast is21.39 initially and20.98 in the repeat pair. The user's post-cutoff
 screenshot marks B0 31.81 and B1 30.97 as evaluated for final score, consistent
 with Kaggle's automatic-selection notice. Final private scores are unknown.
 
@@ -18,3 +19,9 @@ Separate Zenodo draft: https://zenodo.org/uploads/23895859 . Reserved DOI:
 10.5281/zenodo.23895859. Reservation/draft metadata are not publication.
 Repository/release visibility, archive upload and Zenodo publication remain
 separate closure actions. No new source, settings or submission was created.
+
+The earlier 2 November export and the 3 November v2 export are preserved.
+The v2 ZIP predates the Z Repeat result; the next export and actual Zenodo
+draft metadata need updating before publication. The author-provided pre-Z
+draft is preserved separately; the working Solution Writeup now includes
+all five observed public results. No neural experiment was launched.

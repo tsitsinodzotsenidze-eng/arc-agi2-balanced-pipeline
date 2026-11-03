@@ -10,8 +10,8 @@ as a newly invented solver.
 
 The official Kaggle Submissions page was inspected after the deadline on
 3 November. The scores below are rounded **public** scores, not final private
-scores. B1 Repeat completed with an explicit after-deadline label; Z Repeat
-was still running. The original 2 November archive is preserved unchanged.
+scores. Both B1 Repeat and Z Repeat succeeded with explicit after-deadline
+labels. The original 2 November archive is preserved unchanged.
 
 | Arm | Saved scriptVersionId | Configuration | Public score / observed state |
 | --- | --- | --- | --- |
@@ -19,17 +19,20 @@ was still running. The original 2 November archive is preserved unchanged.
 | B1 | 363939870 | LR 5e-5; hash42 | 30.97, Succeeded |
 | Z1 | 364031423 | LR 0; hash42; trainer computations retained | 9.58, Succeeded |
 | B1 repeat | 364031921 | Exact B1 source repeat | 30.56, Succeeded (after deadline) |
-| Z repeat | 364032699 | Exact Z1 source repeat | Pending verification; Running |
+| Z repeat | 364032699 | Exact Z1 source repeat | 9.58, Succeeded (after deadline) |
 
 The B1-Z1 difference is 21.39 public-score points. B1 Repeat is 0.41 points
-below B1 and 20.98 above the single Z1 observation. These are descriptive
-contrasts; Z repeat remains pending. Exact source repeats assess stability; identical source
+below B1. Z Repeat matches Z1 at the displayed two-decimal precision, so the
+repeat B1-Z contrast is20.98 points. This is descriptive recurrence in the
+recorded public scores, not identical-prediction evidence or a significance
+test. Exact source repeats assess stability; identical source
 and hash42 do not guarantee deterministic GPU execution. B0 is a historical
 reference, not an exact B1 replicate. Unfinished or failed runs are not zero
 scores. Packaging runs and their placeholder files are not performance data.
 
 - [Machine-readable current results](publication/CURRENT_RESULTS.json)
 - [B1 repeat result and deadline status](publication/B1_REPEAT_RESULT_2026-11-03.md)
+- [Z repeat result and deadline status](publication/Z_REPEAT_RESULT_OBSERVATION_2026-11-03.json)
 - [Results, intended analysis and limitations](publication/RESULTS_AND_LIMITATIONS.md)
 - [Reproduction and external dependencies](publication/REPRODUCING.md)
 - [Source attribution and license scope](publication/THIRD_PARTY_NOTICES.md)

@@ -7,7 +7,9 @@
 
 ## Research question and attribution
 
-How stable is the observed public-score contrast between a test-time updating policy and a null-update policy in an attributed ARC-AGI-2 solver, when the prescribed code is rerun?
+The research task is to examine performance under parameter-update policies while retaining the surrounding trainer and optimizer workflow. Does the public-score advantage of an update-permitting configuration over a zero-learning-rate configuration persist across repeated evaluations of the specified NVARC port?
+
+The directional hypothesis is that the update-permitting configuration achieves higher public scores than the zero-learning-rate configuration in both the initial and repeated evaluations. This manuscript formulation clarifies the research question; the original dated protocol and amendments remain the record of when experimental decisions were made.
 
 This project is an implementation, update-sensitivity and repeatability study of the NVARC system developed by **Ivan Sorokin and Jean-Francois Puget** (NVIDIA KGMoN), with its acknowledged ARChitects lineage. We do **not** claim to have invented NVARC or its underlying solver. Our distinct contributions are a documented ARC Prize 2026 execution port, a dated update-strength study with a controlled hash seed, exact-source repeat carriers, a bounded independent parameter-invariance probe, and a source-linked record of public results and limitations.
 
@@ -61,6 +63,10 @@ The original NVARC authors are credited throughout. The main upstream Version 10
 
 **Research record:** [ARC-AGI-2 GitHub repository](https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline) (private at drafting; public visibility must be checked before release). **Zenodo:** reserved `10.5281/zenodo.23895859` (existing draft, **not** yet a published DOI). The separate integrated ARC-AGI-2/ARC-AGI-3 academic manuscript is not this Kaggle Solution Writeup.
 
-## Contribution and next analysis
+## Conclusion and next analysis
 
-This study contributes an attributed, provenance-conscious comparison of parameter-update configurations with predeclared source-identical repeats and separately bounded engineering evidence. Future work should obtain task-level and runtime traces where legitimately available, measure variability under additional matched repetitions, and distinguish parameter-update effects from downstream changes in search, scheduling and budget consumption. The observed contrast is a hypothesis-generating finding, not proof that updates alone uniquely explain the aggregate score difference.
+Repeated evaluations showed substantially higher public scores with parameter updates enabled than with a zero learning rate, while trainer and optimizer computations were retained. The observed contrasts were **21.39** and **20.98 public-score points**. The updating configuration scored **30.97** and **30.56**, whereas the zero-learning-rate configuration scored **9.58** in both evaluations at Kaggle's displayed precision. These observations support the directional hypothesis in the tested implementation and establish a recurring empirical contrast between the two update policies.
+
+The study therefore provides evidence of performance sensitivity to the update policy beyond the mere presence of an executing training workflow. It does not isolate a unique mechanism: parameter changes can also alter subsequent generation, candidate ranking and budget use. Task-level and runtime traces, together with additional matched repetitions, would help distinguish these pathways and assess generalization. With two observations per configuration, the result remains a bounded empirical finding rather than a statistical-significance claim or a guarantee of repeatability in other settings.
+
+The contribution is an attributed comparison of update policies with source-identical repeat carriers, bounded parameter-invariance evidence and traceable provenance. It supplies an empirical foundation for the wider research question of when an adaptation procedure improves problem solving under unfamiliar conditions.

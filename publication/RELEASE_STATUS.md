@@ -1,21 +1,20 @@
-# Publication preparation status — 2 November2026
+# Publication preparation status — updated 3 November 2026
 
-This checkpoint prepares GitHub documentation and a separate ARC2 Zenodo
-draft while two official repeat submissions remain running. It does not
-claim Zenodo publication, a public GitHub release or final Kaggle selection.
+GitHub PR8 was reviewed and merged at
+`6cb9f96dc4d3e4c2219fd5941849131c44be4760`. Reviewed head
+`72da63a511ca56abb9ee2a871a3c3745f515ac43` passed pytest workflow41513603656.
+Submitted source and original protocols are unchanged.
 
-The existing research source is commit
-`1c3bb8d805c57003b73e1f34f3a48870064f2e5b` on
-`research/arc2-symbolic-baseline-20261028`. It is ahead12/behind0 relative to
-the former main `01347aa067486bc5f5a95d50aa243a5a2877a74e`.
-Existing pytest workflow41339964368 passed on Python3.10 and3.11.
+The original 2 November 57-file ZIP is preserved unchanged, SHA-256
+`00936ad565ba6e0a64f1086834488fa112ad53dd28a09ac64346d401c57211b2`.
+It is a pre-result checkpoint. Later observations enter a subsequent export.
 
-The new publication branch is prepared from that full source, preserving the
-submitted carriers and historical evidence. Source/archive integrity checks
-do not run neural inference or launch new Kaggle sessions.
+B1 Repeat is verified at public30.56, exact Kaggle status
+`Succeeded (after deadline)`; Z Repeat remains pending. The user's post-cutoff
+screenshot marks B0 31.81 and B1 30.97 as evaluated for final score, consistent
+with Kaggle's automatic-selection notice. Final private scores are unknown.
 
-Pending human-facing closure: verified terminal repeat observations, final
-Kaggle selection, repository/release visibility and Zenodo publication.
-The two official Run/Submit decisions and final selections remain Cici's.
-The code deadline is2 November23:59UTC /3 November03:59Georgia. Publication
-preparation during this wait does not extend that deadline.
+Separate Zenodo draft: https://zenodo.org/uploads/23895859 . Reserved DOI:
+10.5281/zenodo.23895859. Reservation/draft metadata are not publication.
+Repository/release visibility, archive upload and Zenodo publication remain
+separate closure actions. No new source, settings or submission was created.

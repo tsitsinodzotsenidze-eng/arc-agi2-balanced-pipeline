@@ -1,7 +1,7 @@
 # ARC-AGI-2: An Attributed Replication Study of Parameter Updates in NVARC
 
-Interim technical draft, 2 November2026. Repeat results remain pending
-verification. This file is not an officially submitted competition writeup.
+Interim technical draft, updated 3 November 2026. Z Repeat remains pending;
+B1 Repeat has an explicitly labeled post-deadline result. This file is not an officially submitted competition writeup.
 
 ## Research question
 
@@ -28,7 +28,7 @@ decoding and does not establish benchmark accuracy.
 - B0/V2:31.81, script363494251; historical reference with unpinned hash seed.
 - B1:30.97, script363939870.
 - Z1:9.58, script364031423.
-- B1 repeat:script364031921, pending verification.
+- B1 repeat: 30.56, script364031921, Succeeded (after deadline).
 - Z repeat:script364032699, pending verification.
 
 These are rounded public scores. Final private scores are unknown. Short
@@ -36,10 +36,12 @@ ordinary notebook packaging runs are not official scoring runs.
 
 ## Interpretation
 
-The B1-Z1 difference of21.39 points motivates replication but does not by
-itself identify a causal mechanism or statistical significance. Repeat
-outcomes assess the stability of the observed contrast under the recorded
-configurations. Both repeat results, including non-completion, will remain
+The B1-Z1 difference is 21.39 points. An exact-source B1 repeat returned
+30.56, 0.41 below B1 and 20.98 above the single Z1 observation. This supports
+consistency of the updating reference across one later run; Z replication
+remains pending. The after-deadline result is retained as research evidence,
+not represented as a timely final candidate. These observations do not
+identify a causal mechanism or statistical significance. Both repeat results, including non-completion, will remain
 visible. B0 is reported separately because its hash conditions differ.
 Aggregate scores do not reveal hidden task-level effects or execution
 coverage. The earlier symbolic pilot and ARC-AGI-3 recovery experiments

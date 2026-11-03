@@ -1,4 +1,4 @@
-# Claim-to-evidence ledger — 2 November2026
+# Claim-to-evidence ledger — updated 3 November 2026
 
 | Claim | Evidence | Scope |
 | --- | --- | --- |
@@ -8,7 +8,8 @@
 | LR0 adapter invariant on synthetic workload | `evidence/zero-update-check-20261030/training-invariant.json` | 128 steps,506 tensors; no decoding |
 | Repeat priorities were documented before their results | Dated protocol and amendments in `docs/` | Preserves decision chronology |
 | Source licenses were inspected | Dated `nvarc_port/NOTICE` and current `THIRD_PARTY_NOTICES.md` | Artifact-specific observations; not universal dependency certification |
-| B1-Z contrast is repeatable | Pending official repeat outcomes | Not yet established |
+| One B1 exact-source repeat returned 30.56 | `RESULT_OBSERVATION_2026-11-03.json` | Succeeded (after deadline); 0.41 below reference |
+| B1-Z contrast recurs across both conditions | Z repeat remains pending | Not yet established |
 | Final private leaderboard performance | Not available at this checkpoint | Not claimed |
 
 The archive excludes hidden test outputs, model weights and built dependency

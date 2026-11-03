@@ -1,0 +1,46 @@
+{
+  "record_type": "Verified post-deadline public-result observation",
+  "observation_date_georgia": "2026-11-03",
+  "first_observed_by_session_utc": "2026-11-03T00:30:00Z",
+  "observation_time_precision": "minutes; not a scoring-completion timestamp",
+  "source_url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions",
+  "user_screenshot": "image(20261103-003557).png",
+  "arm": "B1_REPEAT",
+  "title": "ARC2 2026 NVARC B1 Repeat",
+  "script_version_id": 364031921,
+  "version_label": "B1 repeat LR5e-5 hash42 2026-10-31",
+  "public_score": 30.56,
+  "score_type": "rounded public leaderboard score",
+  "kaggle_status_exact": "Succeeded (after deadline)",
+  "completed_after_deadline": true,
+  "exact_scoring_completion_timestamp": null,
+  "deadline_utc": "2026-11-02T23:59:00Z",
+  "source_repeat_of": "B1",
+  "reference_script_version_id": 363939870,
+  "reference_public_score": 30.97,
+  "repeat_minus_reference_score_points": -0.41,
+  "repeat_minus_z1_score_points": 20.98,
+  "timely_final_candidate_claimed": false,
+  "causal_identification_claimed": false,
+  "z_repeat_at_observation": {
+    "script_version_id": 364032699,
+    "status": "Notebook Running",
+    "public_score": null
+  },
+  "final_selection": {
+    "manual_count": 0,
+    "automatic_selection_message_observed": true,
+    "evaluated_row_markers_user_screenshot": [
+      {
+        "script_version_id": 363494251,
+        "public_score": 31.81
+      },
+      {
+        "script_version_id": 363939870,
+        "public_score": 30.97
+      }
+    ],
+    "final_private_score_known": false
+  },
+  "archive_policy": "Retain the pre-deadline 2 November ZIP unchanged; append this observation to a later source/evidence export. Scoring deadline status and research inclusion are distinct."
+}

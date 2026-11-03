@@ -6,7 +6,7 @@ Creator: Dzotsenidze, Tsitsino
 
 Resource type: Software
 
-Version: 2026-checkpoint-1
+Version: 2026-checkpoint-2
 
 ## Description
 
@@ -22,9 +22,12 @@ retains trainer and optimizer computations. A separate synthetic engineering
 check completed128 steps while all506 inspected adapter tensors remained
 finite and unchanged; it stopped before decoding and is not accuracy evidence.
 
-Observed rounded official public scores at the2 November checkpoint: B0/V2
-31.81 (script363494251), B1 30.97 (363939870), Z1 9.58 (364031423). B1 repeat
-(364031921) and Z repeat (364032699) remain pending verification. B0 has an
+Observed rounded official public scores: B0/V2 31.81 (script363494251),
+B1 30.97 (363939870), Z1 9.58 (364031423). On 3 November B1 Repeat
+(script364031921) displayed 30.56, exact status Succeeded (after deadline).
+It is 0.41 below B1 and 20.98 above the single Z1 observation. This is
+research evidence, not a claimed timely final competition candidate.
+Z Repeat (364032699) remains pending verification. B0 has an
 unpinned hash seed and is retained as a historical reference. The B1-Z1
 contrast is descriptive; a causal mechanism, statistical significance,
 repeatability and final private leaderboard results are not established.

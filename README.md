@@ -6,27 +6,30 @@ Tsitsino Dzotsenidze. Upstream NVARC authors: Ivan Sorokin and Jean-Francois
 Puget (NVIDIA KGMoN), with underlying ARChitects lineage. The port is not claimed
 as a newly invented solver.
 
-## Current publication checkpoint — 2 November 2026
+## Current publication checkpoint — 3 November 2026
 
-The official Kaggle Submissions page was inspected on 2 November before the
-final deadline. The observed scores below are rounded **public** scores, not
-final private scores. Both repeats were still `Notebook Running`.
+The official Kaggle Submissions page was inspected after the deadline on
+3 November. The scores below are rounded **public** scores, not final private
+scores. B1 Repeat completed with an explicit after-deadline label; Z Repeat
+was still running. The original 2 November archive is preserved unchanged.
 
 | Arm | Saved scriptVersionId | Configuration | Public score / observed state |
 | --- | --- | --- | --- |
 | B0 / V2 | 363494251 | LR 5e-5; Python hash seed not pinned | 31.81, Succeeded |
 | B1 | 363939870 | LR 5e-5; hash42 | 30.97, Succeeded |
 | Z1 | 364031423 | LR 0; hash42; trainer computations retained | 9.58, Succeeded |
-| B1 repeat | 364031921 | Exact B1 source repeat | Pending verification; Running |
+| B1 repeat | 364031921 | Exact B1 source repeat | 30.56, Succeeded (after deadline) |
 | Z repeat | 364032699 | Exact Z1 source repeat | Pending verification; Running |
 
-The B1-Z1 difference is 21.39 public-score points. It is a descriptive
-single-run contrast. Exact source repeats assess stability; identical source
+The B1-Z1 difference is 21.39 public-score points. B1 Repeat is 0.41 points
+below B1 and 20.98 above the single Z1 observation. These are descriptive
+contrasts; Z repeat remains pending. Exact source repeats assess stability; identical source
 and hash42 do not guarantee deterministic GPU execution. B0 is a historical
 reference, not an exact B1 replicate. Unfinished or failed runs are not zero
 scores. Packaging runs and their placeholder files are not performance data.
 
 - [Machine-readable current results](publication/CURRENT_RESULTS.json)
+- [B1 repeat result and deadline status](publication/B1_REPEAT_RESULT_2026-11-03.md)
 - [Results, intended analysis and limitations](publication/RESULTS_AND_LIMITATIONS.md)
 - [Reproduction and external dependencies](publication/REPRODUCING.md)
 - [Source attribution and license scope](publication/THIRD_PARTY_NOTICES.md)

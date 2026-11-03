@@ -1,18 +1,20 @@
-# Claim-to-evidence ledger — updated 3 November 2026
+# ARC-AGI-2 claim-to-evidence ledger — final documentation review
+**Reviewed:** 3 November 2026. **Status:** publication draft; no unverified final private leaderboard claims.
 
-| Claim | Evidence | Scope |
+| Claim | Direct evidence or provenance pointer | Interpretation boundary |
 | --- | --- | --- |
-| B0 public31.81 | Saved script363494251; `evidence/arc2-b0-20261030/official-result.json`; current Kaggle observation | Historical unpinned-hash port result |
-| B1 public30.97; Z1 public9.58 | `evidence/ARC2_Z1_RESULT_B1_REPEAT_HANDOFF_2026-11-01.json`; `CURRENT_RESULTS.json` | Rounded public aggregate scores |
-| B1 and Z repeats are exact source repeats | Notebook SHA-256 identities in `CURRENT_RESULTS.json` and source manifest | Local source identity; not deterministic execution |
-| LR0 adapter invariant on synthetic workload | `evidence/zero-update-check-20261030/training-invariant.json` | 128 steps,506 tensors; no decoding |
-| Repeat priorities were documented before their results | Dated protocol and amendments in `docs/` | Preserves decision chronology |
-| Source licenses were inspected | Dated `nvarc_port/NOTICE` and current `THIRD_PARTY_NOTICES.md` | Artifact-specific observations; not universal dependency certification |
-| One B1 exact-source repeat returned 30.56 | `RESULT_OBSERVATION_2026-11-03.json` | Succeeded (after deadline); 0.41 below reference |
-| Z exact-source repeat returned displayed 9.58, matching Z1 | `Z_REPEAT_RESULT_OBSERVATION_2026-11-03.json` | Succeeded (after deadline); rounded aggregate agreement, not prediction identity |
-| B1-Z public-score contrast recurs in the recorded repeats | Original gap 21.39; repeat gap 20.98; `CURRENT_RESULTS.json` | Two observations per configuration; descriptive recurrence, not statistical significance or a unique causal mechanism |
-| Final private leaderboard performance | Not available at this checkpoint | Not claimed |
+| B0/V2 displayed **31.81**, saved version **363494251** | [Kaggle B0 saved version](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-candidate?scriptVersionId=363494251); `evidence/arc2-b0-20261030/official-result.json`; [CURRENT_RESULTS.json](CURRENT_RESULTS.json) | Historical reference, Python hash seed **not fixed**, not an exact B1 repeat |
+| B1 displayed **30.97**, version **363939870** | [Kaggle B1 saved version](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-b1-hash42?scriptVersionId=363939870); `evidence/ARC2_Z1_RESULT_B1_REPEAT_HANDOFF_2026-11-01.json` | Public rounded result, LR5e-5/hash42 |
+| Z1 displayed **9.58**, version **364031423** | [Kaggle Z1 saved version](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-z1-zero-update?scriptVersionId=364031423); `evidence/ARC2_Z1_RESULT_B1_REPEAT_HANDOFF_2026-11-01.json` | Public rounded result; LR0/hash42 retains trainer/optimizer computations |
+| B1 Repeat displayed **30.56**, version **364031921** | [Kaggle B1 Repeat saved version](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-b1-repeat?scriptVersionId=364031921); [B1 observation](RESULT_OBSERVATION_2026-11-03.json) | **Succeeded (after deadline)**; not claimed eligible for final competition score |
+| Z Repeat displayed **9.58**, version **364032699** | [Kaggle Z Repeat saved version](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-z-repeat?scriptVersionId=364032699); [Z observation](Z_REPEAT_RESULT_OBSERVATION_2026-11-03.json) | **Succeeded (after deadline)**; matches Z1 at displayed precision, not task-level identity |
+| The exact local B1 and B1 Repeat carriers are byte-identical; same for Z1/Z Repeat | [CURRENT_RESULTS.json](CURRENT_RESULTS.json) source SHA-256 identities; repository Git blob identities in [independent audit](INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md); Work preflight `WORK_ARCHIVE_PREFLIGHT_2026-11-03.json` | Local source identity, not necessarily raw Kaggle notebook metadata or GPU execution identity |
+| B1–Z1 contrast **21.39**; repeat B1–Z Repeat contrast **20.98**; B1 repeat shift **−0.41** | [CURRENT_RESULTS.json](CURRENT_RESULTS.json); [RESULTS_AND_LIMITATIONS.md](RESULTS_AND_LIMITATIONS.md) | Descriptive arithmetic of **rounded public scores**. Two observations per condition: no significance, unique causal attribution or reliable variance estimate |
+| ZR zero-rate adapter-invariance probe passed **128 steps / 506 tensors**, no decoding | `evidence/zero-update-check-20261030/training-invariant.json`; `docs/ARC2_PRIORITY_AMENDMENT_2026-10-30.md` | Synthetic/engineering invariant only; **not** hidden-test accuracy evidence |
+| Experimental priorities and repeat strategy were documented in advance | `docs/ARC2_UPDATE_STRENGTH_PROTOCOL_2026-10-29.md`; `docs/ARC2_PRIORITY_AMENDMENT_2026-10-30.md` | Preserve original chronology; the half-rate arm was deferred rather than run |
+| Source licensing and upstream authorship | `nvarc_port/NOTICE` (28 October signed-in license check), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [NVARC upstream README](https://github.com/1ytic/NVARC/blob/main/README.md) | Author notebook V10 Apache-2.0 publicly reread; dependency V2 and model V1 rely on dated 28 October verification; do not license all dependencies by implication |
+| Final selection | Screenshot of authenticated Kaggle Submissions and Kaggle automatic-selection notice; [CURRENT_RESULTS.json](CURRENT_RESULTS.json) | 0 manual selections; public B0 and B1 shown as evaluated; **private** results not established |
+| Public GitHub release and published Zenodo DOI | **Not yet verified / not claimed**; [RELEASE_STATUS.md](RELEASE_STATUS.md) | Private repo and reserved DOI are distinct from public release and DOI registration |
+| Independent documentary check | [INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md](INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md) | Second-source review of readable records; does not rerun neural code or certify all dependency licenses |
 
-The archive excludes hidden test outputs, model weights and built dependency
-packages. Its release checks establish source/archive integrity, not a new
-neural benchmark experiment.
+The archive does **not** include hidden evaluation tasks, hidden per-task predictions, model weights or built dependency distributions. Static source integrity, compilation/AST checks and repository CI do **not** establish a fresh neural benchmark result. Observed screenshot time is **not** scoring-completion time. No final private score or causal mechanism is claimed.

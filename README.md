@@ -23,7 +23,7 @@ labels. The original 2 November archive is preserved unchanged.
 
 The B1-Z1 difference is 21.39 public-score points. B1 Repeat is 0.41 points
 below B1. Z Repeat matches Z1 at the displayed two-decimal precision, so the
-repeat B1-Z contrast is20.98 points. This is descriptive recurrence in the
+repeat B1-Z contrast is 20.98 points. This is descriptive recurrence in the
 recorded public scores, not identical-prediction evidence or a significance
 test. Exact source repeats assess stability; identical source
 and hash42 do not guarantee deterministic GPU execution. B0 is a historical
@@ -38,6 +38,7 @@ scores. Packaging runs and their placeholder files are not performance data.
 - [Source attribution and license scope](publication/THIRD_PARTY_NOTICES.md)
 - [Technical Solution Writeup draft](publication/SOLUTION_WRITEUP_DRAFT.md)
 - [Claim-to-evidence ledger](publication/CLAIMS_LEDGER.md)
+- [Independent source, results and license verification (3 November)](publication/INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md)
 - [Zenodo description draft](publication/ZENODO_DESCRIPTION.md)
 - [Publication status](publication/RELEASE_STATUS.md)
 

@@ -1,37 +1,19 @@
-# Zenodo metadata — final reviewed ARC-AGI-2 export (pre-publication draft)
-**Prepared:** 3 November 2026  
-**Record status:** Existing **draft** `https://zenodo.org/uploads/23895859`. Reserved DOI `10.5281/zenodo.23895859` **is not yet registered as a published version DOI**. This file does not authorize publishing the deposit or claim it exists publicly.
+# Zenodo published record — ARC-AGI-2
+
+**Published:** 3 November 2026 (UTC). [Record](https://zenodo.org/records/23895859); version DOI **10.5281/zenodo.23895859**; concept DOI **10.5281/zenodo.23895858**.
 
 **Title:** ARC-AGI-2: NVARC parameter-update sensitivity and repeatability — competition carriers, provenance and results (2026)
 
-**Creator:** Dzotsenidze, Tsitsino  
-**Resource type:** Software (research source and evidence archive)  
-**Publication date:** Set to actual publication date after verification  
-**Version:** Assign from the final reviewed export (do not reuse the unmodified 2 November or pre-Z-result v2 ZIP labels)  
-**Publisher:** Zenodo
+**Creator:** Dzotsenidze, Tsitsino; ORCID **0000-0002-9432-1803**. **Type:** Software. **Version:** `2026-final-1`.
 
-## Description — ready to adapt to the actual final manifest
+**Public source release:** https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline/releases/tag/arc2-2026-final-1
 
-This archived technical record documents an **attributed ARC Prize 2026 ARC-AGI-2 implementation, update-sensitivity and repeatability study** by Tsitsino Dzotsenidze. The underlying NVARC solver was developed by **Ivan Sorokin and Jean-Francois Puget** (NVIDIA KGMoN), with earlier ARChitects lineage. The contribution here is the documented 2026 port, a controlled comparison of test-time parameter-update policies, exact-local-source repeat submissions, bounded parameter-invariance engineering evidence, and traceable saved-version and research provenance; the NVARC solution itself is **not** claimed as a new invention.
+## Description summary
 
-The initial reference uses learning rate `5e-5` and `PYTHONHASHSEED=42` (B1); the null-update condition uses learning rate `0` with the same hash-seed setting while retaining trainer and optimizer computations, model and decoder policy (Z1). B1 Repeat and Z Repeat use locally byte-identical notebooks to B1 and Z1, respectively. Historical B0/V2 lacks a pinned Python hash seed and is reported separately.
+An attributed port and parameter-update comparison of the NVARC solver developed by Ivan Sorokin and Jean-Francois Puget, with acknowledged ARChitects lineage. The research asks whether the advantage of permitting parameter updates persists across repeated evaluations while trainer and optimizer computations remain in place.
 
-**Observed rounded public Kaggle scores:** B0/V2 **31.81** (saved script `363494251`); B1 **30.97** (`363939870`); Z1 **9.58** (`364031423`); B1 Repeat **30.56** (`364031921`), **Succeeded (after deadline)**; Z Repeat **9.58** (`364032699`), **Succeeded (after deadline)**. The B1–Z1 public-score difference is **21.39** points initially and **20.98** in the repeat pair. Both repeat results are **post-deadline research observations**, not timely final competition entrants. Z1 and Z Repeat have equal **displayed two-decimal aggregate** scores, which does not establish identical predictions. The differences are descriptive, not proof of statistical significance, broad repeatability or a uniquely identified causal mechanism. Final private leaderboard results and exact scoring-completion timestamps are **unknown**.
+Public scores: B0/V2 31.81; B1 30.97; Z1 9.58; B1 Repeat 30.56; Z Repeat 9.58. Both repeats succeeded after deadline and remain research observations. The observed contrasts recur at 21.39 and 20.98 public-score points; two evaluations per configuration do not establish significance, general repeatability, deterministic predictions or a unique mechanism. A separate synthetic-workload check completed 128 steps with 506 adapter tensors finite and unchanged, stopping before decoding.
 
-A separate bounded real-model engineering check completed **128 zero-learning-rate training steps**, with **506 inspected adapter tensors** finite and unchanged, but ended before decoding. It is **not** a benchmark-accuracy result.
+The exact deposit contains `ARC_AGI2_NVARC_Final_84d84e2_2026-11-03.zip` (**418841 bytes**; SHA-256 `96dfc157e13b52091af098a1be2d2e7ebee6b5e1733e55d333b00ffa7aa7456c`). It exports 63 source/evidence files from commit `84d84e2a5b8bad8459ed1a04511743df0bf257fe` plus two generated integrity files. GitHub automatic source archives are distinct. External inputs retain their own terms, and model weights, installed distributions and hidden tasks/predictions are excluded. Artifact-specific license evidence and its dated qualifications are preserved in the included notices.
 
-The selected deposit is to contain source carrier notebooks, retained versions of upstream notebooks with required notices, selected dated protocols, hash manifests, static verification receipts, and machine-readable public result observations. It **excludes** model weights, installed third-party distributions, hidden evaluation tasks and hidden per-task predictions. Full rerunning requires separately authorized external inputs and a compatible pinned Kaggle GPU runtime; successful static/CI checks do not demonstrate hidden benchmark reproduction.
-
-**License and rights:** the primary original Kaggle NVARC Notebook Version 10 publicly displays Apache-2.0; a signed-in artifact-specific inspection dated **28 October 2026** recorded Apache-2.0 for the specific Unsloth dependency Notebook Version 2 and Qwen model Version 1, whose current license fields were **not independently reread** in the latest check. Attribution and third-party terms remain applicable. The repository license is not a blanket relicense for any model, dependencies, or external materials. Consult `publication/THIRD_PARTY_NOTICES.md`, `nvarc_port/NOTICE` and the archive's source-hash manifest.
-
-**Repository:** https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline
-
-**Research relationship:** This ARC-AGI-2 technical archive is separate from the ARC-AGI-3 recovery-study deposit and the combined academic manuscript *Two Worlds, One Challenge: How AI Solves Unfamiliar Problems*.
-
-## Final publication controls for Work
-
-1. Use **the existing Zenodo draft**, do not create a duplicate DOI.
-2. Review and select the actual final ZIP built from the **approved documentation commit**. Check full manifest coverage and per-file hashes against that commit; preserve previous ZIPs unchanged.
-3. Verify README, source rights and selected archive scope. If the two remaining license fields cannot be reverified, keep the exact dated qualification rather than asserting contemporary independent verification.
-4. Link a **real GitHub public Release** when one exists, not the unpublished private repository as a purported public source archive.
-5. Save draft, inspect Preview, confirm public visibility and rights, obtain author approval, then publish and verify the landing page and version/concept DOIs. Until then, this is a **metadata draft**, not a citable publication.
+The published Zenodo description contains the full metadata and verification detail. The creator ORCID, final filename/size/MD5, Published/Open status, version and resolving DOI were verified through the live record. This file is a publication record, replacing the former metadata draft; the immutable ZIP retains that earlier draft as part of its preparation history.

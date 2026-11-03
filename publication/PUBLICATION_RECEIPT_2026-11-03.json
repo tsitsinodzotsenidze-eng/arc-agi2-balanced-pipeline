@@ -1,0 +1,49 @@
+{
+  "record_type": "Verified ARC-AGI-2 GitHub and Zenodo publication completion",
+  "verified_at_utc": "2026-11-03T21:00:04.553471+00:00",
+  "repository": "https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline",
+  "repository_visibility": "public",
+  "pull_request": 10,
+  "merged": true,
+  "archive_source_commit": "84d84e2a5b8bad8459ed1a04511743df0bf257fe",
+  "source_tree": "d7e6bfa6b4130d053505d40ac1c8b6cbbe26c09b",
+  "github_release": {
+    "url": "https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline/releases/tag/arc2-2026-final-1",
+    "tag": "arc2-2026-final-1",
+    "draft": false,
+    "asset_id": 707056416,
+    "sha256": "96dfc157e13b52091af098a1be2d2e7ebee6b5e1733e55d333b00ffa7aa7456c",
+    "size": 418841
+  },
+  "zenodo": {
+    "url": "https://zenodo.org/records/23895859",
+    "status": "published",
+    "access": "open",
+    "version": "2026-final-1",
+    "version_doi": "10.5281/zenodo.23895859",
+    "concept_doi": "10.5281/zenodo.23895858",
+    "version_doi_resolved_to": "https://zenodo.org/records/23895859",
+    "creator_orcid": "0000-0002-9432-1803",
+    "file_md5": "857010e7568522c4154d6a772d7a861e"
+  },
+  "archive": {
+    "file": "ARC_AGI2_NVARC_Final_84d84e2_2026-11-03.zip",
+    "bytes": 418841,
+    "sha256": "96dfc157e13b52091af098a1be2d2e7ebee6b5e1733e55d333b00ffa7aa7456c",
+    "md5": "857010e7568522c4154d6a772d7a861e",
+    "source_files": 63,
+    "total_files": 65,
+    "manifest_entries": 64
+  },
+  "checks": [
+    "CI 41712801506 succeeded on reviewed head; merged tree identical",
+    "All exported source Git blobs matched",
+    "ZIP CRC and full per-file SHA-256 manifest passed",
+    "Five public scores and post-deadline labels retained",
+    "Exact repeat source equality verified",
+    "GitHub asset size and SHA-256 matched",
+    "Zenodo filename, size and MD5 matched",
+    "Published/Open status, version, ORCID and resolving DOI verified"
+  ],
+  "scope_note": "Subsequent publication metadata updates do not change the immutable release tag or curated ZIP. Kaggle Writeup and Paper Track submissions are separate."
+}

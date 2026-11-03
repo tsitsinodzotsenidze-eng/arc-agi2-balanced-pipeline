@@ -1,9 +1,9 @@
 # Parameter Updates and Repeatability in an Attributed NVARC Port for ARC-AGI-2
 
 **ARC Prize 2026 — ARC-AGI-2 technical Solution Writeup (publication-ready draft)**  
-**Author:** Tsitsino Dzotsenidze  
+**Author:** Tsitsino Dzotsenidze — ORCID `0000-0002-9432-1803`  
 **Date:** 3 November 2026  
-**Status:** Documentation complete for Work/author review; Kaggle publication **not yet claimed**.
+**Status:** Reviewed text; accompanying GitHub/Zenodo source/evidence record published. Kaggle Writeup publication **not yet claimed**.
 
 ## Research question and attribution
 
@@ -61,7 +61,7 @@ The source/evidence record preserves locally byte-identical repeat notebooks, fi
 
 The original NVARC authors are credited throughout. The main upstream Version 10 Notebook publicly displays Apache-2.0; the dependency Version 2 and model Version 1 Apache-2.0 labels are documented from a **28 October 2026 authenticated Kaggle inspection**, and were not independently reverified in the present check. Licenses of third-party dependencies and model assets remain their own. See [third-party notices](THIRD_PARTY_NOTICES.md) and the [independent publication audit](INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md).
 
-**Research record:** [ARC-AGI-2 GitHub repository](https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline) (private at drafting; public visibility must be checked before release). **Zenodo:** reserved `10.5281/zenodo.23895859` (existing draft, **not** yet a published DOI). The separate integrated ARC-AGI-2/ARC-AGI-3 academic manuscript is not this Kaggle Solution Writeup.
+**Research record:** [public GitHub Release](https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline/releases/tag/arc2-2026-final-1); [published Zenodo record](https://zenodo.org/records/23895859), DOI **10.5281/zenodo.23895859**, version `2026-final-1`. The curated archive preserves the reviewed source snapshot at `84d84e2a5b8bad8459ed1a04511743df0bf257fe`; preparation-time status statements inside that immutable snapshot are superseded by the publication receipt in the current repository. The separate integrated ARC-AGI-2/ARC-AGI-3 academic manuscript is not this Kaggle Solution Writeup.
 
 ## Conclusion and next analysis
 

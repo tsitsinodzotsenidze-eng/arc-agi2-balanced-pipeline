@@ -1,34 +1,27 @@
-# ARC-AGI-2 publication status and exact next action
-**Updated:** 3 November 2026, Georgia time. **Status:** Documentation for Work review; **publication NOT yet claimed**.
+# ARC-AGI-2 publication status
 
-## Preserved immutable research state
+**Completed:** 3 November 2026 (UTC). Author-requested conclusion revision incorporated; PR #10 merged.
 
-- Historical reviewed research PR **#8** merged at `6cb9f96dc4d3e4c2219fd5941849131c44be4760`. CI on the reviewed head passed (workflow `41513603656`).
-- Five submitted Kaggle saved versions and their source carriers are unchanged. The [results registry](CURRENT_RESULTS.json) and [independent audit](INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md) record exact saved version IDs, scores, source identities and status.
-- **B1 Repeat 30.56** and **Z Repeat 9.58** both have exact Kaggle status **Succeeded (after deadline)**; both belong in the research archive but are not asserted as timely final entrants. B1/Z1 original contrast **21.39**, repeat contrast **20.98** public-score points. B0/V2 31.81 remains historical, with unpinned hash.
-- **Final private leaderboard scores and precise scoring-completion timestamps are unknown.** Screenshot timestamps are observation timestamps.
-- Original 2 November source/evidence ZIP, **57 files, 391,413 bytes**, SHA-256 `00936ad565ba6e0a64f1086834488fa112ad53dd28a09ac64346d401c57211b2` — retained unchanged.
-- Subsequent v2 ZIP, **393,868 bytes**, SHA-256 `91f4fea6e0f016def4bb6d668f0c43d384b5585cfeffd0e896cf0d31edbcf549` — retained unchanged; this ZIP **predated Z Repeat's observed final result**.
-- Work's [static preflight](WORK_ARCHIVE_PREFLIGHT_2026-11-03.json) verified both older ZIPs and matched carrier source hashes. **It did not certify the future final export.**
-- Original protocols, source code, carrier notebooks, SHA-256 hashes and dated observation receipts have not been changed by this documentation-only work.
+- Repository: **Public**.
+- Published [GitHub Release](https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline/releases/tag/arc2-2026-final-1): `arc2-2026-final-1`.
+- Published [Zenodo record](https://zenodo.org/records/23895859): version `2026-final-1`.
+- Version DOI: **10.5281/zenodo.23895859**. Concept DOI: **10.5281/zenodo.23895858**.
+- Creator: Tsitsino Dzotsenidze; ORCID **0000-0002-9432-1803**, saved in the creator identifier field and verified in the published record.
 
-## Existing publication destinations
+## Immutable archive
 
-- GitHub repository: https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline — **Private** as last independently checked, not an accessible public paper citation yet.
-- Zenodo existing draft: https://zenodo.org/uploads/23895859 ; reserved version DOI `10.5281/zenodo.23895859`. **Reserved is not published.** No final archive upload or DOI registration is claimed here.
-- ARC-AGI-2 Kaggle Solution Writeup: [revised complete draft](SOLUTION_WRITEUP_DRAFT.md); **publication not claimed**.
-- Kaggle Paper Track and *Two Worlds* academic manuscript are separate future deliverables.
+Source commit: `84d84e2a5b8bad8459ed1a04511743df0bf257fe`. Source tree: `d7e6bfa6b4130d053505d40ac1c8b6cbbe26c09b`.
 
-## Documentation checkpoint / Work handoff
+File: `ARC_AGI2_NVARC_Final_84d84e2_2026-11-03.zip`; **418841 bytes**; SHA-256 **`96dfc157e13b52091af098a1be2d2e7ebee6b5e1733e55d333b00ffa7aa7456c`**; MD5 **`857010e7568522c4154d6a772d7a861e`**.
 
-The author requested all editorial changes on **`publication/arc2-documentation-final-20261103`**, based on `main` commit `1867ac19add31f0b5d87406e644cd6f47a1d71c8` and including a previously drafted independent evidence audit. The PR's final head SHA is the **authoritative documentation snapshot** for Work's next source archive. Recheck the PR head immediately before packaging and use **that exact immutable commit**, not the moving branch label.
+The curated ZIP contains **63 Git-verified source/evidence files plus two generated metadata/integrity files**. ZIP CRC, complete per-file SHA-256 manifest, source Git blob identities, five recorded scores, exact repeat-source identity and post-deadline labels passed verification. GitHub reports the same SHA-256 and size for its uploaded asset; Zenodo displays the matching size and MD5. CI run **41712801506** passed on the reviewed head with an identical tree to the merged archive source.
 
-**Next for Work (not performed by Chat Amunia):**
+The version DOI was opened and resolved to the published Zenodo landing page. That page displays Published, Open, the final version, author ORCID and the correct ZIP. See [the publication receipt](PUBLICATION_RECEIPT_2026-11-03.json).
 
-1. Review PR diff, full English writeup, rights statements, [claim ledger](CLAIMS_LEDGER.md) and source/score consistency; optionally obtain Astra's independent methodology critique.
-2. Check CI, approve/merge the reviewed document commit when authorized; leave submitted model code and history unchanged.
-3. Prepare a new final source/evidence ZIP (with **both** after-deadline observations) from the exact reviewed Git commit. Record `SOURCE_SNAPSHOT.json`, complete `SHA256SUMS.json`, file count, bytes and ZIP SHA-256. Preserve older exports.
-4. Complete rights review, GitHub public repository/Release verification, then update the **existing Zenodo draft**, upload the matched final ZIP, inspect metadata and author publication decision, and verify the **published** DOI landing page.
-5. Prepare and submit the **separate** ARC-AGI-2 Kaggle Solution Writeup and Paper Track entry only through their authorized workflows; never confuse a saved draft with Submit.
+## Scope and chronology
 
-**Safety boundary:** This is editorial documentation work only. No GPU experiment, model run, source-carrier change, scoring resubmission, artifact rehash/rebuild, Zenodo mutation, release creation or Kaggle Writeup submission is claimed.
+Original NVARC attribution and artifact-specific license qualifications remain in force. Model weights, installed third-party distributions and hidden evaluation tasks/predictions are excluded; rerunning requires authorized external inputs and a compatible pinned runtime. Publication is not a blanket license or prize-eligibility certification.
+
+The immutable ZIP preserves preparation-time documents, including earlier draft/pending status statements. This current status and the published landing pages record the later completion. The release tag and ZIP are not rebuilt merely to change those historical statements. Earlier 2 November, 3 November v2 and a20446a reviewed archives remain preserved unchanged.
+
+Kaggle ARC-AGI-2 Solution Writeup publication, the separate Paper Track entry and the joint ARC2/ARC3 academic manuscript remain separate deliverables. No new GPU experiment or competition submission was performed during publication.

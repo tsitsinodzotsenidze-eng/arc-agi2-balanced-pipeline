@@ -1,76 +1,66 @@
 # Parameter Updates and Repeatability in an Attributed NVARC Port for ARC-AGI-2
 
-**ARC Prize 2026 — ARC-AGI-2 Solution Writeup**\
-**Author:** Tsitsino Dzotsenidze\
-**Status:** Research draft — all five public results recorded; final private leaderboard results unknown
+**ARC Prize 2026 — ARC-AGI-2 technical Solution Writeup (publication-ready draft)**  
+**Author:** Tsitsino Dzotsenidze  
+**Date:** 3 November 2026  
+**Status:** Documentation complete for Work/author review; Kaggle publication **not yet claimed**.
 
-## Research question
+## Research question and attribution
 
-This study investigates the relationship between test-time parameter updates and observed ARC-AGI-2 performance. Specifically, it asks whether the performance contrast between a configuration that permits parameter updates and a zero-learning-rate configuration persists across repeated evaluations.
+How stable is the observed public-score contrast between a test-time updating policy and a null-update policy in an attributed ARC-AGI-2 solver, when the prescribed code is rerun?
 
-The project builds on an attributed port of the NVARC solution developed by **Ivan Sorokin and Jean-Francois Puget**. It is not presented as an independently invented solver.
+This project is an implementation, update-sensitivity and repeatability study of the NVARC system developed by **Ivan Sorokin and Jean-Francois Puget** (NVIDIA KGMoN), with its acknowledged ARChitects lineage. We do **not** claim to have invented NVARC or its underlying solver. Our distinct contributions are a documented ARC Prize 2026 execution port, a dated update-strength study with a controlled hash seed, exact-source repeat carriers, a bounded independent parameter-invariance probe, and a source-linked record of public results and limitations.
 
-## Method and experimental configurations
+Primary original sources: [NVARC authors' research repository](https://github.com/1ytic/NVARC) and [Sorokin's original Kaggle Notebook, Version 10](https://www.kaggle.com/code/sorokin/arc2-qwen3-unsloth-flash-lora-batch4-queue). The relevant external dependency Notebook is [Version 2](https://www.kaggle.com/code/sorokin/pip-install-unsloth-flash-patch); model reference: [qwen3_4b_grids15_sft139 / Transformers / bfloat16 / 1](https://www.kaggle.com/models/sorokin/qwen3_4b_grids15_sft139/transformers/bfloat16/1).
 
-The study compares configurations based on the NVARC solution's Qwen3-based inference and adaptation workflow.
+## Design and intervention
 
-**B1 Hash42** retains the specified learning rate of 5 × 10⁻⁵ and uses `PYTHONHASHSEED=42`.
+The principal comparison uses the same attributed Qwen3-based NVARC carrier and nominal training and inference policy, with `PYTHONHASHSEED=42` set in the child-driver environment before launch:
 
-**Z1 Zero Update** sets the learning rate to zero while retaining trainer and optimizer computations, the original model and decoder policy, and the specified hash seed. This design aims to distinguish the role of intended parameter updates from the continued execution of the surrounding training workflow.
+- **B1 (updating reference):** learning rate `5e-5`.
+- **Z1 (zero-update contrast):** learning rate `0`. The trainer, optimizer, demonstrations, adaptation workflow, model and decoder remain in place; Z1 is **not** an inference-only or no-computation arm.
+- **B1 Repeat and Z Repeat:** separately submitted saved versions built from byte-identical local notebook source to B1 and Z1, respectively. They assess run-to-run stability of the **observed aggregate contrast**, not determinism of individual predictions.
 
-Two repeat submissions were prepared:
+A preceding **B0/V2** carrier is retained as a historical implementation/feasibility result. Its Python hash seed was not pinned, so it is **not** an exact B1 replicate or a matched experimental control.
 
-- **B1 Repeat:** byte-identical source code to B1 Hash42.
-- **Z Repeat:** byte-identical source code to Z1 Zero Update.
+The dated [29 October protocol](../docs/ARC2_UPDATE_STRENGTH_PROTOCOL_2026-10-29.md) and [30 October priority amendment](../docs/ARC2_PRIORITY_AMENDMENT_2026-10-30.md) preserve decisions made before the repeat scores were observed. A proposed half-rate arm was deliberately deferred in favor of source-identical B1 and Z repeat submissions; that decision is not a post hoc response to the scores.
 
-Identical source code does not establish identical runtime trajectories or eliminate all possible execution variability.
+## Observed official public-score display
 
-The earlier **B0/V2** submission is retained as a historical reference rather than a matched control because its Python hash seed was not fixed.
+The signed-in Kaggle [ARC-AGI-2 Submissions page](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/submissions) displayed the following **rounded public** scores and statuses. Version IDs identify the saved Kaggle submissions, not local Git blob hashes:
 
-## Observed public results
+| Arm | Saved `scriptVersionId` | Learning policy | Public score | Kaggle status |
+| --- | --- | --- | ---: | --- |
+| [B0/V2](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-candidate?scriptVersionId=363494251) | `363494251` | `5e-5`, hash seed unpinned | **31.81** | Succeeded |
+| [B1 Hash42](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-b1-hash42?scriptVersionId=363939870) | `363939870` | `5e-5`, hash42 | **30.97** | Succeeded |
+| [Z1 Zero Update](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-z1-zero-update?scriptVersionId=364031423) | `364031423` | `0`, hash42 | **9.58** | Succeeded |
+| [B1 Repeat](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-b1-repeat?scriptVersionId=364031921) | `364031921` | `5e-5`, hash42, exact local B1 source repeat | **30.56** | **Succeeded (after deadline)** |
+| [Z Repeat](https://www.kaggle.com/code/tsitsinodzotsenidze/arc2-2026-nvarc-z-repeat?scriptVersionId=364032699) | `364032699` | `0`, hash42, exact local Z1 source repeat | **9.58** | **Succeeded (after deadline)** |
 
-| Configuration     | Kaggle scriptVersionId | Public score         | Status                   |
-| ----------------- | ---------------------- | -------------------- | ------------------------ |
-| B0/V2, historical | 363494251              | 31.81                | Succeeded                |
-| B1 Hash42         | 363939870              | 30.97                | Succeeded                |
-| Z1 Zero Update    | 364031423              | 9.58                 | Succeeded                |
-| B1 Repeat         | 364031921              | 30.56                | Succeeded (after deadline) |
-| Z Repeat          | 364032699              | 9.58                 | Succeeded (after deadline) |
+The original B1–Z1 difference is **21.39 public-score points** (30.97 − 9.58). The repeat B1–Z difference is **20.98 points** (30.56 − 9.58). B1 Repeat differs from B1 by **−0.41** points; Z Repeat matches Z1 **at the two-decimal precision displayed by Kaggle**. Equal rounded aggregate scores do **not** imply the same predictions on individual tasks.
 
-B1 Repeat produced a displayed public score of 30.56, compared with 30.97 for the original B1 Hash42 submission, a difference of 0.41 points. Its evaluation completed after the official competition deadline; therefore, this observation is distinguished from deadline-eligible competition results.
+**The deadline distinction is material.** The two repeats were *accepted and scored* by Kaggle but explicitly marked **“Succeeded (after deadline)”**. Their values are retained as research observations, **not** represented as timely final competition submissions. The displayed final-selection message indicates automatic selection from eligible best-scoring entries; B0/V2 (31.81) and B1 Hash42 (30.97) were the candidates shown as evaluated for final score. Final **private** scores and exact scoring-completion timestamps are unknown. The time visible on a screenshot is a time of *observation*, not proof of when scoring finished.
 
-Z Repeat produced a displayed public score of 9.58, matching Z1 at the displayed two-decimal precision. Kaggle labels this result `Succeeded (after deadline)`. The original B1–Z1 difference is 21.39 public-score points; the B1 Repeat–Z Repeat difference is 20.98 points. Agreement of rounded aggregate scores does not establish identical task-level predictions.
+## Independent engineering control (not a benchmark score)
 
-## Independent engineering verification
+A separate real-model, bounded **zero-learning-rate invariance check** completed **128 training steps**. The check examined **506 adapter tensors** (528,564,224 elements), all finite and unchanged relative to the recorded reference values on that workload. Trainer and optimizer machinery executed with learning rate zero. **The probe stopped before decoding**, did not score ARC predictions and is not a substitute for a complete competition rerun. Its evidence resides in `evidence/zero-update-check-20261030/`, including the invariant receipt and executed driver.
 
-A separate check completed 128 steps and inspected 506 adapter tensors. All inspected tensors remained finite and unchanged.
+## What the repeated results do and do not establish
 
-This check supports parameter invariance within the observed execution segment. It terminated before decoding and therefore does not establish prediction accuracy or full end-to-end behavioral equivalence.
+The update-permitting policy yielded substantially higher **observed rounded public scores** than the zero-learning-rate policy in the initial comparison and in the exact-source repeats. In that limited, descriptive sense, **the aggregate contrast recurred across two observations per configuration**.
 
-## Interpretation
+This is **not** evidence of a statistically significant difference, a trustworthy variance estimate, identical hidden-test predictions, a unique causal mechanism, or general repeatability beyond the observed runs. Hash42 and source identity reduce specific configuration ambiguities but do not ensure identical GPU scheduling, total realized compute, hidden scoring trajectories or deterministic model execution. Changing the learning rate may change downstream trajectories, compute allocation and which candidates are evaluated within a fixed budget. Without hidden task-level observations, the aggregate difference cannot independently identify the causal path. The historical B0/V2 result remains separate because it lacks a pinned hash seed.
 
-The observed public scores show a substantial descriptive difference between B1 Hash42 and Z1 Zero Update. However, one initial observation per configuration does not support a claim of statistical significance or a fully identified causal mechanism.
+The separate earlier symbolic depth-1/depth-2 pilot, reported as **0/167** public test outputs, is a different study and did not produce these NVARC neural scores. Placeholder packaging outputs, interrupted runs and infrastructure errors are not assigned performance scores.
 
-The B1 Repeat result provides an additional observation of the updating configuration under byte-identical source code. Z Repeat supplies the corresponding observation of the zero-update configuration: the two B1 scores are 30.97 and 30.56, and both displayed Z scores are 9.58.
+## Reproducibility, rights and archive scope
 
-The substantial contrast recurs across the two recorded evaluations per configuration. This is descriptive replication at the rounded public-score level; two observations per configuration do not establish a reliable variance estimate, statistical significance, general repeatability or a uniquely identified causal mechanism. Possible runtime variability and other uncontrolled differences must still be considered.
+The source/evidence record preserves locally byte-identical repeat notebooks, five immutable Kaggle saved-version IDs, source SHA-256 records, dated protocols, score observations, bounded engineering receipts and explicit claim limits. The archive **does not** include model weights, packaged third-party distributions, hidden evaluation tasks or hidden per-task predictions. Rerunning requires obtaining authorized external assets and the compatible pinned GPU runtime; a repository CI pass does not demonstrate hidden evaluation reproducibility.
 
-Missing, interrupted, or post-deadline evaluations will be reported transparently rather than retrospectively excluded.
+The original NVARC authors are credited throughout. The main upstream Version 10 Notebook publicly displays Apache-2.0; the dependency Version 2 and model Version 1 Apache-2.0 labels are documented from a **28 October 2026 authenticated Kaggle inspection**, and were not independently reverified in the present check. Licenses of third-party dependencies and model assets remain their own. See [third-party notices](THIRD_PARTY_NOTICES.md) and the [independent publication audit](INDEPENDENT_SOURCE_EVIDENCE_AUDIT_2026-11-03.md).
 
-## Provenance, attribution and reproducibility
+**Research record:** [ARC-AGI-2 GitHub repository](https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline) (private at drafting; public visibility must be checked before release). **Zenodo:** reserved `10.5281/zenodo.23895859` (existing draft, **not** yet a published DOI). The separate integrated ARC-AGI-2/ARC-AGI-3 academic manuscript is not this Kaggle Solution Writeup.
 
-The original NVARC work is credited to Ivan Sorokin and Jean-Francois Puget.
+## Contribution and next analysis
 
-Primary source: [NVARC research repository](https://github.com/1ytic/NVARC).
-
-Original submission notebook: [arc2-qwen3-unsloth-flash-lora-batch4-queue](https://www.kaggle.com/code/sorokin/arc2-qwen3-unsloth-flash-lora-batch4-queue).
-
-Saved Kaggle versions, parameter settings, source hashes, runtime evidence and licensing notices are preserved in the [project GitHub repository](https://github.com/tsitsinodzotsenidze-eng/arc-agi2-balanced-pipeline). The corresponding Zenodo record remains a preparation draft with reserved DOI 10.5281/zenodo.23895859; publication is not claimed.
-
-The archive will distinguish original NVARC material, attributed modifications, development diagnostics, deadline-eligible submissions and post-deadline research observations.
-
-## Research contribution
-
-The contribution is a documented, comparative study of parameter-update configurations in an attributed ARC-AGI-2 solver, including explicit repeat submissions and reproducibility evidence.
-
-The results are preliminary. They provide an empirical basis for studying adaptation and run-to-run stability, not proof that a single parameter-update mechanism explains the entire observed score difference.
+This study contributes an attributed, provenance-conscious comparison of parameter-update configurations with predeclared source-identical repeats and separately bounded engineering evidence. Future work should obtain task-level and runtime traces where legitimately available, measure variability under additional matched repetitions, and distinguish parameter-update effects from downstream changes in search, scheduling and budget consumption. The observed contrast is a hypothesis-generating finding, not proof that updates alone uniquely explain the aggregate score difference.

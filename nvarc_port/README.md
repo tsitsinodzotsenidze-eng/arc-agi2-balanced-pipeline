@@ -1,5 +1,11 @@
 # NVARC 2026 port candidate
 
+**Original-contribution licence update, 6 November 2026:** the author's
+specified original ARC2 code and method/pseudocode portions have an
+[additional MIT-0 grant](ORIGINAL_CONTRIBUTIONS_MIT0.md). Embedded upstream
+source, third-party assets, the article and ARC3 material are excluded.
+Existing Apache-2.0 notices and completed source artifacts are preserved.
+
 The first official B0 submission completed successfully: **public score 31.81**,
 Version 2 / scriptVersionId 363494251, observed 30 October 2026. Hidden per-task
 predictions and model-runtime breakdown were not exposed. See

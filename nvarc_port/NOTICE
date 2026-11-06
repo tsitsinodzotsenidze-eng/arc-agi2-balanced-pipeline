@@ -16,3 +16,10 @@ filter, diagnostic instrumentation, deadline/coverage guards, and separation
 of inference from label-based benchmarking. Scientific scoring, LoRA and
 candidate-generation parameters are unchanged. Wrapper additions are provided
 under Apache License 2.0. See LICENSE.
+
+Additional author grant, approved 6 November 2026: Tsitsino Dzotsenidze's
+independently authored ARC2 code additions and method/pseudocode portions
+identified in ORIGINAL_CONTRIBUTIONS_MIT0.md and MIT0_SCOPE_2026-11-06.json
+are also available under MIT-0 (LICENSE-MIT-0.txt). This is not a licence
+for embedded upstream source, model weights, benchmark data, ARC3 material
+or the combined article. Existing Apache-2.0 and upstream notices remain.

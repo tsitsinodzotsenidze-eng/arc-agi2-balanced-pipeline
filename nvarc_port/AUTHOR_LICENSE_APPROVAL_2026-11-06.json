@@ -1,0 +1,22 @@
+{
+  "record_type": "explicit_author_license_approval",
+  "author": "Tsitsino Dzotsenidze",
+  "orcid": "0000-0002-9432-1803",
+  "approval_date": "2026-11-06",
+  "approval_source": "Explicit author confirmation in the project conversation",
+  "approved_document": "03_Licensing_Decision_For_Director.md",
+  "approved_document_sha256": "f415b9ed54e42c3a40a795405be1387467b8e0d37f0c1af5298c02e8cc12453e",
+  "approved_scope_map_sha256": "cd8be9a0caa3f5eadb760c6d20e6d55df657f62a839e0abcc8481f604d85f9ae",
+  "approval_text": "ვადასტურებ  ამუნია 03_Licensing_Decision_For_Director.md მხოლოდ ჩემს ორიგინალურ ARC2 კოდსა და მეთოდურ ნაწილებზე",
+  "license": "MIT-0",
+  "grant_type": "additional; existing Apache-2.0 notices retained",
+  "scope_document": "ORIGINAL_CONTRIBUTIONS_MIT0.md",
+  "scope_map": "MIT0_SCOPE_2026-11-06.json",
+  "source_commit": "84d84e2a5b8bad8459ed1a04511743df0bf257fe",
+  "third_party_material_excluded": true,
+  "article_prose_and_figures_excluded": true,
+  "ARC3_material_excluded": true,
+  "existing_DOIs_unchanged": true,
+  "code_and_executed_notebook_bytes_unchanged": true,
+  "cryptographic_author_signature_claimed": false
+}

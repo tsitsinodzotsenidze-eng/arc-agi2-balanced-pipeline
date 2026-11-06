@@ -1,0 +1,142 @@
+{
+  "status": "approved_additional_author_grant",
+  "author": "Tsitsino Dzotsenidze",
+  "orcid": "0000-0002-9432-1803",
+  "source_commit": "84d84e2a5b8bad8459ed1a04511743df0bf257fe",
+  "files": [
+    {
+      "path": "nvarc_port/driver.py",
+      "git_blob_sha": "ab27feac4137090b77acfe84e851131377f90e36",
+      "size": 19226,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/build_notebook.py",
+      "git_blob_sha": "b686c3a16686ec534fcaa5837f28da27b65069d5",
+      "size": 3641,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/build_b1.py",
+      "git_blob_sha": "39f22980b95a3c8f09361cfe24180686a281d770",
+      "size": 2298,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/build_update_study.py",
+      "git_blob_sha": "efe864ae99ccdeedc5f0f4ed21a921dcd0eaa011",
+      "size": 5525,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/zero_update_probe.py",
+      "git_blob_sha": "ea3afcfda2cc875b1a52aba493006a2bd4d556a5",
+      "size": 5436,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/zero_update_probe_support.py",
+      "git_blob_sha": "41ba22eaa6958fe5a53d9fc9d443e04286e2205b",
+      "size": 3374,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/test_wrapper.py",
+      "git_blob_sha": "4f992309108ae91144a0ff3cf0341ff536bc62f6",
+      "size": 7061,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/test_b1.py",
+      "git_blob_sha": "d2cdf43f19780fbd7d0be4ae3a678209c84a37a6",
+      "size": 4391,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/test_update_study.py",
+      "git_blob_sha": "4473750e59a17bb4853abdffaa8e294bc0ab94f9",
+      "size": 3933,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/B1_Cell2_CodeOnly.py",
+      "git_blob_sha": "69131952c346164ca2c4398d51d87a2f5e6569ca",
+      "size": 33527,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/Z_Cell2_CodeOnly.py",
+      "git_blob_sha": "e47324ac41d14a4b8b7217fe5afb5e2b7476936b",
+      "size": 33559,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/NVARC_2026_SUBMISSION_CANDIDATE.ipynb",
+      "git_blob_sha": "9091ab274a71e7b1a039802964fc59771247dc6f",
+      "size": 34752,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/NVARC_2026_B1_HASH42_SUBMISSION.ipynb",
+      "git_blob_sha": "53f412c70a01b6af7745ed41d1a94135a6e3a7c9",
+      "size": 35410,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/NVARC_2026_B1_REPEAT_SUBMISSION.ipynb",
+      "git_blob_sha": "53f412c70a01b6af7745ed41d1a94135a6e3a7c9",
+      "size": 35410,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/NVARC_2026_Z_ZERO_UPDATE_SUBMISSION.ipynb",
+      "git_blob_sha": "3e64b1a9866ee2ae332e9c0623be0241bd332709",
+      "size": 35538,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "nvarc_port/NVARC_2026_Z_REPEAT_SUBMISSION.ipynb",
+      "git_blob_sha": "3e64b1a9866ee2ae332e9c0623be0241bd332709",
+      "size": 35538,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "docs/ARC2_UPDATE_STRENGTH_PROTOCOL_2026-10-29.md",
+      "git_blob_sha": "e9eefd12ac9fd6cdc1f6ca7a890004281ca67aa9",
+      "size": 6467,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    },
+    {
+      "path": "docs/ARC2_PRIORITY_AMENDMENT_2026-10-30.md",
+      "git_blob_sha": "0a7d660d33520ee189faa1a9f4ba1f92342af1e4",
+      "size": 4208,
+      "scope": "author-owned additions only; excludes inherited/quoted source and embedded upstream payloads"
+    }
+  ],
+  "B1_embedded_driver_sha256": "1eec5bb8db719e45d2e07af80b24db9b50d2214254b79445384d4852486f5fd4",
+  "upstream_embedded_exclusions": [
+    {
+      "path": "vendor/author-v10.ipynb",
+      "sha256": "506b85db66f9949022e87935ccb06a73fd78cb690883bd600bfb5c7d36c2b3af"
+    },
+    {
+      "path": "vendor/dependency-v2.ipynb",
+      "sha256": "60f44fd0ab45a7b28a466714744039191b585e222a5c7ee7467bc936314dc1d8"
+    }
+  ],
+  "other_exclusions": [
+    "all third-party notices/licence text",
+    "inherited source and patch-match strings",
+    "benchmark-derived smoke challenges",
+    "article text and figures",
+    "all model weights and third-party runtime packages",
+    "all ARC3 code/data and LP85 empirical records"
+  ],
+  "existing_licenses_and_DOIs_changed": false,
+  "license": "MIT-0",
+  "approval_date": "2026-11-06",
+  "license_granted": true,
+  "grant_scope": "Tsitsino Dzotsenidze's independently authored ARC2 code additions and reusable method/pseudocode only",
+  "approved_proposal_sha256": "f415b9ed54e42c3a40a795405be1387467b8e0d37f0c1af5298c02e8cc12453e",
+  "review_scope_map_sha256": "cd8be9a0caa3f5eadb760c6d20e6d55df657f62a839e0abcc8481f604d85f9ae"
+}

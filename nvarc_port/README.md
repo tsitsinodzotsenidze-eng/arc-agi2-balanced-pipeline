@@ -5,6 +5,8 @@ specified original ARC2 code and method/pseudocode portions have an
 [additional MIT-0 grant](ORIGINAL_CONTRIBUTIONS_MIT0.md). Embedded upstream
 source, third-party assets, the article and ARC3 material are excluded.
 Existing Apache-2.0 notices and completed source artifacts are preserved.
+The historical `NOTICE` is kept byte-identical to the executed carriers;
+the additional grant is recorded in the separate linked scope/approval files.
 
 The first official B0 submission completed successfully: **public score 31.81**,
 Version 2 / scriptVersionId 363494251, observed 30 October 2026. Hidden per-task
